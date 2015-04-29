@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/exploded-aar/UIAppTemplate/stickyListHeaders/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="514fd9967e49b57c1f30340aa98d356fe26eb831">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-c9fc280c66d037049edc8d02250c780af18aac9c.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-f15dbe9059987559ef66e82cc9b48a7167d2f88f.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/libs/listviewanimations_lib-manipulation_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-manipulation_3.1.0-aba02c048fbacf56e6e538b05ea37ec3374a6b32.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-77dd8402d82081c350d74e7031fa922c8cbb960c.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-e0f2802399e20b773e96cd584279424b821a279c.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-a95b10ac1b03e22e91abc1e8772d5c2e51a37ed2.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/libs/listviewanimations_lib-core_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f3f9629b068554d8513a2aaf34418171bf430851">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-core_3.1.0-242e0b4e2fe9bdb4c2979d527437b9112e90a2d3.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-05b8b11372451ccf3e8b7caaed33608ce498d2b9.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/libs/listviewanimations_lib-core-slh_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a4fe703aabd23e8c287c90396514418119109dd1">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-core-slh_3.1.0-9df3660e1a383c56ca2388a310d673ff55a15c06.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/ahlien/Desktop/UIAppTemplate/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-ecc8284f431de161d1f0aa9d321a0ab22b04c15f.jar" />
+    </item>
+
+</items>
