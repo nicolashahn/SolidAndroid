@@ -1,8 +1,6 @@
 package com.csform.android.uiapptemplate;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -25,6 +23,9 @@ import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LeftMenusActivity extends ActionBarActivity {
 
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
@@ -43,7 +44,6 @@ public class LeftMenusActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -175,10 +175,18 @@ public class LeftMenusActivity extends ActionBarActivity {
 		}
 		String drawerTitle = getString(mDrawerItems.get(position - 1).getTitle());
 		Toast.makeText(this, "You selected " + drawerTitle + " at position: " + position, Toast.LENGTH_SHORT).show();
-		
+
 		mDrawerList.setItemChecked(position, true);
 		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
+
+        if(position ==4) {
+            String value = "key";
+            Intent myIntent = new Intent(LeftMenusActivity.this, ListViewsActivity.class);
+            myIntent.putExtra("key", value); //Optional parameters
+            LeftMenusActivity.this.startActivity(myIntent);
+        }
+
 	}
 	
 	@Override
