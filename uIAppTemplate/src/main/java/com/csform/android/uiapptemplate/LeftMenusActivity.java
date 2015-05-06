@@ -182,7 +182,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 
         if(position ==4) {
             String value = "key";
-            Intent myIntent = new Intent(LeftMenusActivity.this, ListViewsActivity.class);
+            Intent myIntent = new Intent(LeftMenusActivity.this, FirebaseTestActivity.class);
             myIntent.putExtra("key", value); //Optional parameters
             LeftMenusActivity.this.startActivity(myIntent);
         }
