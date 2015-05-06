@@ -1,16 +1,26 @@
 package com.csform.android.uiapptemplate;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.firebase.client.Firebase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class FirebaseTestActivity extends ActionBarActivity {
 
+    private String LOG_TAG = "FirebaseTest";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_firebase_test);
     }
 
@@ -35,5 +45,23 @@ public class FirebaseTestActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void clickButton(View v){
+        // get server reference, then requests database, then build new request
+        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com/");
+        Firebase reqRef = ref.child("requests");
+        Firebase newReqRef = reqRef.push();
+
+        // build a request object, send it to server
+        Map<String, String> req1 = new HashMap<String, String>();
+        req1.put("title","let me pet your dog");
+        req1.put("description","preferably not a chihuahua");
+        req1.put("completed", "false");
+        newReqRef.setValue(req1);
+
+        String reqId = newReqRef.getKey();
+        Log.i(LOG_TAG, "key id = "+reqId);
+
     }
 }
