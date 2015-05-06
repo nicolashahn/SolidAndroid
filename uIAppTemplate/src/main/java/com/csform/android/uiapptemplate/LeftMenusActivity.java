@@ -186,6 +186,7 @@ public class LeftMenusActivity extends ActionBarActivity {
             myIntent.putExtra("key", value); //Optional parameters
             LeftMenusActivity.this.startActivity(myIntent);
         }
+        //nick was here
 
 	}
 	
