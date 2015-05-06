@@ -105,7 +105,7 @@ public class ProgressWheel extends View {
 		// convenient way to get most of this complexity handled.
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-		// We can’t use getWidth() or getHight() here. During the measuring
+		// We can’t use getWidth() or getHeight() here. During the measuring
 		// pass the view has not gotten its final size yet (this happens first
 		// at the start of the layout pass) so we have to use getMeasuredWidth()
 		// and getMeasuredHeight().

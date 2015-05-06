@@ -1114,8 +1114,9 @@ int string typography1 0x7f0b0050
 int string typography2 0x7f0b0051
 int string typography3 0x7f0b0052
 int string undo_deletion 0x7f0b0053
-int string username 0x7f0b0054
-int string welcome 0x7f0b0055
+int string url 0x7f0b0054
+int string username 0x7f0b0055
+int string welcome 0x7f0b0056
 int style ActionBarOverlay_Transparent 0x7f0c0000
 int style ActionBarOverlay_Transparent_TitleTextStyle 0x7f0c0001
 int style ActionBarStyle 0x7f0c0002
