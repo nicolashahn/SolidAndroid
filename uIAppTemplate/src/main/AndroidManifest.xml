@@ -3,12 +3,21 @@
     package="com.csform.android.uiapptemplate"
     android:versionCode="1"
     android:versionName="1.0" >
+
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:name=".MainApplication"
@@ -46,6 +55,10 @@
         <activity android:name=".GoogleCardsActivity" />
         <activity android:name=".ExpandableListViewActivity" />
         <activity android:name=".StickyListHeadersActivity" />
+        <activity
+            android:name=".FirebaseTestActivity"
+            android:label="@string/title_activity_firebase_test" >
+        </activity>
     </application>
 
 </manifest>

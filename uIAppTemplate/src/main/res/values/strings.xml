@@ -102,5 +102,9 @@
     <string name="skip">SKIP</string>
     <string name="raised">RAISED</string>
     <string name="flat">FLAT</string>
+    <string name="title_activity_firebase_test">FirebaseTestActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
