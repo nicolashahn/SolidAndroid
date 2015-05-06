@@ -1,8 +1,5 @@
 package com.csform.android.uiapptemplate;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
@@ -33,6 +30,10 @@ import com.csform.android.uiapptemplate.fragment.ShapeImageViewsFragment;
 import com.csform.android.uiapptemplate.fragment.SplashScreensFragment;
 import com.csform.android.uiapptemplate.fragment.TextViewsFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
+import com.firebase.client.Firebase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -45,10 +46,16 @@ public class MainActivity extends ActionBarActivity {
 	private CharSequence mTitle;
 	
 	private Handler mHandler;
+    private Firebase ref;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Firebase.setAndroidContext(this);
+		/*
+		 * database url string located at res/values/firebase.xml for debug purposes
+		 */
+        ref = new Firebase(getResources().getString(R.string.url));
 		setContentView(R.layout.activity_main);
 /*
 		mTitle = mDrawerTitle = getTitle();

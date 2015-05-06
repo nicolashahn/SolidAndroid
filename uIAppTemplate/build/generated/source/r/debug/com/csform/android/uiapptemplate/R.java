@@ -2688,8 +2688,9 @@ containing a value of this type.
         public static final int typography2=0x7f0b0051;
         public static final int typography3=0x7f0b0052;
         public static final int undo_deletion=0x7f0b0053;
-        public static final int username=0x7f0b0054;
-        public static final int welcome=0x7f0b0055;
+        public static final int url=0x7f0b0054;
+        public static final int username=0x7f0b0055;
+        public static final int welcome=0x7f0b0056;
     }
     public static final class style {
         public static final int ActionBarOverlay_Transparent=0x7f0c0000;
