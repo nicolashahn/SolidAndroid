@@ -23,4 +23,8 @@
             android:src="@drawable/ic_launcher" />
     </FrameLayout>
 
+<<<<<<< HEAD
 </merge><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/activity_parallax_ken_burns.xml -->
+=======
+</merge><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_parallax_ken_burns.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

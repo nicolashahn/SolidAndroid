@@ -8,4 +8,8 @@
           android:color="@color/cpb_grey"/>
     <item android:state_enabled="true"
           android:color="@color/cpb_red"/>
+<<<<<<< HEAD
 </selector><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/color/cpb_error_state_selector.xml -->
+=======
+</selector><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/color/cpb_error_state_selector.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

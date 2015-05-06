@@ -6,4 +6,8 @@
 
     <include layout="@layout/list_view"/>
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/fragment_left_menus.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_left_menus.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

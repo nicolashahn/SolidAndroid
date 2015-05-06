@@ -18,4 +18,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_background_main" />
 
+<<<<<<< HEAD
 </merge><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/view_floating_labeled_edit_text.xml -->
+=======
+</merge><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/view_floating_labeled_edit_text.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

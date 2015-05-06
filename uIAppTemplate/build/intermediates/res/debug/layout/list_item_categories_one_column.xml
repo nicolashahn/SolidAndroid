@@ -81,4 +81,8 @@
             android:layout_weight="1" />
     </com.csform.android.uiapptemplate.view.ScaledLinearLayout>
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/list_item_categories_one_column.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_item_categories_one_column.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

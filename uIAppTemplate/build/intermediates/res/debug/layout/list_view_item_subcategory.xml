@@ -23,4 +23,8 @@
             android:textColor="@color/main_color_grey_800" />
     </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/list_view_item_subcategory.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_view_item_subcategory.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

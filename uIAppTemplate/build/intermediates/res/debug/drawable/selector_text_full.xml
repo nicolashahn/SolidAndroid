@@ -4,4 +4,8 @@
     <item android:state_enabled="false" android:color="@color/white_30_percent"/>
     <item android:color="@android:color/white"/>
 
+<<<<<<< HEAD
 </selector><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/drawable/selector_text_full.xml -->
+=======
+</selector><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/drawable/selector_text_full.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

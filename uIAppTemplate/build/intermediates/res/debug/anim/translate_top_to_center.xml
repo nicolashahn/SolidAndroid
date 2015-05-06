@@ -5,4 +5,8 @@
     android:duration="1200"
     android:startOffset="500"
     android:interpolator="@android:anim/accelerate_decelerate_interpolator" />
+<<<<<<< HEAD
 <!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/anim/translate_top_to_center.xml -->
+=======
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/anim/translate_top_to_center.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

@@ -17,4 +17,8 @@
 <alpha xmlns:android="http://schemas.android.com/apk/res/android"
        android:interpolator="@android:anim/decelerate_interpolator"
        android:fromAlpha="1.0" android:toAlpha="0.0"
+<<<<<<< HEAD
        android:duration="@android:integer/config_mediumAnimTime" /><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_fade_out.xml -->
+=======
+       android:duration="@android:integer/config_mediumAnimTime" /><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_fade_out.xml -->
+>>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5
