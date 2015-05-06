@@ -21,8 +21,4 @@
               android:gravity="center_vertical"
               android:enabled="false">
 </LinearLayout>
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_up_container.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_up_container.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

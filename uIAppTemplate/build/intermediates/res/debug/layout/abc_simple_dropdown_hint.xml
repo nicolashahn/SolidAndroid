@@ -20,8 +20,4 @@
           android:singleLine="true"
           android:layout_margin="3dip"
           android:layout_width="match_parent"
-<<<<<<< HEAD
-          android:layout_height="wrap_content" /><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_simple_dropdown_hint.xml -->
-=======
           android:layout_height="wrap_content" /><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_simple_dropdown_hint.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

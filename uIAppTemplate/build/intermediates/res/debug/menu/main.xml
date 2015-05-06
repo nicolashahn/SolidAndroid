@@ -19,8 +19,4 @@
           android:icon="@drawable/action_search"
           android:title="@string/action_websearch"
           android:showAsAction="ifRoom|withText" /> -->
-<<<<<<< HEAD
-</menu><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/menu/main.xml -->
-=======
 </menu><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/menu/main.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

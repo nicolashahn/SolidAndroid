@@ -20,8 +20,4 @@
         android:layout_width="?attr/panelMenuListWidth"
         android:layout_height="wrap_content"
         android:background="?attr/panelBackground"/>
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_expanded_menu_layout.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_expanded_menu_layout.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

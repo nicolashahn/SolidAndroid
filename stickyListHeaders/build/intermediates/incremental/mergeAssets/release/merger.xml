@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main"><source path="C:\Users\Ash\Documents\Favor\solid\stickyListHeaders\src\main\assets"/></dataSet><dataSet config="release"><source path="C:\Users\Ash\Documents\Favor\solid\stickyListHeaders\src\release\assets"/></dataSet></merger>
-=======
 <merger version="3"><dataSet config="main"><source path="/Users/remypham/Documents/AndroidStudioProjects/Solid/stickyListHeaders/src/main/assets"/></dataSet><dataSet config="release"><source path="/Users/remypham/Documents/AndroidStudioProjects/Solid/stickyListHeaders/src/release/assets"/></dataSet></merger>
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

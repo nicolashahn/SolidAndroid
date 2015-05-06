@@ -7,8 +7,4 @@
     android:background="@color/main_color_500"
     app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
     app:theme="@style/AppTheme.Title" />
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/toolbar.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/toolbar.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

@@ -83,8 +83,4 @@
               android:layout_above="@android:id/text2" />
 
 </RelativeLayout>
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_search_dropdown_item_icons_2line.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_search_dropdown_item_icons_2line.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

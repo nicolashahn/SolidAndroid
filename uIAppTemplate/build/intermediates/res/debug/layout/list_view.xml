@@ -2,8 +2,4 @@
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list_view"
     style="@style/ListViewStyle" />
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/list_view.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_view.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

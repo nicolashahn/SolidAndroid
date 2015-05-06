@@ -33,8 +33,4 @@
             app:typeface="robotoBold" />
     </LinearLayout>
 
-<<<<<<< HEAD
-</com.csform.android.uiapptemplate.view.MaterialRippleLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/list_view_item_navigation_drawer_1.xml -->
-=======
 </com.csform.android.uiapptemplate.view.MaterialRippleLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_view_item_navigation_drawer_1.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

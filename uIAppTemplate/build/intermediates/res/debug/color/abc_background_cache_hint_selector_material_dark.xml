@@ -18,8 +18,4 @@
     <item android:state_accelerated="false" android:color="@color/background_material_dark" />
     <item android:color="@android:color/transparent" />
 </selector>
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/color/abc_background_cache_hint_selector_material_dark.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/color/abc_background_cache_hint_selector_material_dark.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

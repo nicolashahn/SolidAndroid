@@ -31,8 +31,4 @@
         android:textSize="16sp"
         app:typeface="robotoRegular" />
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/list_item.xml -->
-=======
 </LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_item.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

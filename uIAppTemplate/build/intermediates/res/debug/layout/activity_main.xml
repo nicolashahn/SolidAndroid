@@ -23,8 +23,4 @@
             layout="@layout/list_view" />
     </android.support.v4.widget.DrawerLayout>
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/activity_main.xml -->
-=======
 </LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_main.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

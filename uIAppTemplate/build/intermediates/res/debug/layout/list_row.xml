@@ -25,8 +25,4 @@
     android:textSize="20sp"
     app:typeface="robotoRegular"
     tools:ignore="UnusedAttribute" />
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/list_row.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_row.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

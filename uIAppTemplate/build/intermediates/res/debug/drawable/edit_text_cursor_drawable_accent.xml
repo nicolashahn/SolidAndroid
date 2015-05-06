@@ -5,8 +5,4 @@
 
     <solid android:color="@color/main_color_A100" />
 
-<<<<<<< HEAD
-</shape><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/drawable/edit_text_cursor_drawable_accent.xml -->
-=======
 </shape><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/drawable/edit_text_cursor_drawable_accent.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

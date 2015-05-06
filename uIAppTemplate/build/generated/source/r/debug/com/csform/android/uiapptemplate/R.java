@@ -2646,53 +2646,6 @@ containing a value of this type.
         public static final int drawer_title_blog=0x7f0b0027;
         public static final int drawer_title_check_and_radio_buttons=0x7f0b0028;
         public static final int drawer_title_git_hub=0x7f0b0029;
-<<<<<<< HEAD
-        public static final int drawer_title_image_gallery=0x7f0b002a;
-        public static final int drawer_title_instagram=0x7f0b002b;
-        public static final int drawer_title_left_menus=0x7f0b002c;
-        public static final int drawer_title_linked_in=0x7f0b002d;
-        public static final int drawer_title_list_views=0x7f0b002e;
-        public static final int drawer_title_login_page=0x7f0b002f;
-        public static final int drawer_title_parallax=0x7f0b0030;
-        public static final int drawer_title_progress_bars=0x7f0b0031;
-        public static final int drawer_title_search_bars=0x7f0b0032;
-        public static final int drawer_title_shape_image_views=0x7f0b0033;
-        public static final int drawer_title_splash_screens=0x7f0b0034;
-        public static final int drawer_title_text_views=0x7f0b0035;
-        public static final int error=0x7f0b0036;
-        public static final int flat=0x7f0b0037;
-        public static final int fontello_drag_and_drop=0x7f0b0038;
-        public static final int fontello_heart_empty=0x7f0b0039;
-        public static final int fontello_heart_full=0x7f0b003a;
-        public static final int fontello_logo=0x7f0b003b;
-        public static final int fontello_microfon=0x7f0b003c;
-        public static final int fontello_password=0x7f0b003d;
-        public static final int fontello_play=0x7f0b003e;
-        public static final int fontello_search=0x7f0b003f;
-        public static final int fontello_upload=0x7f0b0040;
-        public static final int fontello_user=0x7f0b0041;
-        public static final int fontello_x_mark=0x7f0b0042;
-        public static final int fontello_x_mark_masked=0x7f0b0043;
-        public static final int login=0x7f0b0044;
-        public static final int lorem_ipsum_long=0x7f0b0045;
-        public static final int lorem_ipsum_short=0x7f0b0046;
-        public static final int material_design=0x7f0b0047;
-        public static final int material_design_variation=0x7f0b0048;
-        public static final int number_of_images=0x7f0b0049;
-        public static final int password=0x7f0b004a;
-        public static final int raised=0x7f0b004b;
-        public static final int register=0x7f0b004c;
-        public static final int skip=0x7f0b004d;
-        public static final int thicker_and_darker_version=0x7f0b004e;
-        public static final int thiner_and_lighter_version=0x7f0b004f;
-        public static final int typography1=0x7f0b0050;
-        public static final int typography2=0x7f0b0051;
-        public static final int typography3=0x7f0b0052;
-        public static final int undo_deletion=0x7f0b0053;
-        public static final int url=0x7f0b0054;
-        public static final int username=0x7f0b0055;
-        public static final int welcome=0x7f0b0056;
-=======
         public static final int drawer_title_home=0x7f0b002a;
         public static final int drawer_title_image_gallery=0x7f0b002b;
         public static final int drawer_title_instagram=0x7f0b002c;
@@ -2739,9 +2692,9 @@ containing a value of this type.
         public static final int typography2=0x7f0b0055;
         public static final int typography3=0x7f0b0056;
         public static final int undo_deletion=0x7f0b0057;
-        public static final int username=0x7f0b0058;
-        public static final int welcome=0x7f0b0059;
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5
+        public static final int url=0x7f0b0058;
+        public static final int username=0x7f0b0059;
+        public static final int welcome=0x7f0b005a;
     }
     public static final class style {
         public static final int ActionBarOverlay_Transparent=0x7f0c0000;

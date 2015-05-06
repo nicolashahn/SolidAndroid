@@ -16,8 +16,4 @@
         android:paddingRight="70dp"
         android:textColor="@android:color/white" />
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/src/main/res/layout/header_image_gallery.xml -->
-=======
 </LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/header_image_gallery.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5

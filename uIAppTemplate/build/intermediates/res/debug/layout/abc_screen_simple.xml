@@ -32,8 +32,4 @@
     <include layout="@layout/abc_screen_content_include" />
 
 </android.support.v7.internal.widget.FitWindowsLinearLayout>
-<<<<<<< HEAD
-<!-- From: file:/C:/Users/Ash/Documents/Favor/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_screen_simple.xml -->
-=======
 <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_screen_simple.xml -->
->>>>>>> ea50bad47d0794dc2c0220f4fef590635167d2a5
