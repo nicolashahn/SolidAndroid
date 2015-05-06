@@ -120,22 +120,22 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_linked_in,
-						R.string.drawer_title_linked_in,
+						R.string.drawer_title_home,
 						DrawerItem.DRAWER_ITEM_TAG_LINKED_IN));
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_blog,
-						R.string.drawer_title_blog,
+						R.string.drawer_title_requests,
 						DrawerItem.DRAWER_ITEM_TAG_BLOG));
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_git_hub,
-						R.string.drawer_title_git_hub,
+						R.string.drawer_title_offers,
 						DrawerItem.DRAWER_ITEM_TAG_GIT_HUB));
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_instagram,
-						R.string.drawer_title_instagram,
+						R.string.drawer_title_settings,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 	}
 
