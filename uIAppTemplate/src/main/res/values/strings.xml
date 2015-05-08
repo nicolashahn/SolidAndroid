@@ -106,5 +106,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_favor_form">FavorFormActivity</string>
+
+
+    <string name="firebaseURL">https://crackling-torch-5178.firebaseio.com/</string>
 
 </resources>

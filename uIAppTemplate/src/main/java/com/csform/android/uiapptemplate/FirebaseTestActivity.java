@@ -60,6 +60,7 @@ public class FirebaseTestActivity extends ActionBarActivity {
         req1.put("completed", "false");
         newReqRef.setValue(req1);
 
+        // this is to get the id of the object we just sent to the server
         String reqId = newReqRef.getKey();
         Log.i(LOG_TAG, "key id = "+reqId);
 
