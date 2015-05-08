@@ -11,6 +11,8 @@ import android.widget.Switch;
 
 import com.firebase.client.Firebase;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +26,7 @@ public class FavorFormActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_favor_form);
     }
 
@@ -78,7 +81,15 @@ public class FavorFormActivity extends ActionBarActivity {
         EditText compField = (EditText) findViewById(R.id.compField);
         String comp = compField.getText().toString();
 
+        ///////////////////////////
+        // to add:
+        // checkbox for monetary compensation,
+        // currencyField - float?
+        //////////////////////////
 
+        // a random number for the favor ID
+        SecureRandom random = new SecureRandom();
+        String favorId = new BigInteger(130, random).toString(32);
 
 
         // build a request object, send it to server
@@ -88,11 +99,19 @@ public class FavorFormActivity extends ActionBarActivity {
         f1.put("completed", "false");
         f1.put("compensation",comp);
         f1.put("dateToBeCompletedBy",date);
+        f1.put("datePosted",Clock.getTimeStamp());
+        // change this later - use appInfo from hw3?
+        f1.put("userPosted","batman");
+        f1.put("favorId",favorId);
         newFavorRef.setValue(f1);
 
+
         // this is to get the id of the object we just sent to the server
-        String favorId = newFavorRef.getKey();
-        Log.i(LOG_TAG, "key id = " + favorId);
+        String returnId = newFavorRef.getKey();
+        Log.i(LOG_TAG, "key id = " + returnId);
+
+//        Toast t = Toast.makeText(this.getApplicationContext(), "Favor posted!", Toast.LENGTH_SHORT);
+//        t.show();
 
     }
 }

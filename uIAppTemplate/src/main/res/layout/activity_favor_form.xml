@@ -17,14 +17,28 @@
             android:layout_height="fill_parent">
 
             <Switch
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Request / Offer"
                 android:id="@+id/reqOfferSwitch"
-                android:layout_column="1"
                 android:checked="false"
                 android:textOff="Request"
-                android:textOn="Offer" />
+                android:textOn="Offer"
+                android:layout_column="0" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/categorySpinner"
+                android:layout_column="1"
+
+                android:spinnerMode="dropdown"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
         </TableRow>
 
         <TableRow
@@ -47,12 +61,13 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Done by"
+                android:text="Date to be done by"
                 android:id="@+id/textView4"
                 android:layout_column="0"
                 android:layout_marginRight="10dp" />
@@ -121,5 +136,6 @@
         android:id="@+id/postButton"
         android:layout_column="1"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="clickButton" />
 </RelativeLayout>
