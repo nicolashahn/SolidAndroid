@@ -1,8 +1,5 @@
 package com.csform.android.uiapptemplate;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
@@ -21,6 +18,14 @@ import android.widget.TextView;
 
 import com.csform.android.uiapptemplate.view.AnimatedExpandableListView;
 import com.csform.android.uiapptemplate.view.AnimatedExpandableListView.AnimatedExpandableListAdapter;
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This is an example usage of the AnimatedExpandableListView class.
@@ -31,17 +36,49 @@ import com.csform.android.uiapptemplate.view.AnimatedExpandableListView.Animated
  */
 public class ExpandableListViewActivity extends ActionBarActivity {
 
+    private static final String FIREBASE_REQ_URL = "https://crackling-torch-5178.firebaseio.com/requests";
+    private Firebase ref;
 	private AnimatedExpandableListView listView;
 	private ExampleAdapter adapter;
 
+	List<GroupItem> items = new ArrayList<GroupItem>();
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_expandable_list_view);
+        Firebase.setAndroidContext(this);
+        ref = new Firebase(FIREBASE_REQ_URL);
 
-		List<GroupItem> items = new ArrayList<GroupItem>();
-
+        ref.addChildEventListener(new ChildEventListener() {
+            @Override
+            //  A DataSnapshot instance contains data from a Firebase location.
+            public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
+                if (snapshot.getValue() == null) return;
+                // Map<String, Object>
+                Map<?, ?> newPost = (Map<?, ?>) snapshot.getValue();
+				GroupItem item = new GroupItem();
+				item.title = newPost.get("title") + "";
+				ChildItem child = new ChildItem();
+				child.title = newPost.get("description") + "";
+				item.items.add(child);
+				items.add(item);
+            }
+            @Override
+            public void onChildChanged(DataSnapshot snapshot, String previousChildKey){
+            }
+            @Override
+            public void onChildMoved(DataSnapshot snapshot, String previousChildKey){
+            }
+            @Override
+            public void onChildRemoved(DataSnapshot snapshot){
+            }
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                System.out.println("The read failed: " + firebaseError.getMessage());
+            }
+        });
+/*
 		// Populate our list with groups and it's children
 		for (int i = 1; i < 100; i++) {
 			GroupItem item = new GroupItem();
@@ -58,7 +95,7 @@ public class ExpandableListViewActivity extends ActionBarActivity {
 
 			items.add(item);
 		}
-		
+*/
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		adapter = new ExampleAdapter(this);
@@ -101,6 +138,7 @@ public class ExpandableListViewActivity extends ActionBarActivity {
 		} else {
 			listView.setIndicatorBoundsRelative(width - px, width);
 		}
+
 	}
 
 	@Override

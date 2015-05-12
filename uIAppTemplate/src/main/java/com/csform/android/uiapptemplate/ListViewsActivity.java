@@ -1,7 +1,5 @@
 package com.csform.android.uiapptemplate;
 
-import java.util.Random;
-
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBarActivity;
@@ -26,12 +24,14 @@ import com.nhaarman.listviewanimations.itemmanipulation.dragdrop.TouchViewDragga
 import com.nhaarman.listviewanimations.itemmanipulation.swipedismiss.OnDismissCallback;
 import com.nhaarman.listviewanimations.itemmanipulation.swipedismiss.undo.SimpleSwipeUndoAdapter;
 
+import java.util.Random;
+
 public class ListViewsActivity extends ActionBarActivity {
 
 	public static final String LIST_VIEW_OPTION = "com.csform.android.uiapptemplate.ListViewsActivity";
 	public static final String LIST_VIEW_OPTION_1 = "Expandable";
 	public static final String LIST_VIEW_OPTION_2 = "Drag&Drop";
-	public static final String LIST_VIEW_OPTION_3 = "Swipe-to-dissmiss";
+	public static final String LIST_VIEW_OPTION_3 = "Swipe-to-dismiss";
 	public static final String LIST_VIEW_OPTION_4 = "Appearance animation (alpha)";
 	public static final String LIST_VIEW_OPTION_5 = "Appearance animation (random)";
 	public static final String LIST_VIEW_OPTION_6 = "Sticky list headers"; //Coming soon

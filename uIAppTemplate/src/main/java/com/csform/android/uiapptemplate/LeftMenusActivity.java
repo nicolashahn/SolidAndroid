@@ -179,8 +179,13 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerList.setItemChecked(position, true);
 		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
-
-        if(position ==4) {
+		if (position == 2) {
+            String value = "key";
+            Intent myIntent = new Intent(LeftMenusActivity.this, ExpandableListViewActivity.class);
+            myIntent.putExtra("key", value); //Optional parameters
+            LeftMenusActivity.this.startActivity(myIntent);
+		}
+        if(position == 4) {
             String value = "key";
             Intent myIntent = new Intent(LeftMenusActivity.this, FavorFormActivity.class);
             myIntent.putExtra("key", value); //Optional parameters
