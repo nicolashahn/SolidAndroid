@@ -14,7 +14,15 @@
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <fragment
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:name="com.csform.android.uiapptemplate.fragment.CalendarsFragment"
+                android:id="@+id/fragment"
+                android:layout_gravity="center" />
+        </FrameLayout>
 
         <include
             android:layout_width="@dimen/drawer_width"

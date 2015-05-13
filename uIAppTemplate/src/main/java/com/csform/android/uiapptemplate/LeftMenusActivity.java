@@ -1,8 +1,11 @@
 package com.csform.android.uiapptemplate;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -20,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
+import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
@@ -39,6 +43,8 @@ public class LeftMenusActivity extends ActionBarActivity {
 
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
+
+	private Handler mHandler;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -184,6 +190,19 @@ public class LeftMenusActivity extends ActionBarActivity {
             Intent myIntent = new Intent(LeftMenusActivity.this, ExpandableListViewActivity.class);
             myIntent.putExtra("key", value); //Optional parameters
             LeftMenusActivity.this.startActivity(myIntent);
+		}
+		if (position == 3) {
+			// Create new fragment and transaction
+			Fragment newFragment = new ExpandableListViewFragment();
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+			// Replace whatever is in the fragment view with this fragment,
+			// and add the transaction to the back stack
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+
+			// Commit the transaction
+			transaction.commit();
 		}
         if(position == 4) {
             String value = "key";
