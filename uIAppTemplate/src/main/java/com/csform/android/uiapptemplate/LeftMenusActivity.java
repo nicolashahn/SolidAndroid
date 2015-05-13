@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
 import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
+import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
@@ -205,11 +206,23 @@ public class LeftMenusActivity extends ActionBarActivity {
 			transaction.commit();
 		}
         if(position == 4) {
-            String value = "key";
-            Intent myIntent = new Intent(LeftMenusActivity.this, FavorFormActivity.class);
-            myIntent.putExtra("key", value); //Optional parameters
-            LeftMenusActivity.this.startActivity(myIntent);
+//            String value = "key";
+//            Intent myIntent = new Intent(LeftMenusActivity.this, FavorFormActivity.class);
+//            myIntent.putExtra("key", value); //Optional parameters
+//            LeftMenusActivity.this.startActivity(myIntent);
+			// Create new fragment and transaction
+			Fragment newFragment = new FavorFormFragment();
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+			// Replace whatever is in the fragment view with this fragment,
+			// and add the transaction to the back stack
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+
+			// Commit the transaction
+			transaction.commit();
         }
+
         //nick was here
 
 	}
