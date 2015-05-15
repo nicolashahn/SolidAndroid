@@ -16,10 +16,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f5f5a5c-7cb7-476b-97e5-1215700de5fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\classes.jar" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\AndroidManifest.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\aapt\AndroidManifest.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/aapt/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\res\values\values.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/res/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="solid.iws" />
@@ -2548,7 +2544,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431674017901</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Requests button now loads request fragment without crashing, but nothing populates. I haven't been able to figure out why. Firebase still works and the view is being created successfully. The problem might reside in the xml file, which I had simply copied from the original expandable list view. This uses a custom layout defined in view/AnimatedExpandableListView, which has a bunch of code that might not play nice with fragments. &#10;&#10;Actually, I just now noticed there's an ExpandableListViewFragment, which I should probably be using instead of Fragment. I'm too tired to look at it right now but I just wanted to note it.">
+      <created>1431674031302</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1431674031302</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
