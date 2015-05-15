@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -34,7 +35,7 @@ import java.util.Map;
  * where each group has from 1 to 100 children (so the first group will have one
  * child, the second will have two children and so on...).
  */
-public class ExpandableListViewActivity extends ActionBarActivity {
+public class ExpandableListViewActivity extends ActionBarActivity{
 
     private static final String FIREBASE_REQ_URL = "https://crackling-torch-5178.firebaseio.com/requests";
     private Firebase ref;
@@ -78,24 +79,7 @@ public class ExpandableListViewActivity extends ActionBarActivity {
                 System.out.println("The read failed: " + firebaseError.getMessage());
             }
         });
-/*
-		// Populate our list with groups and it's children
-		for (int i = 1; i < 100; i++) {
-			GroupItem item = new GroupItem();
 
-			item.title = "Expand this item " + i;
-
-			for (int j = 0; j < i; j++) {
-				ChildItem child = new ChildItem();
-				child.title = "Expanded " + j;
-				//child.hint = "Too awesome";
-
-				item.items.add(child);
-			}
-
-			items.add(item);
-		}
-*/
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		adapter = new ExampleAdapter(this);
@@ -129,7 +113,7 @@ public class ExpandableListViewActivity extends ActionBarActivity {
 		Point size = new Point();
 		display.getSize(size);
 		int width = size.x;
-		//Log.v("width", width + "");
+		Log.i("width", width + "");
 		Resources r = getResources();
 		int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
 				50, r.getDisplayMetrics());

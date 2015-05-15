@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
 import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
 import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
+import com.csform.android.uiapptemplate.fragment.RequestsListFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
@@ -83,7 +84,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
 	}
-	
+
 	private void setAdapter() {
 		String option = LEFT_MENU_OPTION_1;
 		Bundle extras = getIntent().getExtras();
@@ -142,7 +143,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_instagram,
-						R.string.drawer_title_settings,
+						R.string.drawer_title_form,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 	}
 
@@ -186,11 +187,30 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerList.setItemChecked(position, true);
 		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
-		if (position == 2) {
+		if (position == 1) {
             String value = "key";
             Intent myIntent = new Intent(LeftMenusActivity.this, ExpandableListViewActivity.class);
             myIntent.putExtra("key", value); //Optional parameters
             LeftMenusActivity.this.startActivity(myIntent);
+
+		}
+		if (position == 2) {
+			/*
+            String value = "key";
+            Intent myIntent = new Intent(LeftMenusActivity.this, ExpandableListViewActivity.class);
+            myIntent.putExtra("key", value); //Optional parameters
+            LeftMenusActivity.this.startActivity(myIntent);
+            */
+
+			Fragment newFragment = new RequestsListFragment();
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            // Replace whatever is in the fragment view with this fragment,
+			// and add the transaction to the back stack
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+
+			// Commit the transaction
+			transaction.commit();
 		}
 		if (position == 3) {
 			// Create new fragment and transaction
