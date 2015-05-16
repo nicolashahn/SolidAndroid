@@ -3,12 +3,10 @@
     android:layout_height="match_parent"
     tools:context="com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="I&apos;m in fragment_expandable_list_view.xml"
-        android:id="@+id/textView"
-        android:layout_gravity="center"
-        android:gravity="center_vertical|center_horizontal" />
+    <com.csform.android.uiapptemplate.view.AnimatedExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </FrameLayout>
 <!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml -->

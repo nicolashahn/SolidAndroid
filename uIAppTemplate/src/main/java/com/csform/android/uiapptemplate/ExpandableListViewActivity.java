@@ -30,7 +30,7 @@ import java.util.Map;
 
 /**
  * This is an example usage of the AnimatedExpandableListView class.
- * 
+ *
  * It is an activity that holds a listview which is populated with 100 groups
  * where each group has from 1 to 100 children (so the first group will have one
  * child, the second will have two children and so on...).
@@ -38,6 +38,7 @@ import java.util.Map;
 public class ExpandableListViewActivity extends ActionBarActivity{
 
     private static final String FIREBASE_REQ_URL = "https://crackling-torch-5178.firebaseio.com/requests";
+
     private Firebase ref;
 	private AnimatedExpandableListView listView;
 	private ExampleAdapter adapter;
@@ -64,6 +65,7 @@ public class ExpandableListViewActivity extends ActionBarActivity{
 				child.title = newPost.get("description") + "";
 				item.items.add(child);
 				items.add(item);
+                adapter.notifyDataSetChanged();
             }
             @Override
             public void onChildChanged(DataSnapshot snapshot, String previousChildKey){
