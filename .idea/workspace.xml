@@ -18,36 +18,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f5f5a5c-7cb7-476b-97e5-1215700de5fe" name="Default" comment="inally works. ExpandableListViewFragment sucessfully">
-      <change type="DELETED" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\src\main\java\com\csform\android\uiapptemplate\fragment\RequestsListFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\src\main\res\layout\fragment_requests_list_fragment.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/bundles/release/classes.jar" />
+    <list default="true" id="6f5f5a5c-7cb7-476b-97e5-1215700de5fe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\classes.jar" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/resources/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/resources/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/resources/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-debug.aar" afterPath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-release.aar" afterPath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\AndroidManifest.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\aapt\AndroidManifest.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/aapt/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/ExpandableListViewActivity.java" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/ExpandableListViewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ExpandableListViewFragment.java" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ExpandableListViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/uIAppTemplate/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/generated/source/r/debug/com/csform/android/uiapptemplate/R.java" afterPath="$PROJECT_DIR$/uIAppTemplate/build/generated/source/r/debug/com/csform/android/uiapptemplate/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/fragment_expandable_list_view.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/fragment_expandable_list_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/uIAppTemplate.iml" afterPath="$PROJECT_DIR$/uIAppTemplate/uIAppTemplate.iml" />
       <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\res\values\values.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/res/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -75,7 +49,7 @@
           <file leaf-file-name="LeftMenusActivity.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.38674033">
+                <state vertical-scroll-proportion="-0.7910448">
                   <caret line="190" column="18" selection-start-line="190" selection-start-column="18" selection-end-line="190" selection-end-column="18" />
                   <folding>
                     <element signature="e#4556#4586#0" expanded="true" />
@@ -162,7 +136,7 @@
           <file leaf-file-name="ProgressWheel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/ProgressWheel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.27992633">
+                <state vertical-scroll-proportion="0.2835821">
                   <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
                   <folding />
                 </state>
@@ -2592,7 +2566,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431751191855</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ExpandableListViewFragment successfully populates data from Firebase.">
+      <created>1431814824259</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1431814824259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2606,21 +2586,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.45115682" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19537275" sideWeight="0.18023255" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20694445" sideWeight="0.27956298" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21666667" sideWeight="0.5025707" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21666667" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21666667" sideWeight="0.4974293" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.4562982" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20694445" sideWeight="0.720437" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20694445" sideWeight="0.720437" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23071979" sideWeight="0.8197674" order="0" side_tool="false" content_ui="combo" />
@@ -2655,7 +2635,8 @@
     </ignored-roots>
     <MESSAGE value="Requests button now loads request fragment without crashing, but nothing populates. I haven't been able to figure out why. Firebase still works and the view is being created successfully. The problem might reside in the xml file, which I had simply copied from the original expandable list view. This uses a custom layout defined in view/AnimatedExpandableListView, which has a bunch of code that might not play nice with fragments. &#10;&#10;Actually, I just now noticed there's an ExpandableListViewFragment, which I should probably be using instead of Fragment. I'm too tired to look at it right now but I just wanted to note it." />
     <MESSAGE value="forgot to add the new files.." />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot to add the new files.." />
+    <MESSAGE value="ExpandableListViewFragment successfully populates data from Firebase." />
+    <option name="LAST_COMMIT_MESSAGE" value="ExpandableListViewFragment successfully populates data from Firebase." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3112,7 +3093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/ProgressWheel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27992633">
+        <state vertical-scroll-proportion="0.2835821">
           <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
           <folding />
         </state>
@@ -3120,7 +3101,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38674033">
+        <state vertical-scroll-proportion="-0.7910448">
           <caret line="190" column="18" selection-start-line="190" selection-start-column="18" selection-end-line="190" selection-end-column="18" />
           <folding>
             <element signature="e#4556#4586#0" expanded="true" />
