@@ -19,10 +19,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f5f5a5c-7cb7-476b-97e5-1215700de5fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\classes.jar" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\AndroidManifest.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\aapt\AndroidManifest.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/aapt/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\res\values\values.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/solid/stickyListHeaders/unspecified/res/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="solid.iws" />
@@ -2572,7 +2568,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431814824259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ExpandableListViewFragment successfully populates data from Firebase.">
+      <created>1431814869654</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1431814869654</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
