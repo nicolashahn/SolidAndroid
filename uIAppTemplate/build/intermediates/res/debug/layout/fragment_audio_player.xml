@@ -10,4 +10,4 @@
         android:text="@string/drawer_title_audio_player"
         app:typeface="robotoLightItalic" /> -->
 
-</LinearLayout><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/fragment_audio_player.xml -->
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_audio_player.xml -->
