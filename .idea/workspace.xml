@@ -11,7 +11,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6f5f5a5c-7cb7-476b-97e5-1215700de5fe" name="Default" comment="">
+=======
+    <list default="true" id="91ec52c3-1580-4f54-b7ac-00fa1f327727" name="Default" comment="">
+>>>>>>> master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/AdapterWrapper$1.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/AdapterWrapper$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/AdapterWrapper$1.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/AdapterWrapper$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/AdapterWrapper$2.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/AdapterWrapper$2.class" />
@@ -28,6 +32,106 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/ExpandableStickyListHeadersListView$1.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/ExpandableStickyListHeadersListView$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/ExpandableStickyListHeadersListView.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/ExpandableStickyListHeadersListView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/ExpandableStickyListHeadersListView.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/ExpandableStickyListHeadersListView.class" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$2.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$3.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$FloatEditTextSavedState$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$FloatEditTextSavedState$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$FloatEditTextSavedState.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText$FloatEditTextSavedState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/GoogleCardsActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/GoogleCardsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/GoogleCardsAdapter$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/GoogleCardsAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/GoogleCardsAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/GoogleCardsAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/GoogleCardsAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/GoogleCardsAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/HeartImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/HeartImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/HexagonImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/HexagonImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/IdHandler$IdRecording.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/IdHandler$IdRecording.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/IdHandler.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/IdHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ImageGalleryCategoryActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ImageGalleryCategoryActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter$ViewHolder$TwoColumnsViewHolder.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter$ViewHolder$TwoColumnsViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGalleryCategoryModel$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGalleryCategoryModel$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGalleryCategoryModel.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGalleryCategoryModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ImageGalleryFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ImageGalleryFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ImageGallerySubcategoryActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ImageGallerySubcategoryActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter$ViewHolder$TwoColumnsViewHolder.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter$ViewHolder$TwoColumnsViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGallerySubcategoryModel$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGallerySubcategoryModel$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGallerySubcategoryModel.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/model/ImageGallerySubcategoryModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/util/ImageUtil.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/util/ImageUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/IoUtil.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/IoUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/kbv/KenBurnsView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/kbv/KenBurnsView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity$DrawerItemClickListener.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity$DrawerItemClickListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/LeftMenusFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/LeftMenusFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ListViewsActivity$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ListViewsActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ListViewsActivity$2.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ListViewsActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ListViewsActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ListViewsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ListViewsFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ListViewsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LogInPageActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LogInPageActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/LogInPageFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/LogInPageFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity$CommitFragmentRunnable.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity$CommitFragmentRunnable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity$DrawerItemClickListener.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity$DrawerItemClickListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainApplication.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$2.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$3.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$4.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$5.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$PerformClickEvent.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$PerformClickEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$RippleBuilder.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout$RippleBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/MaterialRippleLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/cpb/MorphingAnimation$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/cpb/MorphingAnimation$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/cpb/MorphingAnimation$2.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/cpb/MorphingAnimation$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/cpb/MorphingAnimation.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/cpb/MorphingAnimation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/MyStickyListHeadersAdapter$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/MyStickyListHeadersAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/MyStickyListHeadersAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/MyStickyListHeadersAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/MyStickyListHeadersAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/MyStickyListHeadersAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/NumberParse.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/NumberParse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/OctogonImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/OctogonImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ParallaxEffectsFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ParallaxEffectsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxKenBurnsActivity$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxKenBurnsActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxKenBurnsActivity$2.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxKenBurnsActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxKenBurnsActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ParallaxKenBurnsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/ParseUtil.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/ParseUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/ParserHelper.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/ParserHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/PathInfo.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/path/parser/PathInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/PentagonImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/PentagonImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/mask/PorterImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/mask/PorterImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/mask/PorterShapeImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/mask/PorterShapeImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ProgressBarsFragment$FalseProgress.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ProgressBarsFragment$FalseProgress.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ProgressBarsFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ProgressBarsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/ProgressWheel.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/ProgressWheel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomListView$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomListView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomListView$ScalingRunnable.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomListView$ScalingRunnable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomListView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomListView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomScrollView$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomScrollView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomScrollView$ScalingRunnable.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomScrollView$ScalingRunnable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomScrollView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/PullToZoomScrollView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/kbv/RandomTransitionGenerator.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/kbv/RandomTransitionGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/font/RobotoTextView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/font/RobotoTextView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/shader/RoundedShader.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/shader/RoundedShader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter$ViewHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/SearchBarsActivity$1.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/SearchBarsActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/SearchBarsActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/SearchBarsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/SearchBarsFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/SearchBarsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/shader/ShaderHelper.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/shader/ShaderHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/ShaderImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/ShaderImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ShapeImageViewsFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ShapeImageViewsFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/SplashScreensActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/SplashScreensActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/SplashScreensFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/SplashScreensFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/StarImageView.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/siv/StarImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/StickyListHeadersActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/StickyListHeadersActivity.class" />
+>>>>>>> master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/StickyListHeadersListView$1.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/StickyListHeadersListView$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/StickyListHeadersListView$1.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/release/se/emilsjolander/stickylistheaders/StickyListHeadersListView$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/StickyListHeadersListView$2.class" afterPath="$PROJECT_DIR$/stickyListHeaders/build/intermediates/classes/debug/se/emilsjolander/stickylistheaders/StickyListHeadersListView$2.class" />
@@ -61,6 +165,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-debug.aar" afterPath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-release.aar" afterPath="$PROJECT_DIR$/stickyListHeaders/build/outputs/aar/stickyListHeaders-release.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug-unaligned.apk" afterPath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug.apk" afterPath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug.apk" />
+>>>>>>> master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/abc_action_bar_title_item.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/abc_action_bar_title_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/abc_action_bar_up_container.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/abc_action_bar_up_container.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/res/debug/layout/abc_action_bar_view_list_nav_layout.xml" />
@@ -335,8 +444,17 @@
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ParallaxEffectsFragment.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
                   <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
                   <folding />
+=======
+                  <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1618#1629#0" expanded="true" />
+                    <element signature="e#5177#5188#0" expanded="true" />
+                  </folding>
+>>>>>>> master
                 </state>
               </provider>
             </entry>
@@ -351,6 +469,7 @@
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="fragment_expandable_list_view.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml">
               <provider selected="true" editor-type-id="text-editor">
@@ -377,10 +496,29 @@
                     <element signature="imports" expanded="true" />
                     <element signature="e#6193#6204#0" expanded="true" />
                   </folding>
+=======
+          <file leaf-file-name="ProgressWheel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/ProgressWheel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.22030981">
+                  <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="41" column="75" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
+                  <folding />
+>>>>>>> master
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
           <file leaf-file-name="ExpandableListViewActivity.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/ExpandableListViewActivity.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -391,16 +529,41 @@
                     <element signature="e#1642#1653#0" expanded="true" />
                     <element signature="e#4876#4887#0" expanded="true" />
                   </folding>
+=======
+          <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/local.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+                  <folding />
+>>>>>>> master
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="ProgressWheel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/ProgressWheel.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
                   <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
                   <folding />
+=======
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="ExpandableListViewActivity.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/ExpandableListViewActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="2.039587">
+                  <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1618#1629#0" expanded="true" />
+                    <element signature="e#5177#5188#0" expanded="true" />
+                  </folding>
+>>>>>>> master
                 </state>
               </provider>
             </entry>
@@ -409,6 +572,7 @@
       </split-second>
     </splitter>
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -421,10 +585,35 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="nickBranch4" />
+=======
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ashley Rae Rocha &lt;contact@ash-arr.net&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="nickBranch3" />
+>>>>>>> master
       </map>
     </option>
   </component>
   <component name="GradleLocalSettings">
+<<<<<<< HEAD
+=======
+    <option name="tasksExpandState">
+      <map>
+        <entry key="" value="true" />
+      </map>
+    </option>
+>>>>>>> master
     <option name="availableProjects">
       <map>
         <entry>
@@ -448,6 +637,7 @@
                 <option name="name" value=":stickyListHeaders" />
                 <option name="path" value="$PROJECT_DIR$/stickyListHeaders" />
               </ExternalProjectPojo>
+<<<<<<< HEAD
             </list>
           </value>
         </entry>
@@ -919,6 +1109,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/uIAppTemplate">
+=======
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$/stickyListHeaders">
+>>>>>>> master
           <value>
             <list>
               <ExternalTaskPojo>
@@ -1797,6 +1997,7 @@
     <option name="y" value="23" />
     <option name="width" value="1135" />
     <option name="height" value="1023" />
+<<<<<<< HEAD
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1820,6 +2021,8 @@
         </expanded-state>
       </profile-state>
     </entry>
+=======
+>>>>>>> master
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2045,6 +2248,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
+<<<<<<< HEAD
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="7109266c" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="124" />
@@ -2054,6 +2258,10 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="uIAppTemplate" />
     <property name="android.project.structure.proportion" value="0.15" />
+=======
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="f9dbdaff" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_17" />
+>>>>>>> master
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -2317,6 +2525,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2336,11 +2545,40 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.4562982" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5457552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17866324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31973538" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24166666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2395,14 +2633,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FirebaseTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1778#1794#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/ProgressWheel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="75" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/ExpandableListViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1618#1629#0" expanded="true" />
+            <element signature="e#5177#5188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="185" column="59" selection-start-line="185" selection-start-column="59" selection-end-line="185" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/ExpandableListViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#1642#1653#0" expanded="true" />
             <element signature="e#4876#4887#0" expanded="true" />
+=======
+            <element signature="e#1618#1629#0" expanded="true" />
+            <element signature="e#5177#5188#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -2612,6 +2910,7 @@
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FavorFormActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="41" />
         </state>
       </provider>
@@ -2621,6 +2920,9 @@
         <state vertical-scroll-proportion="0.23076923">
           <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
           <folding />
+=======
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+>>>>>>> master
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2819,22 +3121,39 @@
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
+=======
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1618#1629#0" expanded="true" />
+            <element signature="e#5177#5188#0" expanded="true" />
+          </folding>
+>>>>>>> master
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/FavorFormFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="86" column="75" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="75" />
+=======
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="75" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ParallaxEffectsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2847,14 +3166,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
+=======
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.043923866">
           <caret line="190" column="18" selection-start-line="190" selection-start-column="18" selection-end-line="190" selection-end-column="18" />
+=======
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/ProgressWheel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22030981">
+          <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
