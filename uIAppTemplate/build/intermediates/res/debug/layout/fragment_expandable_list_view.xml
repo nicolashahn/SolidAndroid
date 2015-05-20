@@ -1,12 +1,37 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment">
+
+
+
+<FrameLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment">
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:id="@+id/frameLayout">
 
     <com.csform.android.uiapptemplate.view.AnimatedExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_add"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton"
+        android:layout_gravity="right|bottom" />
+
+
 </FrameLayout>
-<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml -->
+</RelativeLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml -->
