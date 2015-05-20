@@ -94,9 +94,24 @@ public class FavorFormFragment extends Fragment {
            }
         });
 
+<<<<<<< HEAD
         return mLinearLayout;
     }
 
+=======
+        // populate spinner with categories
+        Spinner spin = (Spinner) mLinearLayout.findViewById(R.id.categorySpinner);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                getActivity(), R.array.categories, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setPrompt("Choose category");
+        spin.setAdapter(adapter);
+
+        return mLinearLayout;
+    }
+
+
+>>>>>>> category dropdown working
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
@@ -164,6 +179,9 @@ public class FavorFormFragment extends Fragment {
         EditText compField = (EditText) getActivity().findViewById(R.id.compField);
         String comp = compField.getText().toString();
 
+        Spinner catSpin = (Spinner) getActivity().findViewById(R.id.categorySpinner);
+        String category = catSpin.getSelectedItem().toString();
+
         ///////////////////////////
         // TODO:
         // checkbox for monetary compensation,
@@ -186,6 +204,7 @@ public class FavorFormFragment extends Fragment {
         // change this later - use appInfo from hw3?
         f1.put("userPosted","batman");
         f1.put("favorId",favorId);
+        f1.put("category",category);
         newFavorRef.setValue(f1);
 
 

@@ -30,7 +30,12 @@
                 android:layout_column="1"
 
                 android:spinnerMode="dropdown"
+<<<<<<< HEAD
                 />
+=======
+                android:background="#CCCCCC"
+                android:padding="10dp" />
+>>>>>>> category dropdown working
         </TableRow>
 
         <TableRow
