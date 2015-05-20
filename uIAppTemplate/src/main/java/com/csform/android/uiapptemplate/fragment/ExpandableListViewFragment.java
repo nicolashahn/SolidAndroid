@@ -2,6 +2,7 @@ package com.csform.android.uiapptemplate.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.csform.android.uiapptemplate.R;
@@ -46,12 +48,16 @@ public class ExpandableListViewFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     private List<GroupItem> items = new ArrayList<>();
 
+	ImageButton FAB;
+
     public static ExpandableListViewFragment newInstance(String arg_url) {
         ExpandableListViewFragment fragment = new ExpandableListViewFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         url = arg_url;
         return fragment;
+
+
     }
 
     public ExpandableListViewFragment() {
@@ -64,6 +70,8 @@ public class ExpandableListViewFragment extends Fragment {
 		ctx = getActivity().getApplicationContext();
         Firebase.setAndroidContext(ctx);
         ref = new Firebase(url);
+
+
     }
 
     @Override
@@ -108,6 +116,31 @@ public class ExpandableListViewFragment extends Fragment {
         View V = inflater.inflate(R.layout.fragment_expandable_list_view, container, false);
         listView = (AnimatedExpandableListView)V.findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+
+
+
+		FAB=(ImageButton) V.findViewById(R.id.imageButton);
+		FAB.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+
+				//Toast.makeText(ExpandableListViewFragment.this, "Hello Worl", Toast.LENGTH_SHORT).show();
+				Fragment newFragment = new FavorFormFragment();
+				FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+				// Replace whatever is in the fragment view with this fragment,
+				// and add the transaction to the back stack
+				transaction.replace(R.id.fragment, newFragment);
+				transaction.addToBackStack(null);
+
+				// Commit the transaction
+				transaction.commit();
+
+			}
+		});
+
+
         // In order to show animations, we need to use a custom click handler
         // for our ExpandableListView.
         listView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
@@ -140,6 +173,7 @@ public class ExpandableListViewFragment extends Fragment {
         } else {
             listView.setIndicatorBoundsRelative(width - px, width);
         }
+
             return V;
         }
 
