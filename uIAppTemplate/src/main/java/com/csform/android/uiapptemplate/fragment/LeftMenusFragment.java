@@ -1,21 +1,21 @@
 package com.csform.android.uiapptemplate.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.csform.android.uiapptemplate.LeftMenusActivity;
-import com.csform.android.uiapptemplate.R;
-import com.csform.android.uiapptemplate.adapter.SubcategoryAdapter;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+
+import com.csform.android.uiapptemplate.LeftMenusActivity;
+import com.csform.android.uiapptemplate.R;
+import com.csform.android.uiapptemplate.adapter.SubcategoryAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LeftMenusFragment extends Fragment implements OnItemClickListener {
 
@@ -32,7 +32,11 @@ public class LeftMenusFragment extends Fragment implements OnItemClickListener {
 		mLeftMenus = new ArrayList<String>();
 		mLeftMenus.add(LeftMenusActivity.LEFT_MENU_OPTION_1);
 		mLeftMenus.add(LeftMenusActivity.LEFT_MENU_OPTION_2);
+
 	}
+
+
+
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

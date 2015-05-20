@@ -1,8 +1,10 @@
 package com.csform.android.uiapptemplate;
 
-import android.content.Intent;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -20,6 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
+import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
+import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
+import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
@@ -31,6 +36,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
 	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
+    private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 	
 	private ListView mDrawerList;
 	private List<DrawerItem> mDrawerItems;
@@ -39,6 +45,8 @@ public class LeftMenusActivity extends ActionBarActivity {
 
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
+
+	private Handler mHandler;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +84,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
 	}
-	
+
 	private void setAdapter() {
 		String option = LEFT_MENU_OPTION_1;
 		Bundle extras = getIntent().getExtras();
@@ -97,21 +105,21 @@ public class LeftMenusActivity extends ActionBarActivity {
 					"dev@csform.com");
 			isFirstType = false;
 		}
-		
+
 		BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems, isFirstType);
-		
+
 		mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
 		mDrawerList.setAdapter(adapter);
 	}
-	
+
 	private View prepareHeaderView(int layoutRes, String url, String email) {
 		View headerView = getLayoutInflater().inflate(layoutRes, mDrawerList, false);
 		ImageView iv = (ImageView) headerView.findViewById(R.id.image);
 		TextView tv = (TextView) headerView.findViewById(R.id.email);
-		
+
 		ImageUtil.displayRoundImage(iv, url, null);
 		tv.setText(email);
-		
+
 		return headerView;
 	}
 
@@ -135,7 +143,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_instagram,
-						R.string.drawer_title_settings,
+						R.string.drawer_title_form,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 	}
 
@@ -179,20 +187,42 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerList.setItemChecked(position, true);
 		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
+		if (position == 1) {
+			Fragment newFragment = ParallaxEffectsFragment.newInstance();
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+			transaction.commit();
+		}
 		if (position == 2) {
-            String value = "key";
-            Intent myIntent = new Intent(LeftMenusActivity.this, ExpandableListViewActivity.class);
-            myIntent.putExtra("key", value); //Optional parameters
-            LeftMenusActivity.this.startActivity(myIntent);
+			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "requests");
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+			transaction.commit();
+		}
+		if (position == 3) {
+			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "offers");
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+			transaction.commit();
 		}
         if(position == 4) {
-            String value = "key";
-            Intent myIntent = new Intent(LeftMenusActivity.this, FavorFormActivity.class);
-            myIntent.putExtra("key", value); //Optional parameters
-            LeftMenusActivity.this.startActivity(myIntent);
-        }
-        //nick was here
+			// Create new fragment and transaction
+			Fragment newFragment = new FavorFormFragment();
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
+			// Replace whatever is in the fragment view with this fragment,
+			// and add the transaction to the back stack
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+
+			// Commit the transaction
+			transaction.commit();
+        }
+
+        //nick was here
 	}
 	
 	@Override
