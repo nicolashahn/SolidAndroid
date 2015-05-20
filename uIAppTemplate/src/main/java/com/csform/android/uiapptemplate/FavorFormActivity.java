@@ -1,5 +1,6 @@
 package com.csform.android.uiapptemplate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -9,7 +10,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
 
+import com.csform.android.uiapptemplate.view.MapActivity;
 import com.firebase.client.Firebase;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -22,6 +25,9 @@ public class FavorFormActivity extends ActionBarActivity {
     public String LOG_TAG = "FavorFormActivity";
 
     public String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
+    Bundle bundle = getIntent().getParcelableExtra("bundle");
+    LatLng user_position = bundle.getParcelable("user_position");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +58,10 @@ public class FavorFormActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    public void mapClick(View v){
+        Intent intent = new Intent(FavorFormActivity.this, MapActivity.class);
+        startActivity(intent);
+    }
     public void clickButton(View v){
         // get server reference, then requests database, then build new request
         Firebase ref = new Firebase(FIREBASE_URL);

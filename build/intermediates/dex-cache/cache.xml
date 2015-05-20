@@ -2,116 +2,249 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\listviewanimations_lib-manipulation_3.1.0.jar"
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-manipulation_3.1.0-646cec26b9cfa410fdf47728f875cde0d36c1052.jar" />
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-42bf775b37197cce0fa7ae37909787619a2d366c.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jar="/Users/Eitan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2-2a4f16fd4df34fe0269ccf4a2726b4e36e919c73.jar" />
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-3319935f5fc01b45bc9342fdc7ae1e4b8c923e83.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.2.3\682d0a8dce58e47bde57316aac7d6bb5618dee6b\firebase-client-android-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="682d0a8dce58e47bde57316aac7d6bb5618dee6b">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\firebase-client-android-2.2.3-23ddbdf29b4ce32465a78e2e08fc4c5d630139dd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-05fcb18586cf85fc49a2ac517bb418a7a3f47760.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-14262b5edd1aa672d5fc9c601cbc2cb000aef593.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\listviewanimations_lib-core-slh_3.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a4fe703aabd23e8c287c90396514418119109dd1">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-core-slh_3.1.0-be480cf78c0826aab19f7c352cc837fa36ce89be.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-461275fbebe6afc4412416eddd13b7f3f2c70439.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.11\d37cb67277928cf59344b4196af8d9cee1f1a27c\tubesock-0.0.11.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\tubesock-0.0.11-b1912014adc0515507915dca4e844e7afa4d85e7.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-aab931e8d35e11ea1044bb19e23a90c56870dfe4.jar" />
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-8c54dbfad8df75c4bbc9ebe23aaab9ef4c8cde99.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\nineoldandroids-2.4.0.jar"
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-fd1f9aa9d7ba82bef5d5db45ecc4cc748d4145db.jar" />
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-455c816cc0cf2fd2d423e2c5d3804eda1a42c3a2.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\listviewanimations_lib-core_3.1.0.jar"
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-eb85e3f4135f14fc9af4b65f808633ec7a1c9e82.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-13c14ee04167ef8d5941a822e3346cc25cf99792.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/libs/listviewanimations_lib-core_3.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="f3f9629b068554d8513a2aaf34418171bf430851">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-core_3.1.0-1ffa1df8cb7263a451ccb75bbeb00c774ff717e6.jar" />
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-core_3.1.0-cc8ae7ea40bdd8f2c869a66015214df84c78f784.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.2.3\e787a02a644f2681e4af82cdc88dd2f69877692b\firebase-client-jvm-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e787a02a644f2681e4af82cdc88dd2f69877692b">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\firebase-client-jvm-2.2.3-0a05dc2864c3e65c78c9d5b059784c3effba68d8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-core-2.2.2-5994638a733cae2dd101810a624f51280fe15bde.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\universal-image-loader-1.9.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-b3ea6d73015e75c3d6c344b82450b765eb2960b6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\solid\stickyListHeaders\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b02857df47cd01db6f68418ad964d98180a65e2">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-38baa86fc7110e51e0a6dc7a5cc482b076dfaa52.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jar="/Users/Eitan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2-ef6c2634f3b04227db966491b052df04b0f1921a.jar" />
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-10d56574efcfa6ff6afcc3bd99c27b165872c6c6.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-7dc12be6db948a76047ff274263ceb0860d0b867.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-b6519b28ed704520b3bd49643abc549a30dc81ef.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-869c5596a035a67be01c29176da11194b6fcac68.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.2.3/682d0a8dce58e47bde57316aac7d6bb5618dee6b/firebase-client-android-2.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="682d0a8dce58e47bde57316aac7d6bb5618dee6b">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/firebase-client-android-2.2.3-cab6022a61c30ca696a42970db84beaf1cd0648f.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-3d1d8fc5b1359be2bd3b2069624d6294b98bdd0a.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-80e451733f60238427747dabe36afdcdb706cb7c.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-56627ec92887abb9bd156873c48d41ede7ecfec6.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-3bbef6d642e4478a7e23f9bbcbd2e0586381eb22.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-43a27c92b83c2ce5e92e853b3f5225c5bdc48f16.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-e8ac4d719a341633b00020007263bfe498bfaa80.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/libs/listviewanimations_lib-core-slh_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a4fe703aabd23e8c287c90396514418119109dd1">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-core-slh_3.1.0-d9a6428a3afb7fdd3d3d089242312bc724265ef7.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-12766e3372a05d8a0209690f6170a98163f40889.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-5b9f1b603630b584c02ba08ef4937768b530c0f0.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/tubesock-0.0.11-89b4bbd37ec436b2cdea2bc1af47f925325d2bc3.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-2e40056943b5649c67ce2acd749f4d5cec6aed1f.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-01c8eb6450a87a4fbba6f1dc25004380dcb8dd2a.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-bb36a551582271907ec14f5e7e548c2cc035fece.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-f1bd292f568eea447f3020d7985fc14c5ad6f071.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-e5250da4b6fba5d1fb08be3dc67353093f0a25d9.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.2.3/e787a02a644f2681e4af82cdc88dd2f69877692b/firebase-client-jvm-2.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e787a02a644f2681e4af82cdc88dd2f69877692b">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.2.3-99dba089f901cb66a213acad2f4cf33feb370dd7.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-20b08efc3b25e04cee434d6e73bfe9832377cbaf.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-8424f5affdebe075021bcce7f1abdff7272e5b22.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/Solid/stickyListHeaders/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="125790a4e7d18df0f5b0c09d813ed9a781eb5e66">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-d8419707f0351d352c058b63d9ccbb5d463c4abf.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-1f109f55e3a516aeff455ff8edf726f54f8a9bf0.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-5dd56dc684d35d1d4d3d617a6462dbaeff5bb33d.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/libs/listviewanimations_lib-manipulation_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-manipulation_3.1.0-16580040d5657e0533bf686dceb142596888035e.jar" />
+    </item>
+    <item
+        jar="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="/Users/Eitan/Desktop/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-2936efc395f954c44d1974e8d9f2abdb28932bcf.jar" />
     </item>
 
 </items>
