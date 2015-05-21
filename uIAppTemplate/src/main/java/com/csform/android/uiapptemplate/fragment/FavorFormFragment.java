@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Spinner;
 import android.widget.Switch;
 
 import com.csform.android.uiapptemplate.Clock;
@@ -94,11 +96,7 @@ public class FavorFormFragment extends Fragment {
            }
         });
 
-<<<<<<< HEAD
-        return mLinearLayout;
-    }
 
-=======
         // populate spinner with categories
         Spinner spin = (Spinner) mLinearLayout.findViewById(R.id.categorySpinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(
@@ -111,7 +109,7 @@ public class FavorFormFragment extends Fragment {
     }
 
 
->>>>>>> category dropdown working
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
