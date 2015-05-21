@@ -115,4 +115,14 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="categories">
+        <item>Transportation</item>
+        <item>Food</item>
+        <item>Education</item>
+        <item>Services</item>
+        <item>Home maintenance</item>
+        <item>Everything else</item>
+    </string-array>
+    <string name="categoryPrompt">Choose Category</string>
+
 </resources>
