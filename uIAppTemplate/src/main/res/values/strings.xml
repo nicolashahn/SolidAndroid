@@ -53,6 +53,7 @@
 
     <!--updated drawer names-->
     <string name="drawer_title_home">Home</string>
+    <string name="drawer_title_profile">Profile</string>
     <string name="drawer_title_requests">Requests</string>
     <string name="drawer_title_offers">Offers</string>
     <string name="drawer_title_settings">Settings</string>

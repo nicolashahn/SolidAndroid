@@ -25,6 +25,7 @@ import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
 import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
 import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
 import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
+import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
@@ -145,6 +146,11 @@ public class LeftMenusActivity extends ActionBarActivity {
 						R.string.drawer_icon_instagram,
 						R.string.drawer_title_form,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
+		mDrawerItems.add(
+				new DrawerItem(
+						R.string.drawer_icon_instagram,
+						R.string.drawer_title_profile,
+						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 	}
 
 	@Override
@@ -221,6 +227,19 @@ public class LeftMenusActivity extends ActionBarActivity {
 			// Commit the transaction
 			transaction.commit();
         }
+		if(position == 5) {
+			// Create new fragment and transaction
+			Fragment newFragment = new UserProfileFragment();
+			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+			// Replace whatever is in the fragment view with this fragment,
+			// and add the transaction to the back stack
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+
+			// Commit the transaction
+			transaction.commit();
+		}
 
         //nick was here
 	}

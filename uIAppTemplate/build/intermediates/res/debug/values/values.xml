@@ -569,6 +569,7 @@
     <string name="drawer_title_login_page">Login Pages</string>
     <string name="drawer_title_offers">Offers</string>
     <string name="drawer_title_parallax">Parallax</string>
+    <string name="drawer_title_profile">Profile</string>
     <string name="drawer_title_progress_bars">Progress Bars</string>
     <string name="drawer_title_requests">Requests</string>
     <string name="drawer_title_search_bars">Search Bars</string>
