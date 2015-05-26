@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.Spinner;
 import android.widget.Switch;
 
 import com.csform.android.uiapptemplate.Clock;
@@ -94,8 +96,19 @@ public class FavorFormFragment extends Fragment {
            }
         });
 
+
+        // populate spinner with categories
+        Spinner spin = (Spinner) mLinearLayout.findViewById(R.id.categorySpinner);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                getActivity(), R.array.categories, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setPrompt("Choose category");
+        spin.setAdapter(adapter);
+
         return mLinearLayout;
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -164,6 +177,9 @@ public class FavorFormFragment extends Fragment {
         EditText compField = (EditText) getActivity().findViewById(R.id.compField);
         String comp = compField.getText().toString();
 
+        Spinner catSpin = (Spinner) getActivity().findViewById(R.id.categorySpinner);
+        String category = catSpin.getSelectedItem().toString();
+
         ///////////////////////////
         // TODO:
         // checkbox for monetary compensation,
@@ -186,6 +202,7 @@ public class FavorFormFragment extends Fragment {
         // change this later - use appInfo from hw3?
         f1.put("userPosted","batman");
         f1.put("favorId",favorId);
+        f1.put("category",category);
         newFavorRef.setValue(f1);
 
 

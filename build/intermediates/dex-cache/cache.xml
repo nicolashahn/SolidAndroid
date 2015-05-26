@@ -2,116 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-b8fc31d5e94eeaaca47280ba51b9bfe5f5bb0259.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2-1874315e1343c1b0d214581f7156add9c69d9cf6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\libs\universal-image-loader-1.9.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-d3b72ddffdea419e91b33778bc1969d74cd04728.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.2.3\e787a02a644f2681e4af82cdc88dd2f69877692b\firebase-client-jvm-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e787a02a644f2681e4af82cdc88dd2f69877692b">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\firebase-client-jvm-2.2.3-b7f549b4fea7590d35e5ef8c4f39f513fc6ca9d8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\libs\listviewanimations_lib-core-slh_3.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a4fe703aabd23e8c287c90396514418119109dd1">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-core-slh_3.1.0-8694617047ba2386f02bb652fe062f80c7887478.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2-4ea6ccb5434c861f6a26b4ca4f19ed798f016cec.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\libs\listviewanimations_lib-manipulation_3.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-manipulation_3.1.0-1f4f6f4558493722e6bbbf8c9d8c555e4532d61a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-f0c9fc5ec833eba35f86bcc5efcd9452e820aca5.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\libs\nineoldandroids-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-2be2602913da0713a29b72ca7379686827632e0a.jar" />
-    </item>
-    <item
         jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\exploded-aar\Solid\stickyListHeaders\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="c3bd8f27cc185e55cae34f2d816f224b8899a901">
+        sha1="9c5d2e523e440dbeddb445cd674b8bcb19e4e80e">
         <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-935148ae92316f414a36c0f49c7456f32b361077.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-03d9ba39dc441049c647b2d7f4d983c395c611e0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\libs\listviewanimations_lib-core_3.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f3f9629b068554d8513a2aaf34418171bf430851">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-core_3.1.0-fd983d41869d669534a0fb2ee779c65c435583fa.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-58f0c9306f2e98da7520ad55453a8f778c5aa257.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.11\d37cb67277928cf59344b4196af8d9cee1f1a27c\tubesock-0.0.11.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\tubesock-0.0.11-07113570b9dace63782eb4bef3aab22f8559f1b6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-core-2.2.2-5b737b0f9f9aa1b79843cd4147ebcb72675082e4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.2.3\682d0a8dce58e47bde57316aac7d6bb5618dee6b\firebase-client-android-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="682d0a8dce58e47bde57316aac7d6bb5618dee6b">
-        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\firebase-client-android-2.2.3-891b595929a2544b5a58657c5a0c6563aaeb8bc4.jar" />
     </item>
 
 </items>

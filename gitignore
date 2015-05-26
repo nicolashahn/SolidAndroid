@@ -17,6 +17,9 @@ gen/
  
 # Signing files
 .signing/
+
+# Java class files
+*.class
  
 # User-specific configurations
 .idea/libraries/

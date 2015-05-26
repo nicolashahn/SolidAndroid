@@ -105,7 +105,7 @@ public class ProgressWheel extends View {
 		// convenient way to get most of this complexity handled.
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-		// We can’t use getWidth() or getHeight() here. During the measuring
+		// We cant use getWidth() or getHeight() here. During the measuring
 		// pass the view has not gotten its final size yet (this happens first
 		// at the start of the layout pass) so we have to use getMeasuredWidth()
 		// and getMeasuredHeight().
@@ -133,10 +133,10 @@ public class ProgressWheel extends View {
 		}
 
 		// If you override onMeasure() you have to call setMeasuredDimension().
-		// This is how you report back the measured size. If you don’t call
+		// This is how you report back the measured size. If you dont call
 		// setMeasuredDimension() the parent will throw an exception and your
 		// application will crash.
-		// We are calling the onMeasure() method of the superclass so we don’t
+		// We are calling the onMeasure() method of the superclass so we dont
 		// actually need to call setMeasuredDimension() since that takes care
 		// of that. However, the purpose with overriding onMeasure() was to
 		// change the default behaviour and to do that we need to call
