@@ -1,7 +1,7 @@
 package com.csform.android.uiapptemplate;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
@@ -320,7 +320,7 @@ public class MainActivity extends ActionBarActivity {
 		
 		@Override
 		public void run() {
-			FragmentManager fragmentManager = getFragmentManager();
+			FragmentManager fragmentManager = getSupportFragmentManager();
 			fragmentManager.beginTransaction()
 					.replace(R.id.content_frame, fragment)
 					.commit();

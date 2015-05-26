@@ -604,6 +604,10 @@
     <string name="raised">RAISED</string>
     <string name="register">REGISTER</string>
     <string name="skip">SKIP</string>
+    <string name="tab_messages">Messages</string>
+    <string name="tab_notifications">Notifications</string>
+    <string name="tab_photos">Photos</string>
+    <string name="tab_stream">Stream</string>
     <string name="thicker_and_darker_version">Thicker and darker version of Material design</string>
     <string name="thiner_and_lighter_version">Thiner and lighter version of Material design</string>
     <string name="title_activity_favor_form">FavorFormActivity</string>

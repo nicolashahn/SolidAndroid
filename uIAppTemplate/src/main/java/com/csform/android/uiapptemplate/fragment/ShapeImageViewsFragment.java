@@ -3,7 +3,7 @@ package com.csform.android.uiapptemplate.fragment;
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

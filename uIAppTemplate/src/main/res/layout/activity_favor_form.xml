@@ -31,8 +31,7 @@
                 android:id="@+id/categorySpinner"
                 android:layout_column="1"
 
-                android:spinnerMode="dropdown"
-                android:prompt="Choose Category" />
+                android:spinnerMode="dropdown" />
         </TableRow>
 
         <TableRow

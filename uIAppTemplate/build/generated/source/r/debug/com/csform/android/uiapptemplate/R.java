@@ -2312,8 +2312,8 @@ containing a value of this type.
         public static final int splash_screen_background=0x7f02005b;
     }
     public static final class id {
-        public static final int FloatLabeledEditTextEditText=0x7f0a00df;
-        public static final int FloatLabeledEditTextHint=0x7f0a00de;
+        public static final int FloatLabeledEditTextEditText=0x7f0a00e0;
+        public static final int FloatLabeledEditTextHint=0x7f0a00df;
         public static final int a=0x7f0a00c2;
         public static final int actionDone=0x7f0a0046;
         public static final int actionGo=0x7f0a0047;
@@ -2336,7 +2336,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a007f;
         public static final int action_mode_bar_stub=0x7f0a007e;
         public static final int action_mode_close_button=0x7f0a0071;
-        public static final int action_settings=0x7f0a00e0;
+        public static final int action_settings=0x7f0a00e1;
         public static final int activity_chooser_view_content=0x7f0a0072;
         public static final int activity_stickylistheaders_listview=0x7f0a00ae;
         public static final int always=0x7f0a0057;
@@ -2409,8 +2409,9 @@ containing a value of this type.
         public static final int ifRoom=0x7f0a0059;
         public static final int image=0x7f0a0074;
         public static final int imageButton=0x7f0a00b0;
-        public static final int item_subtitle=0x7f0a00db;
-        public static final int item_title=0x7f0a00dc;
+        public static final int item_divider_color=0x7f0a00dd;
+        public static final int item_indicator_color=0x7f0a00dc;
+        public static final int item_title=0x7f0a00db;
         public static final int ken_burns_images=0x7f0a00ac;
         public static final int layout_top_bottom_1=0x7f0a00ce;
         public static final int layout_top_bottom_2=0x7f0a00d3;
@@ -2528,7 +2529,7 @@ containing a value of this type.
         public static final int time=0x7f0a0045;
         public static final int title=0x7f0a0078;
         public static final int titleField=0x7f0a0094;
-        public static final int toolbar=0x7f0a00dd;
+        public static final int toolbar=0x7f0a00de;
         public static final int top=0x7f0a0026;
         public static final int undo_button=0x7f0a00d7;
         public static final int up=0x7f0a0008;
@@ -2734,17 +2735,21 @@ containing a value of this type.
         public static final int raised=0x7f0c0056;
         public static final int register=0x7f0c0057;
         public static final int skip=0x7f0c0058;
-        public static final int thicker_and_darker_version=0x7f0c0059;
-        public static final int thiner_and_lighter_version=0x7f0c005a;
-        public static final int title_activity_favor_form=0x7f0c005b;
-        public static final int title_activity_firebase_test=0x7f0c005c;
-        public static final int typography1=0x7f0c005d;
-        public static final int typography2=0x7f0c005e;
-        public static final int typography3=0x7f0c005f;
-        public static final int undo_deletion=0x7f0c0060;
-        public static final int url=0x7f0c0061;
-        public static final int username=0x7f0c0062;
-        public static final int welcome=0x7f0c0063;
+        public static final int tab_messages=0x7f0c0059;
+        public static final int tab_notifications=0x7f0c005a;
+        public static final int tab_photos=0x7f0c005b;
+        public static final int tab_stream=0x7f0c005c;
+        public static final int thicker_and_darker_version=0x7f0c005d;
+        public static final int thiner_and_lighter_version=0x7f0c005e;
+        public static final int title_activity_favor_form=0x7f0c005f;
+        public static final int title_activity_firebase_test=0x7f0c0060;
+        public static final int typography1=0x7f0c0061;
+        public static final int typography2=0x7f0c0062;
+        public static final int typography3=0x7f0c0063;
+        public static final int undo_deletion=0x7f0c0064;
+        public static final int url=0x7f0c0065;
+        public static final int username=0x7f0c0066;
+        public static final int welcome=0x7f0c0067;
     }
     public static final class style {
         public static final int ActionBarOverlay_Transparent=0x7f0d0000;
