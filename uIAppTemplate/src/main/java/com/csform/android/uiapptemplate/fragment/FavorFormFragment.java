@@ -21,6 +21,10 @@ import com.firebase.client.Firebase;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -104,11 +108,23 @@ public class FavorFormFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setPrompt("Choose category");
         spin.setAdapter(adapter);
+        // auto fill the completed by date to be tomorrow
+        autofillDate(mLinearLayout);
 
         return mLinearLayout;
     }
 
-
+    public void autofillDate(FrameLayout mLinearLayout){
+        EditText df = (EditText) mLinearLayout.findViewById(R.id.dateField);
+        // get tomorrow's date
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_YEAR, 1);
+        Date tomorrow = calendar.getTime();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String tomorrowAsString = dateFormat.format(tomorrow);
+        df.setText(tomorrowAsString);
+//        Log.i(LOG_TAG, "in autofillDate()");
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

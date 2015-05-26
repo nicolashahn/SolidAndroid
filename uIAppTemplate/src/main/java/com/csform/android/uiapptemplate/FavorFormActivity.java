@@ -28,8 +28,16 @@ public class FavorFormActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_favor_form);
+        // auto fill the completed by date with tomorrow's date
+        autofillDate();
     }
 
+    public void autofillDate(){
+        EditText df = (EditText) findViewById(R.id.dateField);
+        String ts = Clock.getTimeStamp();
+        df.setText(ts);
+        Log.i(LOG_TAG, "in autofillDate()");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

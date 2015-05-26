@@ -16,7 +16,7 @@ public class Clock {
     public static String getNow() {
         Time now = new Time();
         now.setToNow();
-        String sTime = now.format("%Y_%m_%d %T");
+        String sTime = now.format("%Y/%m/%d %T");
         return sTime;
     }
     /**
