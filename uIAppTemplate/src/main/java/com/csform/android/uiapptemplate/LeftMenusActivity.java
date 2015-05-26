@@ -1,10 +1,10 @@
 package com.csform.android.uiapptemplate;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -195,21 +195,21 @@ public class LeftMenusActivity extends ActionBarActivity {
 		mDrawerLayout.closeDrawer(mDrawerList);
 		if (position == 1) {
 			Fragment newFragment = ParallaxEffectsFragment.newInstance();
-			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
 		}
 		if (position == 2) {
 			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "requests");
-			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
 		}
 		if (position == 3) {
 			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "offers");
-			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
@@ -217,7 +217,7 @@ public class LeftMenusActivity extends ActionBarActivity {
         if(position == 4) {
 			// Create new fragment and transaction
 			Fragment newFragment = new FavorFormFragment();
-			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
 			// Replace whatever is in the fragment view with this fragment,
 			// and add the transaction to the back stack
@@ -230,7 +230,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 		if(position == 5) {
 			// Create new fragment and transaction
 			Fragment newFragment = new UserProfileFragment();
-			FragmentTransaction transaction = getFragmentManager().beginTransaction();
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
 			// Replace whatever is in the fragment view with this fragment,
 			// and add the transaction to the back stack

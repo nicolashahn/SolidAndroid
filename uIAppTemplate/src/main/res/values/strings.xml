@@ -126,4 +126,9 @@
     </string-array>
     <string name="categoryPrompt">Choose Category</string>
 
+    <string name="tab_stream">Stream</string>
+    <string name="tab_messages">Messages</string>
+    <string name="tab_notifications">Notifications</string>
+    <string name="tab_photos">Photos</string>
+
 </resources>
