@@ -37,4 +37,4 @@
         android:text="@string/welcome"
         android:textColor="@color/main_color_500" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/activity_splash_screen.xml -->
+</RelativeLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_splash_screen.xml -->
