@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         jar="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/libs/universal-image-loader-1.9.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -112,6 +113,13 @@
         revision="21.1.2"
         sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
         <dex dex="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-f27c773e974f9cd08a01c0654ad50964826acf6f.jar" />
+=======
+        jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\exploded-aar\Solid\stickyListHeaders\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9c5d2e523e440dbeddb445cd674b8bcb19e4e80e">
+        <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-935148ae92316f414a36c0f49c7456f32b361077.jar" />
+>>>>>>> 6ed08cc25c92f394b95ba61fe2722ce255269dae
     </item>
 
 </items>
