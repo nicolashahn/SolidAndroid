@@ -27,14 +27,15 @@ public class RegistrationPageActivity extends ActionBarActivity {
 
         final TextView emailview = (TextView)findViewById(R.id.emailid);
         final TextView passview = (TextView)findViewById(R.id.pwid);
-
+        final TextView numview = (TextView)findViewById(R.id.phoneNumber);
         Button submitbut = (Button)findViewById(R.id.submitbutton);
         submitbut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
                 String emailuser = emailview.getText().toString();
                 String pwidpass = passview.getText().toString();
-
+                String phoneNumber=numview.getText().toString();
+                int phoneLen=phoneNumber.length();
                 if(emailuser.matches("") || pwidpass.matches("")){
                     Context context = getApplicationContext();
                     CharSequence text = "You cannot leave one or both fields blank!";
@@ -42,42 +43,51 @@ public class RegistrationPageActivity extends ActionBarActivity {
 
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
-                }else {
+                }else if(phoneLen!=10) {
+                    Context context = getApplicationContext();
+                    CharSequence text = "Phone number must be 10 digits";
+                    int duration = Toast.LENGTH_SHORT;
 
-                    Firebase ref = new Firebase("https://solidtest01.firebaseio.com");
-                    ref.createUser(pwidpass, emailuser, new Firebase.ValueResultHandler<Map<String, Object>>() {
-                        @Override
-                        public void onSuccess(Map<String, Object> result) {
-                           // System.out.println("Successfully created user account with uid: " + result.get("uid"));
-                            Context context = getApplicationContext();
-                            CharSequence text = "Successful!";
-                            int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
 
-                            Toast toast = Toast.makeText(context, text, duration);
-                            toast.show();
+                }else{
+
+                        Firebase ref = new Firebase("https://solidtest01.firebaseio.com");
+                        ref.createUser(pwidpass, emailuser, new Firebase.ValueResultHandler<Map<String, Object>>() {
+                            @Override
+                            public void onSuccess(Map<String, Object> result) {
+                                // System.out.println("Successfully created user account with uid: " + result.get("uid"));
+                                Context context = getApplicationContext();
+                                CharSequence text = "Successful!";
+                                int duration = Toast.LENGTH_SHORT;
+
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
 
 //                            String unique_user_id = result.get("uid").toString();
-                            Intent myIntent = new Intent(RegistrationPageActivity.this, LogInPageActivity.class);
-                            //myIntent.putExtra("key", unique_user_id); //Optional parameters
-                            RegistrationPageActivity.this.startActivity(myIntent);
-                        }
-                        @Override
-                        public void onError(FirebaseError firebaseError) {
-                            // there was an error
-                            Context context = getApplicationContext();
-                            CharSequence text = "Error!";
-                            int duration = Toast.LENGTH_SHORT;
+                                Intent myIntent = new Intent(RegistrationPageActivity.this, LogInPageActivity.class);
+                                //myIntent.putExtra("key", unique_user_id); //Optional parameters
+                                RegistrationPageActivity.this.startActivity(myIntent);
+                            }
+                            @Override
+                            public void onError(FirebaseError firebaseError) {
+                                // there was an error
+                                Context context = getApplicationContext();
+                                CharSequence text = "Error!";
+                                int duration = Toast.LENGTH_SHORT;
 
-                            Toast toast = Toast.makeText(context, text, duration);
-                            toast.show();
-                        }
-                    });
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
+                            }
+                        });
 
+                    }
                 }
 
 
-            }
-        });
+            });
+
 
 
     }
