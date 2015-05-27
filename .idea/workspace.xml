@@ -53,7 +53,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="activity_favor_info.xml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="activity_favor_info.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/activity_favor_info.xml">
               <provider editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
@@ -68,6 +68,18 @@
               </provider>
               <provider selected="true" editor-type-id="android-designer">
                 <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UserInfo.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/UserInfo.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.20431328">
+                  <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
               </provider>
             </entry>
           </file>
@@ -111,6 +123,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1474,6 +1493,7 @@
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_favor_spec.xml" />
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/view/FavorInfoActivity.java" />
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/activity_favor_info.xml" />
+        <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/UserInfo.java" />
       </list>
     </option>
   </component>
@@ -2118,6 +2138,16 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20431328">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
