@@ -130,5 +130,6 @@
     <string name="tab_messages">Messages</string>
     <string name="tab_notifications">Notifications</string>
     <string name="tab_photos">Photos</string>
+    <string name="title_activity_favor_info">FavorInfoActivity</string>
 
 </resources>

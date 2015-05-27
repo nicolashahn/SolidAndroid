@@ -49,7 +49,7 @@ public class FavorFormFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
 
-    public String LOG_TAG = "FavorFormActivity";
+    public String LOG_TAG = "FavorFormFragment";
 
     public String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 

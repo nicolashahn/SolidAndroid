@@ -21,7 +21,8 @@
                 android:checked="false"
                 android:textOff="Request"
                 android:textOn="Offer"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:layout_marginRight="10dp" />
 
             <Spinner
                 android:layout_width="wrap_content"
