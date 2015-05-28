@@ -61,7 +61,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 
         Intent intent = getIntent();
         AUTH_USER_ID = intent.getStringExtra("key");
-        Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
