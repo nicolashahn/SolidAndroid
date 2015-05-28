@@ -126,10 +126,10 @@
     </string-array>
     <string name="categoryPrompt">Choose Category</string>
 
-    <string name="tab_stream">Stream</string>
-    <string name="tab_messages">Messages</string>
+    <string name="history">History</string>
+    <string name="offers">Offers</string>
     <string name="tab_notifications">Notifications</string>
-    <string name="tab_photos">Photos</string>
+    <string name="requests">Requests</string>
     <string name="title_activity_registration_page">RegistrationPageActivity</string>
 
 </resources>
