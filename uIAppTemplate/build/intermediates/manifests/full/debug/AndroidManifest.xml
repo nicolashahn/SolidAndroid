@@ -62,6 +62,10 @@
             android:name="com.csform.android.uiapptemplate.FavorFormActivity"
             android:label="@string/title_activity_favor_form" >
         </activity>
+        <activity
+            android:name="com.csform.android.uiapptemplate.view.FavorInfoActivity"
+            android:label="@string/title_activity_favor_info" >
+        </activity>
     </application>
 
 </manifest>

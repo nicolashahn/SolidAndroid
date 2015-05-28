@@ -84,6 +84,7 @@ public class ExpandableListViewFragment extends Fragment {
 			public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
 				if (snapshot.getValue() == null) return;
 				Map<?, ?> newPost = (Map<?, ?>) snapshot.getValue();
+				String id = snapshot.getKey() + "";
 				GroupItem item = new GroupItem();
 				ChildItem child = new ChildItem();
 				item.title = newPost.get("title") + "";

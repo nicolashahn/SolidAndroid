@@ -611,6 +611,7 @@
     <string name="thicker_and_darker_version">Thicker and darker version of Material design</string>
     <string name="thiner_and_lighter_version">Thiner and lighter version of Material design</string>
     <string name="title_activity_favor_form">FavorFormActivity</string>
+    <string name="title_activity_favor_info">FavorInfoActivity</string>
     <string name="title_activity_firebase_test">FirebaseTestActivity</string>
     <string name="typography1">Typography I</string>
     <string name="typography2">Typography II</string>
