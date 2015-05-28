@@ -28,6 +28,8 @@ public class RegistrationPageActivity extends ActionBarActivity {
         final TextView emailview = (TextView)findViewById(R.id.emailid);
         final TextView passview = (TextView)findViewById(R.id.pwid);
         final TextView numview = (TextView)findViewById(R.id.phoneNumber);
+        final TextView nameview= (TextView)findViewById(R.id.fullname);
+
         Button submitbut = (Button)findViewById(R.id.submitbutton);
         submitbut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -35,10 +37,13 @@ public class RegistrationPageActivity extends ActionBarActivity {
                 String emailuser = emailview.getText().toString();
                 String pwidpass = passview.getText().toString();
                 String phoneNumber=numview.getText().toString();
+                String fullName=nameview.getText().toString();
+
                 int phoneLen=phoneNumber.length();
-                if(emailuser.matches("") || pwidpass.matches("")){
+
+                if(emailuser.matches("") || pwidpass.matches("") || fullName.matches("")){
                     Context context = getApplicationContext();
-                    CharSequence text = "You cannot leave one or both fields blank!";
+                    CharSequence text = "You cannot leave a field blank!";
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, text, duration);

@@ -48,4 +48,16 @@
         android:layout_alignRight="@+id/pwid"
         android:layout_alignEnd="@+id/pwid"
         android:hint="phone number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fullname"
+        android:layout_alignBottom="@+id/emailid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="36dp"
+        android:layout_alignRight="@+id/emailid"
+        android:layout_alignEnd="@+id/emailid"
+        android:hint="full name" />
 </RelativeLayout>
