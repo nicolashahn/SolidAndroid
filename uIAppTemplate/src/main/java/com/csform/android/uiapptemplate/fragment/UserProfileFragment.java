@@ -114,28 +114,28 @@ public class UserProfileFragment extends Fragment {
          * color, which are used by {@link SlidingTabLayout}.
          */
         mTabs.add(new SamplePagerItem(
-                getString(R.string.tab_stream), // Title
+                getString(R.string.history), // Title
                 Color.BLUE, // Indicator color
                 Color.GRAY // Divider color
         ));
 
         mTabs.add(new SamplePagerItem(
-                getString(R.string.tab_messages), // Title
+                getString(R.string.offers), // Title
                 Color.RED, // Indicator color
                 Color.GRAY // Divider color
         ));
 
         mTabs.add(new SamplePagerItem(
-                getString(R.string.tab_photos), // Title
+                getString(R.string.requests), // Title
                 Color.YELLOW, // Indicator color
                 Color.GRAY // Divider color
         ));
 
-        mTabs.add(new SamplePagerItem(
+        /*mTabs.add(new SamplePagerItem(
                 getString(R.string.tab_notifications), // Title
                 Color.GREEN, // Indicator color
                 Color.GRAY // Divider color
-        ));
+        ));*/
         // END_INCLUDE (populate_tabs)
     }
 
