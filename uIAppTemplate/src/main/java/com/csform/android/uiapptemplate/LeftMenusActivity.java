@@ -1,10 +1,9 @@
 package com.csform.android.uiapptemplate;
 
-import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -42,7 +41,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
 	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
     private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
-	
+	private static String AUTH_USER_ID = "default_id";
 	private ListView mDrawerList;
 	private List<DrawerItem> mDrawerItems;
 	private DrawerLayout mDrawerLayout;
@@ -59,6 +58,11 @@ public class LeftMenusActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        AUTH_USER_ID = intent.getStringExtra("key");
+        Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_SHORT).show();
+
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -88,10 +92,10 @@ public class LeftMenusActivity extends ActionBarActivity {
 		if (savedInstanceState == null) {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
-
+/*
         LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,locationListener);*/
 
     }
     LocationListener locationListener = new LocationListener(){
