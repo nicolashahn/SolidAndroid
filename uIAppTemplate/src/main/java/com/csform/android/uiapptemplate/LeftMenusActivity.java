@@ -1,6 +1,10 @@
 package com.csform.android.uiapptemplate;
 
+import android.content.Context;
 import android.content.res.Configuration;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -84,7 +88,52 @@ public class LeftMenusActivity extends ActionBarActivity {
 		if (savedInstanceState == null) {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
-	}
+
+        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,locationListener);
+
+    }
+    LocationListener locationListener = new LocationListener(){
+        @Override
+        public void onLocationChanged(Location location){
+            //do something with location received
+            displayLocation(location);
+        }
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras){}
+
+        @Override
+        public void onProviderEnabled(String provider){}
+
+        @Override
+        public void onProviderDisabled(String provider){}
+
+
+
+    };
+    double _lat = 0.0;
+    double _long = 0.0;
+    double _acc = 0.0;
+    boolean locationgiven = false;
+    private void displayLocation(Location location){
+        if(location == null){
+            locationgiven = false;
+        }else{
+            locationgiven = true;
+
+            _lat = location.getLatitude();
+
+
+            _long = location.getLongitude();
+
+            _acc = location.getAccuracy();
+
+            //can choose to color the accuracy here, but naaah
+
+        }
+    }
+
 
 	private void setAdapter() {
 		String option = LEFT_MENU_OPTION_1;
