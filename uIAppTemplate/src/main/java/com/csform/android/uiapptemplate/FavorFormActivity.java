@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -22,6 +23,7 @@ public class FavorFormActivity extends ActionBarActivity {
     public String LOG_TAG = "FavorFormActivity";
 
     public String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
+    public String key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,20 @@ public class FavorFormActivity extends ActionBarActivity {
         setContentView(R.layout.activity_favor_form);
         // auto fill the completed by date with tomorrow's date
         autofillDate();
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+                        int duration = Toast.LENGTH_SHORT;
+            key = extras.getString("key");
+            Toast toast = Toast.makeText(getApplicationContext(), "success retrieving " + key, duration);
+            toast.show();
+        } else {
+            int duration = Toast.LENGTH_SHORT;
+            String s = "Unable to retrieve data";
+            Toast toast = Toast.makeText(getApplicationContext(), s, duration);
+            toast.show();
+            finish();
+        }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void autofillDate(){

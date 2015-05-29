@@ -144,4 +144,4 @@
         android:layout_centerHorizontal="true"
         android:onClick="clickButton" />
 </RelativeLayout>
-<!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/activity_favor_form.xml -->
+<!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solidx/uIAppTemplate/src/main/res/layout/activity_favor_form.xml -->

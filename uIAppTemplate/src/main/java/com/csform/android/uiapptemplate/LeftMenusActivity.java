@@ -1,5 +1,6 @@
 package com.csform.android.uiapptemplate;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,9 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
-import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
 import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
 import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
+import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
@@ -32,7 +33,8 @@ import com.csform.android.uiapptemplate.util.ImageUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeftMenusActivity extends ActionBarActivity {
+public class LeftMenusActivity extends ActionBarActivity
+		implements ReqOffListFragment.OnFragmentInteractionListener{
 
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
@@ -201,14 +203,14 @@ public class LeftMenusActivity extends ActionBarActivity {
 			transaction.commit();
 		}
 		if (position == 2) {
-			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "requests");
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL + "requests");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
 		}
 		if (position == 3) {
-			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "offers");
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL + "offers");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
@@ -265,5 +267,11 @@ public class LeftMenusActivity extends ActionBarActivity {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	@Override
+	public void onFragmentInteraction(String key){
+        Intent intent = new Intent(LeftMenusActivity.this, FavorFormActivity.class);
+        intent.putExtra("key", key);
+        this.startActivity(intent);
 	}
 }
