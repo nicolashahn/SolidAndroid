@@ -1,5 +1,6 @@
 package com.csform.android.uiapptemplate;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.location.Location;
@@ -31,6 +32,10 @@ import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -138,7 +143,7 @@ public class LeftMenusActivity extends ActionBarActivity {
         }
     }
 
-
+    String full_name = "";
 	private void setAdapter() {
 		String option = LEFT_MENU_OPTION_1;
 		Bundle extras = getIntent().getExtras();
@@ -149,14 +154,44 @@ public class LeftMenusActivity extends ActionBarActivity {
 		boolean isFirstType = true;
 		
 		View headerView = null;
+
+
+        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+        ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot datasnap) {
+                full_name = datasnap.getKey();
+                String aud = datasnap.getKey();
+                Context context = getApplicationContext();
+                CharSequence text = "Name:" + full_name + " UID =" + aud;
+                int duration = Toast.LENGTH_LONG;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError error) {
+                Context context = getApplicationContext();
+                CharSequence text = "Error";
+                int duration = Toast.LENGTH_LONG;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+            }
+        });
+
 		if (option.equals(LEFT_MENU_OPTION_1)) {
 			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
 					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
-					"dev@csform.com");
+					full_name + "");
 		} else if (option.equals(LEFT_MENU_OPTION_2)) {
 			headerView = prepareHeaderView(R.layout.header_navigation_drawer_2,
 					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
-					"dev@csform.com");
+					full_name + "");
 			isFirstType = false;
 		}
 
@@ -281,8 +316,9 @@ public class LeftMenusActivity extends ActionBarActivity {
 			transaction.commit();
         }
 		if(position == 5) {
+            Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", AUTH_USER_ID);
 			// Create new fragment and transaction
-			Fragment newFragment = new UserProfileFragment();
+			//Fragment newFragment = new UserProfileFragment();
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
 			// Replace whatever is in the fragment view with this fragment,

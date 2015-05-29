@@ -17,9 +17,9 @@
 package com.csform.android.uiapptemplate.fragment;
 
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-//import android.support.v4.app.Fragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -30,21 +30,38 @@ import android.view.ViewGroup;
 
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.view.SlidingTabLayout;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
+//import android.support.v4.app.Fragment;
+
 /**
- * A basic sample which shows how to use {@link com.example.android.common.view.SlidingTabLayout}
+ * A basic sample which shows how to use
  * to display a custom {@link ViewPager} title strip which gives continuous feedback to the user
  * when scrolling.
  */
 public class UserProfileFragment extends Fragment {
-
+    private static String url;
+    private static Context ctx;
+    private static Firebase ref;
+    private static String auth_id;
     /**
      * This class represents a tab to be displayed by {@link ViewPager} and it's associated
      * {@link SlidingTabLayout}.
      */
+    public static UserProfileFragment newInstance(String arg_url, String auth_id_received){
+        UserProfileFragment fragment = new UserProfileFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        url = arg_url;
+        auth_id = auth_id_received;
+        return fragment;
+    }
     static class SamplePagerItem {
         private final CharSequence mTitle;
         private final int mIndicatorColor;
@@ -107,6 +124,34 @@ public class UserProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ctx = getActivity().getApplicationContext();
+        Firebase.setAndroidContext(ctx);
+        ref = new Firebase(url);
+
+
+
+
+    }
+    String full_name = "";
+    /**
+     * Inflates the {@link View} which will be displayed by this {@link Fragment}, from the app's
+     * resources.
+     */
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        ref.child(auth_id).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot datasnap) {
+                full_name = datasnap.getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(FirebaseError error) {
+            }
+        });
+
 
         // BEGIN_INCLUDE (populate_tabs)
         /**
@@ -137,16 +182,13 @@ public class UserProfileFragment extends Fragment {
                 Color.GRAY // Divider color
         ));
         // END_INCLUDE (populate_tabs)
-    }
-
-    /**
-     * Inflates the {@link View} which will be displayed by this {@link Fragment}, from the app's
-     * resources.
-     */
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_sample, container, false);
+
+
+
+
+
+
     }
 
     // BEGIN_INCLUDE (fragment_onviewcreated)

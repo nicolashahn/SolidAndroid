@@ -59,17 +59,22 @@ public class RegistrationPageActivity extends ActionBarActivity {
 
                 }else{
 
-                        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
-                        String type = "user_database";
-                        Firebase userRef = ref.child(type);
-                        final Firebase newUserRef = userRef.push();
+
+                    final Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
                         ref.createUser(pwidpass, emailuser, new Firebase.ValueResultHandler<Map<String, Object>>() {
                             @Override
                             public void onSuccess(Map<String, Object> result) {
                                 // System.out.println("Successfully created user account with uid: " + result.get("uid"));
+
+
                                 Context context = getApplicationContext();
                                 CharSequence text = "Successful!";
                                 int duration = Toast.LENGTH_SHORT;
+
+
+                                String type = result.get("uid").toString();
+                                Firebase userRef = ref.child(type);
+                                final Firebase newUserRef = userRef.push();
 
                                 // build a request object, send it to server
                                 Map<String, String> f1 = new HashMap<String, String>();
