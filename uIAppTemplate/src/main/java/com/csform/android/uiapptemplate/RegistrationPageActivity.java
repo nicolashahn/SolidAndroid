@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -36,8 +37,8 @@ public class RegistrationPageActivity extends ActionBarActivity {
                 // Perform action on click
                 String emailuser = emailview.getText().toString();
                 String pwidpass = passview.getText().toString();
-                String phoneNumber=numview.getText().toString();
-                String fullName=nameview.getText().toString();
+                final String phoneNumber=numview.getText().toString();
+                final String fullName=nameview.getText().toString();
 
                 int phoneLen=phoneNumber.length();
 
@@ -58,7 +59,10 @@ public class RegistrationPageActivity extends ActionBarActivity {
 
                 }else{
 
-                        Firebase ref = new Firebase("https://solidtest01.firebaseio.com");
+                        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+                        String type = "user_database";
+                        Firebase userRef = ref.child(type);
+                        final Firebase newUserRef = userRef.push();
                         ref.createUser(pwidpass, emailuser, new Firebase.ValueResultHandler<Map<String, Object>>() {
                             @Override
                             public void onSuccess(Map<String, Object> result) {
@@ -66,6 +70,14 @@ public class RegistrationPageActivity extends ActionBarActivity {
                                 Context context = getApplicationContext();
                                 CharSequence text = "Successful!";
                                 int duration = Toast.LENGTH_SHORT;
+
+                                // build a request object, send it to server
+                                Map<String, String> f1 = new HashMap<String, String>();
+                                f1.put("uid", result.get("uid").toString());
+                                f1.put("FullName", fullName);
+                                f1.put("Phone",phoneNumber);
+                                newUserRef.setValue(f1);
+
 
                                 Toast toast = Toast.makeText(context, text, duration);
                                 toast.show();

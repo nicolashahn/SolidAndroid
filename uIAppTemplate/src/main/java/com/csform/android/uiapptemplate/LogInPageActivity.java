@@ -76,12 +76,13 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }else {
-                    Firebase ref = new Firebase("https://solidtest01.firebaseio.com");
+                    Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
                     ref.authWithPassword(emailuser, pwidpass, new Firebase.AuthResultHandler() {
                         @Override
                         public void onAuthenticated(AuthData authData) {
                             System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                             String value = authData.getUid().toString();
+
                             Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
                             myIntent.putExtra("key", value); //Optional parameters
                             LogInPageActivity.this.startActivity(myIntent);
