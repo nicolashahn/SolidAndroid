@@ -26,43 +26,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f4e26a4-fd44-4746-ac9a-86cb58544b54" name="Default" comment="- swipe-to-refresh implemented&#10;- sorts list from newest to oldest&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ContentFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ContentFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/DefaultAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/DefaultAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ExpandableListViewActivity$ExampleAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ExpandableListViewActivity$ExampleAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ExpandableListViewFragment$ExampleAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ExpandableListViewFragment$ExampleAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/FavorFormActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/FavorFormActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/FirebaseTestActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/FirebaseTestActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/view/FloatLabeledEditText.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ImageGalleryCategoryActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/ImageGalleryCategoryActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGalleryCategoryAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/ImageGallerySubcategoryAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/LeftMenusActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$id.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$integer.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$layout.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$menu.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$raw.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$string.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$style.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$styleable.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/adapter/SearchAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ShapeImageViewsFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/ShapeImageViewsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/UserProfileFragment.class" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/classes/debug/com/csform/android/uiapptemplate/fragment/UserProfileFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/resources/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug-unaligned.apk" afterPath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug.apk" afterPath="$PROJECT_DIR$/uIAppTemplate/build/outputs/apk/uIAppTemplate-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/generated/source/r/debug/com/csform/android/uiapptemplate/R.java" afterPath="$PROJECT_DIR$/uIAppTemplate/build/generated/source/r/debug/com/csform/android/uiapptemplate/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/uIAppTemplate/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ReqOffListFragment.java" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ReqOffListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_reqoff_list_view.xml" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_reqoff_list_view.xml" />
+    <list default="true" id="6f4e26a4-fd44-4746-ac9a-86cb58544b54" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FavorSpecActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/res/menu/menu_favor_spec.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java" afterPath="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="solid.iws" />
@@ -106,31 +74,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReqOffListFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReqOffListFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ReqOffListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60365856">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="132" column="20" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4838#5264#0" expanded="true" />
                 <element signature="e#4985#5233#0" expanded="true" />
-                <element signature="e#5232#5233#0" expanded="true" />
                 <element signature="e#5263#5264#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListViewsFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ListViewsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#977#978#0" expanded="false" />
-                <element signature="e#1014#1015#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -150,9 +103,32 @@
         <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="230" column="8" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
+              <caret line="272" column="75" selection-start-line="272" selection-start-column="75" selection-end-line="272" selection-end-column="75" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavorSpecActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FavorSpecActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_favor_spec.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -2080,8 +2056,9 @@
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FavorFormActivity.java" />
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/FavorFormFragment.java" />
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/fragment_reqoff_list_view.xml" />
-        <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java" />
         <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ReqOffListFragment.java" />
+        <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FavorSpecActivity.java" />
+        <option value="$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java" />
       </list>
     </option>
   </component>
@@ -2167,12 +2144,30 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uiapptemplate" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solid" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uIAppTemplate" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2191,10 +2186,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="uiapptemplate" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2231,12 +2222,14 @@
       <recent name="com.csform.android.uiapptemplate.fragment" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ash\AndroidStudioProjects\solidx\uIAppTemplate\src\main\res\menu" />
       <recent name="C:\Users\Ash\AndroidStudioProjects\solidx\uIAppTemplate\src\main\res\layout" />
     </key>
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.csform.android.uiapptemplate" />
       <recent name="com.csform.android.uiapptemplate.model" />
       <recent name="com.csform.android.uiapptemplate.fragment" />
       <recent name="com.csform.android.uiapptemplate.adapter" />
@@ -2446,7 +2439,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432861850872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- swipe-to-refresh implemented&#10;- sorts list from newest to oldest&#10;">
+      <created>1433031014575</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1433031014575</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2497,7 +2496,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="new req/off list. each item creates new activity for favor spec." />
-    <option name="LAST_COMMIT_MESSAGE" value="new req/off list. each item creates new activity for favor spec." />
+    <MESSAGE value="- swipe-to-refresh implemented&#10;- sorts list from newest to oldest&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- swipe-to-refresh implemented&#10;- sorts list from newest to oldest&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2546,7 +2546,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#4838#5264#0" expanded="true" />
             <element signature="e#4985#5233#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
             <element signature="e#5263#5264#0" expanded="true" />
           </folding>
         </state>
@@ -2556,11 +2555,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2804,18 +2799,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ListViewsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/model/DummyModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05050505">
@@ -2858,6 +2841,27 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ListViewsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7256098">
+          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ReqOffListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="132" column="20" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4838#5264#0" expanded="true" />
+            <element signature="e#4985#5233#0" expanded="true" />
+            <element signature="e#5263#5264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/adapter/ReqOffListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2869,23 +2873,36 @@
     <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/LeftMenusActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="230" column="8" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
+          <caret line="272" column="75" selection-start-line="272" selection-start-column="75" selection-end-line="272" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/fragment/ReqOffListFragment.java">
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/res/menu/menu_favor_spec.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60365856">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4838#5264#0" expanded="true" />
-            <element signature="e#4985#5233#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
-            <element signature="e#5263#5264#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/java/com/csform/android/uiapptemplate/FavorSpecActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

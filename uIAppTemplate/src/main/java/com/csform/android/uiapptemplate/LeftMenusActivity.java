@@ -270,7 +270,7 @@ public class LeftMenusActivity extends ActionBarActivity
 	}
 	@Override
 	public void onFragmentInteraction(String key){
-        Intent intent = new Intent(LeftMenusActivity.this, FavorFormActivity.class);
+        Intent intent = new Intent(LeftMenusActivity.this, FavorSpecActivity.class);
         intent.putExtra("key", key);
         this.startActivity(intent);
 	}
