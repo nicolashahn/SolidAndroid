@@ -28,6 +28,7 @@ import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
 import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
+import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 
 import java.util.ArrayList;
@@ -269,9 +270,9 @@ public class LeftMenusActivity extends ActionBarActivity
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 	@Override
-	public void onFragmentInteraction(String key){
+	public void onFragmentInteraction(FavorModel fm){
         Intent intent = new Intent(LeftMenusActivity.this, FavorSpecActivity.class);
-        intent.putExtra("key", key);
+        intent.putExtra("fm", fm);
         this.startActivity(intent);
 	}
 }

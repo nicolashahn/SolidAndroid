@@ -24,7 +24,7 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.nhaarman.listviewanimations.appearance.AnimationAdapter;
-import com.nhaarman.listviewanimations.appearance.simple.ScaleInAnimationAdapter;
+import com.nhaarman.listviewanimations.appearance.simple.AlphaInAnimationAdapter;
 import com.nhaarman.listviewanimations.itemmanipulation.DynamicListView;
 
 import java.util.ArrayList;
@@ -33,6 +33,7 @@ import java.util.Map;
 
 public class ReqOffListFragment extends Fragment {
 	private static Firebase ref;
+    private static String list;
     private static String url;
 	private static Context ctx;
 	private ReqOffListAdapter adapter;
@@ -41,11 +42,12 @@ public class ReqOffListFragment extends Fragment {
     private List<FavorModel> favorList = new ArrayList<>();
 	private DynamicListView mDynamicListView;
 
-    public static ReqOffListFragment newInstance(String arg_url) {
+    public static ReqOffListFragment newInstance(String url_, String list_) {
         ReqOffListFragment fragment = new ReqOffListFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
-        url = arg_url;
+        url = url_;
+        list = list_;
         return fragment;
     }
 
@@ -75,9 +77,24 @@ public class ReqOffListFragment extends Fragment {
 //				if (newPost.get("title") == null || newPost.get("description") == null ||
 //						newPost.get("completed") != "false") return;
                 FavorModel favor = new FavorModel();
+                favor.setUser(newPost.get("user") + "");
                 favor.setTitle(newPost.get("title") + "");
                 favor.setDesc(newPost.get("description") + "");
-                favor.setImageURL(newPost.get("avatar") + "");
+                user_ref.child(newPost.get("user") + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.getValue() != null) {
+                            //user exists, do something
+                        } else {
+                            //user does not exist, do something else
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(FirebaseError firebaseError) {
+                    }
+                });
+                favor.setUserImage(newPost.get("avatar") + "");
                 favor.setKey(snapshot.getKey());
 //				favorList.add(favor);
                 favorList.add(0, favor);
@@ -89,17 +106,17 @@ public class ReqOffListFragment extends Fragment {
 
             @Override
             public void onChildMoved(DataSnapshot snapshot, String previousChildKey) {
-			}
+            }
 
-			@Override
-			public void onChildRemoved(DataSnapshot snapshot) {
-			}
+            @Override
+            public void onChildRemoved(DataSnapshot snapshot) {
+            }
 
-			@Override
-			public void onCancelled(FirebaseError firebaseError) {
-				System.out.println("The read failed: " + firebaseError.getMessage());
-			}
-		});
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                System.out.println("The read failed: " + firebaseError.getMessage());
+            }
+        });
         // initial list population
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -116,7 +133,7 @@ public class ReqOffListFragment extends Fragment {
         final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) V.findViewById(R.id.reqoff_list_swipe_refresh_layout);
 		mDynamicListView = (DynamicListView) V.findViewById(R.id.dynamic_listview);
         adapter = new ReqOffListAdapter(ctx, favorList, false, mListener);
-		AnimationAdapter animAdapter = new ScaleInAnimationAdapter(adapter);
+		AnimationAdapter animAdapter = new AlphaInAnimationAdapter(adapter);
         //AnimationAdapter animAdapter = new ScaleInAnimationAdapter(adapter);
         animAdapter.setAbsListView(mDynamicListView);
         mDynamicListView.setAdapter(animAdapter);
@@ -131,7 +148,7 @@ public class ReqOffListFragment extends Fragment {
                         mSwipeRefreshLayout.setRefreshing(false);
                         adapter.notifyDataSetChanged();
                     }
-                }, 500);
+                }, 750);
             }
         });
 
@@ -181,9 +198,6 @@ public class ReqOffListFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(String key);
+        void onFragmentInteraction(FavorModel fm);
     }
-	public void onListItemClick(String key){
-		mListener.onFragmentInteraction(key);
-	}
 }

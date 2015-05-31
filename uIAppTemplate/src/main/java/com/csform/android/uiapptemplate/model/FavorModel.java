@@ -1,18 +1,23 @@
 package com.csform.android.uiapptemplate.model;
 
-public class FavorModel {
+import java.io.Serializable;
+
+// Serializable allows FavorModel to be passed through Intent
+public class FavorModel implements Serializable {
 
 	private String mKey;
-	private String mImageURL;
+	private String mUser;
+	private String mUserImage;
 	private String mTitle;
 	private String mDesc;
 
 	public FavorModel() {
 	}
 
-	public FavorModel(String key, String imageURL, String title, String desc) {
+	public FavorModel(String key, String user, String userImage, String title, String desc) {
 		mKey = key;
-		mImageURL = imageURL;
+		mUser = user;
+		mUserImage = userImage;
 		mTitle = title;
 		mDesc = desc;
 	}
@@ -25,14 +30,21 @@ public class FavorModel {
 		mKey = key;
 	}
 
-	public String getImageURL() {
-		return mImageURL;
+	public String getUserImage() {
+		return mUserImage;
 	}
 
-	public void setImageURL(String imageURL) {
-		mImageURL = imageURL;
+	public void setUserImage(String userImage) {
+		mUserImage = userImage;
 	}
 
+	public String getUser() {
+		return mUser;
+	}
+
+	public void setUser(String user) {
+		mUser = user;
+	}
 	public String getTitle() {
 		return mTitle;
 	}
@@ -58,4 +70,5 @@ public class FavorModel {
 	public long getId() {
 		return 0;
 	}
+
 }

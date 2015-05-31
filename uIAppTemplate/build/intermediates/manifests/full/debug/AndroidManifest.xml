@@ -63,8 +63,8 @@
             android:label="@string/title_activity_favor_form" >
         </activity>
         <activity
-            android:name="com.csform.android.uiapptemplate.view.FavorInfoActivity"
-            android:label="@string/title_activity_favor_info" >
+            android:name="com.csform.android.uiapptemplate.FavorSpecActivity"
+            android:label="@string/title_activity_favor_spec" >
         </activity>
     </application>
 

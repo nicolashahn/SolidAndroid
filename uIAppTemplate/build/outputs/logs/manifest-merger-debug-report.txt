@@ -15,7 +15,7 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
-MERGED from solidx:stickyListHeaders:unspecified:7:5
+MERGED from solid:stickyListHeaders:unspecified:7:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
@@ -152,7 +152,7 @@ ADDED from AndroidManifest.xml:61:9
 		ADDED from AndroidManifest.xml:63:13
 	android:name
 		ADDED from AndroidManifest.xml:62:13
-activity#com.csform.android.uiapptemplate.view.FavorInfoActivity
+activity#com.csform.android.uiapptemplate.FavorSpecActivity
 ADDED from AndroidManifest.xml:65:9
 	android:label
 		ADDED from AndroidManifest.xml:67:13
