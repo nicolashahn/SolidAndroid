@@ -3,7 +3,9 @@ package com.csform.android.uiapptemplate.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,6 +22,7 @@ import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.nhaarman.listviewanimations.appearance.AnimationAdapter;
 import com.nhaarman.listviewanimations.appearance.simple.ScaleInAnimationAdapter;
 import com.nhaarman.listviewanimations.itemmanipulation.DynamicListView;
@@ -63,29 +66,29 @@ public class ReqOffListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-		ref.addChildEventListener(new ChildEventListener() {
-			@Override
-			//  A DataSnapshot instance contains data from a Firebase location.
-			public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
-				if (snapshot.getValue() == null) return;
-				Map<?, ?> newPost = (Map<?, ?>) snapshot.getValue();
+        ref.addChildEventListener(new ChildEventListener() {
+            @Override
+            //  A DataSnapshot instance contains data from a Firebase location.
+            public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
+                if (snapshot.getValue() == null) return;
+                Map<?, ?> newPost = (Map<?, ?>) snapshot.getValue();
 //				if (newPost.get("title") == null || newPost.get("description") == null ||
 //						newPost.get("completed") != "false") return;
-				FavorModel favor = new FavorModel();
-				favor.setTitle(newPost.get("title") + "");
-				favor.setDesc(newPost.get("description") + "");
+                FavorModel favor = new FavorModel();
+                favor.setTitle(newPost.get("title") + "");
+                favor.setDesc(newPost.get("description") + "");
                 favor.setImageURL(newPost.get("avatar") + "");
-				favor.setKey(snapshot.getKey());
-				favorList.add(favor);
-				adapter.notifyDataSetChanged();
-			}
+                favor.setKey(snapshot.getKey());
+//				favorList.add(favor);
+                favorList.add(0, favor);
+            }
 
-			@Override
-			public void onChildChanged(DataSnapshot snapshot, String previousChildKey) {
-			}
+            @Override
+            public void onChildChanged(DataSnapshot snapshot, String previousChildKey) {
+            }
 
-			@Override
-			public void onChildMoved(DataSnapshot snapshot, String previousChildKey) {
+            @Override
+            public void onChildMoved(DataSnapshot snapshot, String previousChildKey) {
 			}
 
 			@Override
@@ -97,13 +100,40 @@ public class ReqOffListFragment extends Fragment {
 				System.out.println("The read failed: " + firebaseError.getMessage());
 			}
 		});
+        // initial list population
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                // do some stuff once
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
         View V = inflater.inflate(R.layout.fragment_reqoff_list_view, container, false);
+        final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) V.findViewById(R.id.reqoff_list_swipe_refresh_layout);
 		mDynamicListView = (DynamicListView) V.findViewById(R.id.dynamic_listview);
         adapter = new ReqOffListAdapter(ctx, favorList, false, mListener);
 		AnimationAdapter animAdapter = new ScaleInAnimationAdapter(adapter);
         //AnimationAdapter animAdapter = new ScaleInAnimationAdapter(adapter);
-		animAdapter.setAbsListView(mDynamicListView);
-		mDynamicListView.setAdapter(animAdapter);
+        animAdapter.setAbsListView(mDynamicListView);
+        mDynamicListView.setAdapter(animAdapter);
+
+        adapter.notifyDataSetChanged();
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSwipeRefreshLayout.setRefreshing(false);
+                        adapter.notifyDataSetChanged();
+                    }
+                }, 500);
+            }
+        });
 
         return V;
     }
