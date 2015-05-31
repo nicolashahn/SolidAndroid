@@ -68,36 +68,35 @@ public class ReqOffListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ref.addChildEventListener(new ChildEventListener() {
+        ref.child(list).addChildEventListener(new ChildEventListener() {
             @Override
             //  A DataSnapshot instance contains data from a Firebase location.
             public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
-                if (snapshot.getValue() == null) return;
-                Map<?, ?> newPost = (Map<?, ?>) snapshot.getValue();
-//				if (newPost.get("title") == null || newPost.get("description") == null ||
-//						newPost.get("completed") != "false") return;
-                FavorModel favor = new FavorModel();
-                favor.setUser(newPost.get("user") + "");
-                favor.setTitle(newPost.get("title") + "");
-                favor.setDesc(newPost.get("description") + "");
-                user_ref.child(newPost.get("user") + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                if(!snapshot.exists()) return;
+                Map<?, ?> favorMap = (Map<?, ?>) snapshot.getValue();
+                final FavorModel favor = new FavorModel();
+                favor.setUser(favorMap.get("userPosted") + "");
+                favor.setTitle(favorMap.get("title") + "");
+                favor.setDesc(favorMap.get("description") + "");
+                ref.child("users").child(favor.getUser()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.getValue() != null) {
-                            //user exists, do something
-                        } else {
-                            //user does not exist, do something else
+                        if (!dataSnapshot.exists()) {
+                            return;
                         }
+                        for (DataSnapshot child : dataSnapshot.getChildren()) {
+                        }
+                        Map<?, ?> userMap = (Map<?, ?>) dataSnapshot.getValue();
+                        favor.setUserImage(userMap.get("avatar") + "");
                     }
 
                     @Override
                     public void onCancelled(FirebaseError firebaseError) {
+
                     }
                 });
-                favor.setUserImage(newPost.get("avatar") + "");
                 favor.setKey(snapshot.getKey());
-//				favorList.add(favor);
-                favorList.add(0, favor);
+                favorList.add(0, favor); // display list from newest to oldest
             }
 
             @Override

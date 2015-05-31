@@ -2,6 +2,7 @@ package com.csform.android.uiapptemplate.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
 import com.csform.android.uiapptemplate.model.FavorModel;
+import com.csform.android.uiapptemplate.util.ImageUtil;
 import com.nhaarman.listviewanimations.itemmanipulation.swipedismiss.OnDismissCallback;
 import com.nhaarman.listviewanimations.itemmanipulation.swipedismiss.undo.UndoAdapter;
 import com.nhaarman.listviewanimations.util.Swappable;
@@ -81,8 +83,8 @@ public class ReqOffListAdapter extends BaseAdapter implements Swappable, UndoAda
 		}
 		
 		final FavorModel fm = favorList.get(position);
-		
-//		ImageUtil.displayImage(holder.image, fm.getImageURL(), null);
+		Log.i("IMAGE", fm.getUserImage());
+		ImageUtil.displayImage(holder.image, fm.getUserImage(), null);
 		holder.text.setText(fm.getTitle());
 		/*
 		if (mShouldShowDragAndDropIcon) {

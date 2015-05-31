@@ -204,14 +204,14 @@ public class LeftMenusActivity extends ActionBarActivity
 			transaction.commit();
 		}
 		if (position == 2) {
-			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL + "requests");
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL , "requests");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
 		}
 		if (position == 3) {
-			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL + "offers");
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL , "offers");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);

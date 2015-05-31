@@ -12,6 +12,11 @@ public class FavorModel implements Serializable {
 	private String mDesc;
 
 	public FavorModel() {
+		mKey = "";
+		mUser = "";
+		mUserImage = "";
+		mTitle = "";
+		mDesc = "";
 	}
 
 	public FavorModel(String key, String user, String userImage, String title, String desc) {
