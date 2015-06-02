@@ -59,8 +59,15 @@ public class RegistrationPageActivity extends ActionBarActivity {
 
                 }else{
 
+<<<<<<< HEAD
 
                     final Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+=======
+                        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+                        String type = "user_database";
+                        Firebase userRef = ref.child(type);
+                        final Firebase newUserRef = userRef.push();
+>>>>>>> 5cab85e53c88de5ba7e5808e91a3cc7eed3454fb
                         ref.createUser(pwidpass, emailuser, new Firebase.ValueResultHandler<Map<String, Object>>() {
                             @Override
                             public void onSuccess(Map<String, Object> result) {
@@ -71,11 +78,14 @@ public class RegistrationPageActivity extends ActionBarActivity {
                                 CharSequence text = "Successful!";
                                 int duration = Toast.LENGTH_SHORT;
 
+<<<<<<< HEAD
 
                                 String type = result.get("uid").toString();
                                 Firebase userRef = ref.child(type);
                                 final Firebase newUserRef = userRef.push();
 
+=======
+>>>>>>> 5cab85e53c88de5ba7e5808e91a3cc7eed3454fb
                                 // build a request object, send it to server
                                 Map<String, String> f1 = new HashMap<String, String>();
                                 f1.put("uid", result.get("uid").toString());
