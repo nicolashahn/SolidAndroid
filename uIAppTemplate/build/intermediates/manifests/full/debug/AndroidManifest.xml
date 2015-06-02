@@ -63,6 +63,10 @@
             android:label="@string/title_activity_favor_form" >
         </activity>
         <activity
+            android:name="com.csform.android.uiapptemplate.FavorSpecActivity"
+            android:label="@string/title_activity_favor_spec" >
+        </activity>
+        <activity
             android:name="com.csform.android.uiapptemplate.RegistrationPageActivity"
             android:label="@string/title_activity_registration_page"
             android:parentActivityName="com.csform.android.uiapptemplate.LogInPageActivity" >

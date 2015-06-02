@@ -26,11 +26,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
-import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
 import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
 import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
+import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
+import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -40,12 +41,13 @@ import com.firebase.client.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeftMenusActivity extends ActionBarActivity {
+public class LeftMenusActivity extends ActionBarActivity
+	implements ReqOffListFragment.OnFragmentInteractionListener {
 
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
 	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
-    private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
+	private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 	private static String AUTH_USER_ID = "default_id";
 	private ListView mDrawerList;
 	private List<DrawerItem> mDrawerItems;
@@ -56,7 +58,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 	private CharSequence mTitle;
 
 	private Handler mHandler;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,9 +66,9 @@ public class LeftMenusActivity extends ActionBarActivity {
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
-        Intent intent = getIntent();
-        AUTH_USER_ID = intent.getStringExtra("key");
-        Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
+		Intent intent = getIntent();
+		AUTH_USER_ID = intent.getStringExtra("key");
+		Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
@@ -93,7 +95,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
+
 		if (savedInstanceState == null) {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
@@ -102,87 +104,93 @@ public class LeftMenusActivity extends ActionBarActivity {
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,locationListener);*/
 
-    }
-    LocationListener locationListener = new LocationListener(){
-        @Override
-        public void onLocationChanged(Location location){
-            //do something with location received
-            displayLocation(location);
-        }
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras){}
+	}
 
-        @Override
-        public void onProviderEnabled(String provider){}
+	LocationListener locationListener = new LocationListener() {
+		@Override
+		public void onLocationChanged(Location location) {
+			//do something with location received
+			displayLocation(location);
+		}
 
-        @Override
-        public void onProviderDisabled(String provider){}
+		@Override
+		public void onStatusChanged(String provider, int status, Bundle extras) {
+		}
 
+		@Override
+		public void onProviderEnabled(String provider) {
+		}
 
-
-    };
-    double _lat = 0.0;
-    double _long = 0.0;
-    double _acc = 0.0;
-    boolean locationgiven = false;
-    private void displayLocation(Location location){
-        if(location == null){
-            locationgiven = false;
-        }else{
-            locationgiven = true;
-
-            _lat = location.getLatitude();
+		@Override
+		public void onProviderDisabled(String provider) {
+		}
 
 
-            _long = location.getLongitude();
+	};
+	double _lat = 0.0;
+	double _long = 0.0;
+	double _acc = 0.0;
+	boolean locationgiven = false;
 
-            _acc = location.getAccuracy();
+	private void displayLocation(Location location) {
+		if (location == null) {
+			locationgiven = false;
+		} else {
+			locationgiven = true;
 
-            //can choose to color the accuracy here, but naaah
+			_lat = location.getLatitude();
 
-        }
-    }
 
-    String full_name = "";
+			_long = location.getLongitude();
+
+			_acc = location.getAccuracy();
+
+			//can choose to color the accuracy here, but naaah
+
+		}
+	}
+
+	String full_name = "";
+
 	private void setAdapter() {
 		String option = LEFT_MENU_OPTION_1;
 		Bundle extras = getIntent().getExtras();
 		if (extras != null && extras.containsKey(LEFT_MENU_OPTION)) {
 			option = extras.getString(LEFT_MENU_OPTION, LEFT_MENU_OPTION_1);
 		}
-		
+
 		boolean isFirstType = true;
-		
+
 		View headerView = null;
 
 
-        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
-        ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot datasnap) {
-                full_name = datasnap.getKey();
-                String aud = datasnap.getKey();
-                Context context = getApplicationContext();
-                CharSequence text = "Name:" + full_name + " UID =" + aud;
-                int duration = Toast.LENGTH_LONG;
+		Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+		ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
+			@Override
+			public void onDataChange(DataSnapshot datasnap) {
+				full_name = datasnap.getKey();
+				String aud = datasnap.getKey();
+				Context context = getApplicationContext();
+				CharSequence text = "Name:" + full_name + " UID =" + aud;
+				int duration = Toast.LENGTH_LONG;
 
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
 
 
-            }
+			}
 
-            @Override
-            public void onCancelled(FirebaseError error) {
-                Context context = getApplicationContext();
-                CharSequence text = "Error";
-                int duration = Toast.LENGTH_LONG;
+			@Override
+			public void onCancelled(FirebaseError error) {
+				Context context = getApplicationContext();
+				CharSequence text = "Error";
+				int duration = Toast.LENGTH_LONG;
 
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
 
-            }
-        });
+			}
+		});
 
 		if (option.equals(LEFT_MENU_OPTION_1)) {
 			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
@@ -265,7 +273,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 			ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
-				long id) {
+								long id) {
 			selectItem(position/*, mDrawerItems.get(position - 1).getTag()*/);
 		}
 	}
@@ -289,20 +297,20 @@ public class LeftMenusActivity extends ActionBarActivity {
 			transaction.commit();
 		}
 		if (position == 2) {
-			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "requests");
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL, "requests");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
 		}
 		if (position == 3) {
-			Fragment newFragment = ExpandableListViewFragment.newInstance(FIREBASE_URL + "offers");
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL, "offers");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
 			transaction.commit();
 		}
-        if(position == 4) {
+		if (position == 4) {
 			// Create new fragment and transaction
 			Fragment newFragment = new FavorFormFragment();
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -314,9 +322,9 @@ public class LeftMenusActivity extends ActionBarActivity {
 
 			// Commit the transaction
 			transaction.commit();
-        }
-		if(position == 5) {
-            Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", AUTH_USER_ID);
+		}
+		if (position == 5) {
+			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", AUTH_USER_ID);
 			// Create new fragment and transaction
 			//Fragment newFragment = new UserProfileFragment();
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -330,9 +338,9 @@ public class LeftMenusActivity extends ActionBarActivity {
 			transaction.commit();
 		}
 
-        //nick was here
+		//nick was here
 	}
-	
+
 	@Override
 	public void setTitle(int titleId) {
 		setTitle(getString(titleId));
@@ -354,5 +362,12 @@ public class LeftMenusActivity extends ActionBarActivity {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+
+	@Override
+	public void onFragmentInteraction(FavorModel fm) {
+		Intent intent = new Intent(LeftMenusActivity.this, FavorSpecActivity.class);
+		intent.putExtra("fm", fm);
+		this.startActivity(intent);
 	}
 }
