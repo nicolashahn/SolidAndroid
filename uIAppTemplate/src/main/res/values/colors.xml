@@ -6,16 +6,16 @@
     
     <color name="divider_color">@color/main_color_500</color>
     
-    <color name="main_color_500">@color/material_purple_500</color>
-    <color name="main_color_50">@color/material_purple_50</color>
-    <color name="main_color_100">@color/material_purple_100</color>
-    <color name="main_color_200">@color/material_purple_200</color>
-    <color name="main_color_300">@color/material_purple_300</color>
-    <color name="main_color_400">@color/material_purple_400</color>
-    <color name="main_color_600">@color/material_purple_600</color>
-    <color name="main_color_700">@color/material_purple_700</color>
-    <color name="main_color_800">@color/material_purple_800</color>
-    <color name="main_color_900">@color/material_purple_900</color>
+    <color name="main_color_500">@color/material_blue_500</color>
+    <color name="main_color_50">@color/material_blue_50</color>
+    <color name="main_color_100">@color/material_blue_100</color>
+    <color name="main_color_200">@color/material_blue_200</color>
+    <color name="main_color_300">@color/material_blue_300</color>
+    <color name="main_color_400">@color/material_blue_400</color>
+    <color name="main_color_600">@color/material_blue_600</color>
+    <color name="main_color_700">@color/material_blue_700</color>
+    <color name="main_color_800">@color/material_blue_800</color>
+    <color name="main_color_900">@color/material_blue_900</color>
     <color name="main_color_A100">@color/material_light_yellow_A100</color>
     <color name="main_color_A200">@color/material_light_yellow_A200</color>
     <color name="main_color_A400">@color/material_light_yellow_A400</color>
