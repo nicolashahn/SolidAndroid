@@ -2,6 +2,7 @@ package com.csform.android.uiapptemplate;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.RectF;
 import android.os.Bundle;
@@ -20,9 +21,38 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DefaultAdapter;
-import com.csform.android.uiapptemplate.util.DummyContent;
+import com.csform.android.uiapptemplate.model.DummyModel;
 import com.csform.android.uiapptemplate.view.AlphaForegroundColorSpan;
+import com.csform.android.uiapptemplate.view.ChatActivity;
 import com.csform.android.uiapptemplate.view.kbv.KenBurnsView;
+
+import java.util.ArrayList;
+
+class messaging_list{
+public static ArrayList<DummyModel> message_list() {
+        ArrayList<DummyModel> list = new ArrayList<>();
+
+        list.add(new DummyModel(0, "http://pengaja.com/uiapptemplate/avatars/0.jpg", "Isaac Reid", R.string.fontello_heart_empty));
+        list.add(new DummyModel(1, "http://pengaja.com/uiapptemplate/avatars/1.jpg", "Jason Graham", R.string.fontello_heart_empty));
+        list.add(new DummyModel(2, "http://pengaja.com/uiapptemplate/avatars/2.jpg", "Abigail Ross", R.string.fontello_heart_empty));
+        list.add(new DummyModel(3, "http://pengaja.com/uiapptemplate/avatars/3.jpg", "Justin Rutherford", R.string.fontello_heart_empty));
+        list.add(new DummyModel(4, "http://pengaja.com/uiapptemplate/avatars/4.jpg", "Nicholas Henderson", R.string.fontello_heart_empty));
+        list.add(new DummyModel(5, "http://pengaja.com/uiapptemplate/avatars/5.jpg", "Elizabeth Mackenzie", R.string.fontello_heart_empty));
+        list.add(new DummyModel(6, "http://pengaja.com/uiapptemplate/avatars/6.jpg", "Melanie Ferguson", R.string.fontello_heart_empty));
+        list.add(new DummyModel(7, "http://pengaja.com/uiapptemplate/avatars/7.jpg", "Fiona Kelly", R.string.fontello_heart_empty));
+        list.add(new DummyModel(8, "http://pengaja.com/uiapptemplate/avatars/8.jpg", "Nicholas King", R.string.fontello_heart_empty));
+        list.add(new DummyModel(9, "http://pengaja.com/uiapptemplate/avatars/9.jpg", "Victoria Mitchell", R.string.fontello_heart_empty));
+        list.add(new DummyModel(10, "http://pengaja.com/uiapptemplate/avatars/10.jpg", "Sophie Lyman", R.string.fontello_heart_empty));
+        list.add(new DummyModel(11, "http://pengaja.com/uiapptemplate/avatars/11.jpg", "Carl Ince", R.string.fontello_heart_empty));
+        list.add(new DummyModel(12, "http://pengaja.com/uiapptemplate/avatars/12.jpg", "Michelle Slater", R.string.fontello_heart_empty));
+        list.add(new DummyModel(13, "http://pengaja.com/uiapptemplate/avatars/13.jpg", "Ryan Mathis", R.string.fontello_heart_empty));
+        list.add(new DummyModel(14, "http://pengaja.com/uiapptemplate/avatars/14.jpg", "Julia Grant", R.string.fontello_heart_empty));
+        list.add(new DummyModel(15, "http://pengaja.com/uiapptemplate/avatars/15.jpg", "Hannah Martin", R.string.fontello_heart_empty));
+
+        return list;
+   }
+}
+
 
 /**
  * Please NOTE: In manifest, set theme for this class to
@@ -91,7 +121,7 @@ public class ParallaxKenBurnsActivity extends Activity {
 		
 		//TODO You'd probably want to set your own adapter
 		// >>>>>>>>>>>>>>>
-		mListView.setAdapter(new DefaultAdapter(this, DummyContent.getDummyModelList(), false));
+		mListView.setAdapter(new DefaultAdapter(this, messaging_list.message_list(), false));
 		//<<<<<<<<<<<<<<<<
 		
 		mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
@@ -120,6 +150,10 @@ public class ParallaxKenBurnsActivity extends Activity {
 				Toast.makeText(ParallaxKenBurnsActivity.this,
 						mListView.getAdapter().getItem(position).toString(),
 						Toast.LENGTH_SHORT).show();
+                String value = mListView.getAdapter().getItem(position).toString();
+                Intent myIntent = new Intent(ParallaxKenBurnsActivity.this, ChatActivity.class);
+                myIntent.putExtra("key", value); //Optional parameters
+                ParallaxKenBurnsActivity.this.startActivity(myIntent);
 			}
 		});
 	}

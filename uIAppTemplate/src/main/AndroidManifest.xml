@@ -71,6 +71,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.csform.android.uiapptemplate.LogInPageActivity" />
         </activity>
+        <activity
+            android:name=".view.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName=".ParallaxKenBurnsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csform.android.uiapptemplate.ParallaxKenBurnsActivity" />
+        </activity>
     </application>
 
 </manifest>
