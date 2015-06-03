@@ -2384,7 +2384,7 @@ containing a value of this type.
         public static final int e=0x7f0a00d7;
         public static final int edit_query=0x7f0a0084;
         public static final int email=0x7f0a00dd;
-        public static final int emailid=0x7f0a00b4;
+        public static final int emailid=0x7f0a00b5;
         public static final int emailview=0x7f0a00aa;
         public static final int end=0x7f0a0022;
         public static final int expand_activities_button=0x7f0a0073;
@@ -2403,7 +2403,7 @@ containing a value of this type.
         public static final int fragPostButton=0x7f0a00c0;
         public static final int fragment=0x7f0a00af;
         public static final int frameLayout=0x7f0a00be;
-        public static final int fullname=0x7f0a00b7;
+        public static final int fullname=0x7f0a00b4;
         public static final int g=0x7f0a00d9;
         public static final int h=0x7f0a00da;
         public static final int header=0x7f0a00b0;
@@ -2449,7 +2449,7 @@ containing a value of this type.
         public static final int numberSigned=0x7f0a002c;
         public static final int passview=0x7f0a00ab;
         public static final int phone=0x7f0a002d;
-        public static final int phoneNumber=0x7f0a00b6;
+        public static final int phoneNumber=0x7f0a00b7;
         public static final int postButton=0x7f0a009b;
         public static final int postedDateText=0x7f0a009e;
         public static final int progress_bar_1=0x7f0a00c1;
@@ -2509,7 +2509,7 @@ containing a value of this type.
         public static final int start=0x7f0a0025;
         public static final int stroke=0x7f0a000c;
         public static final int submit_area=0x7f0a008d;
-        public static final int submitbutton=0x7f0a00b5;
+        public static final int submitbutton=0x7f0a00b6;
         public static final int tabMode=0x7f0a0014;
         public static final int text=0x7f0a002e;
         public static final int textAutoComplete=0x7f0a002f;
