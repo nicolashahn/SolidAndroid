@@ -58,7 +58,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
 
             String regi = tv.getText().toString();
             if(regi.equalsIgnoreCase("REGISTER")){
-                Toast.makeText(this, tv.getText(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, tv.getText(), Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(LogInPageActivity.this, RegistrationPageActivity.class);
                 LogInPageActivity.this.startActivity(myIntent);
             }else if(regi.equalsIgnoreCase("LOGIN")) {
@@ -86,6 +86,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                             Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
                             myIntent.putExtra("key", value); //Optional parameters
                             LogInPageActivity.this.startActivity(myIntent);
+                            finish();
                         }
 
                         @Override

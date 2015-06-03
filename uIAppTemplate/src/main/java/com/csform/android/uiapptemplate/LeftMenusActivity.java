@@ -22,7 +22,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
 import com.csform.android.uiapptemplate.fragment.ExpandableListViewFragment;
@@ -66,7 +65,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 
         Intent intent = getIntent();
         AUTH_USER_ID = intent.getStringExtra("key");
-        Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
         Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com/user_database");
 
         Query queryRef = ref.orderByChild("uid").equalTo(AUTH_USER_ID);
@@ -277,7 +276,7 @@ public class LeftMenusActivity extends ActionBarActivity {
 			return;
 		}
 		String drawerTitle = getString(mDrawerItems.get(position - 1).getTitle());
-		Toast.makeText(this, "You selected " + drawerTitle + " at position: " + position, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "You selected " + drawerTitle + " at position: " + position, Toast.LENGTH_SHORT).show();
 
 		mDrawerList.setItemChecked(position, true);
 		setTitle(mDrawerItems.get(position - 1).getTitle());
