@@ -1,6 +1,5 @@
 package com.csform.android.uiapptemplate;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.location.Location;
@@ -32,10 +31,11 @@ import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.util.ImageUtil;
+import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
+import com.firebase.client.Query;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +67,46 @@ public class LeftMenusActivity extends ActionBarActivity {
         Intent intent = getIntent();
         AUTH_USER_ID = intent.getStringExtra("key");
         Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
+        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com/user_database");
+
+        Query queryRef = ref.orderByChild("uid").equalTo(AUTH_USER_ID);
+
+
+            queryRef.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    System.out.println(dataSnapshot.getKey());
+                    System.out.println(dataSnapshot.child("FullName").getValue().toString());
+                    System.out.println(dataSnapshot.child("uid").getChildrenCount());
+                    full_name = dataSnapshot.child("FullName").getValue().toString();
+
+                    View headerView = getLayoutInflater().inflate(R.layout.header_navigation_drawer_1, mDrawerList, false);
+                    TextView tv = (TextView) headerView.findViewById(R.id.email);
+                    System.out.println("Right before the full-Name : " + full_name);
+                    tv.setText(full_name);
+                    mDrawerList.addHeaderView(headerView);
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(FirebaseError firebaseError) {
+
+                }
+            });
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
@@ -142,7 +182,8 @@ public class LeftMenusActivity extends ActionBarActivity {
 
         }
     }
-
+    boolean isFirstType = true;
+    View headerView = null;
     String full_name = "";
 	private void setAdapter() {
 		String option = LEFT_MENU_OPTION_1;
@@ -150,64 +191,24 @@ public class LeftMenusActivity extends ActionBarActivity {
 		if (extras != null && extras.containsKey(LEFT_MENU_OPTION)) {
 			option = extras.getString(LEFT_MENU_OPTION, LEFT_MENU_OPTION_1);
 		}
-		
-		boolean isFirstType = true;
-		
-		View headerView = null;
+            System.out.println("fullname = " + full_name);
 
-
-        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
-        ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot datasnap) {
-                full_name = datasnap.getKey();
-                String aud = datasnap.getKey();
-                Context context = getApplicationContext();
-                CharSequence text = "Name:" + full_name + " UID =" + aud;
-                int duration = Toast.LENGTH_LONG;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-
-
-            }
-
-            @Override
-            public void onCancelled(FirebaseError error) {
-                Context context = getApplicationContext();
-                CharSequence text = "Error";
-                int duration = Toast.LENGTH_LONG;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-
-            }
-        });
-
-		if (option.equals(LEFT_MENU_OPTION_1)) {
-			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
-					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
-					full_name + "");
-		} else if (option.equals(LEFT_MENU_OPTION_2)) {
-			headerView = prepareHeaderView(R.layout.header_navigation_drawer_2,
-					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
-					full_name + "");
-			isFirstType = false;
-		}
-
-		BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems, isFirstType);
-
-		mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
-		mDrawerList.setAdapter(adapter);
+            System.out.println("Afteward");
+            headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
+                    "http://pengaja.com/uiapptemplate/avatars/0.jpg",
+                    full_name + "test");
+            BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems, isFirstType);
+            //mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
+            mDrawerList.setAdapter(adapter);
 	}
 
 	private View prepareHeaderView(int layoutRes, String url, String email) {
 		View headerView = getLayoutInflater().inflate(layoutRes, mDrawerList, false);
 		ImageView iv = (ImageView) headerView.findViewById(R.id.image);
-		TextView tv = (TextView) headerView.findViewById(R.id.email);
+		//TextView tv = (TextView) headerView.findViewById(R.id.email);
 
 		ImageUtil.displayRoundImage(iv, url, null);
-		tv.setText(email);
+		//tv.setText(email);
 
 		return headerView;
 	}

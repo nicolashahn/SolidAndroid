@@ -60,4 +60,14 @@
         android:layout_alignRight="@+id/emailid"
         android:layout_alignEnd="@+id/emailid"
         android:hint="full name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Profile Picture"
+        android:id="@+id/prof_pic_but"
+        android:onClick="prof_pic_onclick"
+        android:layout_below="@+id/phoneNumber"
+        android:layout_alignRight="@+id/phoneNumber"
+        android:layout_alignEnd="@+id/phoneNumber" />
 </RelativeLayout>

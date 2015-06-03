@@ -72,7 +72,7 @@ public class RegistrationPageActivity extends ActionBarActivity {
                                 int duration = Toast.LENGTH_SHORT;
 
 
-                                String type = result.get("uid").toString();
+                                String type = "users";
                                 Firebase userRef = ref.child(type);
                                 final Firebase newUserRef = userRef.push();
 
