@@ -1,7 +1,6 @@
 package com.csform.android.uiapptemplate.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,13 +24,15 @@ public class ReqOffListAdapter extends BaseAdapter implements Swappable, UndoAda
 
 
 	private Context mContext;
+	private static Boolean singleUser;
 	private LayoutInflater mInflater;
 	private List<FavorModel> favorList;
     private ReqOffListFragment.OnFragmentInteractionListener mListener;
 	private boolean mShouldShowDragAndDropIcon;
 
 	public ReqOffListAdapter(Context context, List<FavorModel> favorItemsList, boolean shouldShowDragAndDropIcon,
-							 ReqOffListFragment.OnFragmentInteractionListener mListener) {
+							 ReqOffListFragment.OnFragmentInteractionListener mListener, Boolean singleUser_) {
+		singleUser = singleUser_;
 		mContext = context;
 		mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		favorList = favorItemsList;
@@ -84,15 +85,8 @@ public class ReqOffListAdapter extends BaseAdapter implements Swappable, UndoAda
 		
 		final FavorModel fm = favorList.get(position);
 		Log.i("IMAGE", fm.getUserImage());
-		ImageUtil.displayImage(holder.image, fm.getUserImage(), null);
+		if(!singleUser) ImageUtil.displayImage(holder.image, fm.getUserImage(), null);
 		holder.text.setText(fm.getTitle());
-		/*
-		if (mShouldShowDragAndDropIcon) {
-			holder.icon.setText(R.string.fontello_drag_and_drop);
-		} else {
-			holder.icon.setText(fm.getIconRes());
-		}
-		*/
 		 convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -111,15 +105,13 @@ public class ReqOffListAdapter extends BaseAdapter implements Swappable, UndoAda
 	}
 
 	@Override
-	@NonNull
-	public View getUndoClickView(@NonNull View view) {
+	public View getUndoClickView(View view) {
 		return view.findViewById(R.id.undo_button);
 	}
 
 	@Override
-	@NonNull
 	public View getUndoView(final int position, final View convertView,
-			@NonNull final ViewGroup parent) {
+			final ViewGroup parent) {
 		View view = convertView;
 		if (view == null) {
 			view = LayoutInflater.from(mContext).inflate(R.layout.list_item_undo_view,
@@ -129,8 +121,8 @@ public class ReqOffListAdapter extends BaseAdapter implements Swappable, UndoAda
 	}
 
 	@Override
-	public void onDismiss(@NonNull final ViewGroup listView,
-			@NonNull final int[] reverseSortedPositions) {
+	public void onDismiss(final ViewGroup listView,
+			final int[] reverseSortedPositions) {
 		for (int position : reverseSortedPositions) {
 			remove(position);
 		}

@@ -36,11 +36,13 @@ public class ReqOffListFragment extends Fragment {
     private static String list;
     private static String url;
 	private static Context ctx;
+    private static Boolean singleUser;
 	private ReqOffListAdapter adapter;
     private AnimatedExpandableListView listView;
     private OnFragmentInteractionListener mListener;
     private List<FavorModel> favorList = new ArrayList<>();
 	private DynamicListView mDynamicListView;
+
 
     public static ReqOffListFragment newInstance(String url_, String list_) {
         ReqOffListFragment fragment = new ReqOffListFragment();
@@ -48,6 +50,16 @@ public class ReqOffListFragment extends Fragment {
         fragment.setArguments(args);
         url = url_;
         list = list_;
+        singleUser = false;
+        return fragment;
+    }
+    public static ReqOffListFragment newInstance(String url_, String list_, Boolean singleUser_) {
+        ReqOffListFragment fragment = new ReqOffListFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        url = url_;
+        list = list_;
+        singleUser = singleUser_;
         return fragment;
     }
 
@@ -76,6 +88,12 @@ public class ReqOffListFragment extends Fragment {
                 Map<?, ?> favorMap = (Map<?, ?>) snapshot.getValue();
                 final FavorModel favor = new FavorModel();
                 favor.setUser(favorMap.get("userPosted") + "");
+                if(singleUser) {
+                    if(!favor.getUser().equals("batman")) {
+                        Log.i("AFG", favor.getUser());
+                        return;
+                    }
+                }
                 favor.setTitle(favorMap.get("title") + "");
                 favor.setDesc(favorMap.get("description") + "");
                 ref.child("users").child(favor.getUser()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -131,7 +149,7 @@ public class ReqOffListFragment extends Fragment {
         View V = inflater.inflate(R.layout.fragment_reqoff_list_view, container, false);
         final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) V.findViewById(R.id.reqoff_list_swipe_refresh_layout);
 		mDynamicListView = (DynamicListView) V.findViewById(R.id.dynamic_listview);
-        adapter = new ReqOffListAdapter(ctx, favorList, false, mListener);
+        adapter = new ReqOffListAdapter(ctx, favorList, false, mListener, singleUser);
 		AnimationAdapter animAdapter = new AlphaInAnimationAdapter(adapter);
         //AnimationAdapter animAdapter = new ScaleInAnimationAdapter(adapter);
         animAdapter.setAbsListView(mDynamicListView);

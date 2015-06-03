@@ -30,10 +30,7 @@ import android.view.ViewGroup;
 
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.view.SlidingTabLayout;
-import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,11 +64,13 @@ public class UserProfileFragment extends Fragment {
         private final CharSequence mTitle;
         private final int mIndicatorColor;
         private final int mDividerColor;
+        private final String mDatabase;
 
-        SamplePagerItem(CharSequence title, int indicatorColor, int dividerColor) {
+        SamplePagerItem(CharSequence title, int indicatorColor, int dividerColor, String database) {
             mTitle = title;
             mIndicatorColor = indicatorColor;
             mDividerColor = dividerColor;
+            mDatabase = database;
         }
 
         /**
@@ -79,7 +78,7 @@ public class UserProfileFragment extends Fragment {
          */
         Fragment createFragment() {
             //return ContentFragment.newInstance(mTitle, mIndicatorColor, mDividerColor);
-            return ReqOffListFragment.newInstance(FIREBASE_URL, "requests");
+            return ReqOffListFragment.newInstance(FIREBASE_URL, mDatabase, true);
         }
 
         /**
@@ -129,10 +128,6 @@ public class UserProfileFragment extends Fragment {
         ctx = getActivity().getApplicationContext();
         Firebase.setAndroidContext(ctx);
         ref = new Firebase(url);
-
-
-
-
     }
     String full_name = "";
     /**
@@ -142,7 +137,7 @@ public class UserProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+/*
         ref.child(auth_id).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot datasnap) {
@@ -153,6 +148,7 @@ public class UserProfileFragment extends Fragment {
             public void onCancelled(FirebaseError error) {
             }
         });
+        */
 
 
         // BEGIN_INCLUDE (populate_tabs)
@@ -163,19 +159,22 @@ public class UserProfileFragment extends Fragment {
         mTabs.add(new SamplePagerItem(
                 getString(R.string.history), // Title
                 Color.BLUE, // Indicator color
-                Color.GRAY // Divider color
+                Color.GRAY, // Divider color
+                "offers"
         ));
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.offers), // Title
                 Color.RED, // Indicator color
-                Color.GRAY // Divider color
+                Color.GRAY, // Divider color
+                "offers"
         ));
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.requests), // Title
                 Color.YELLOW, // Indicator color
-                Color.GRAY // Divider color
+                Color.GRAY, // Divider color
+                "requests"
         ));
 
         /*mTabs.add(new SamplePagerItem(
@@ -185,11 +184,6 @@ public class UserProfileFragment extends Fragment {
         ));*/
         // END_INCLUDE (populate_tabs)
         return inflater.inflate(R.layout.fragment_sample, container, false);
-
-
-
-
-
 
     }
 
