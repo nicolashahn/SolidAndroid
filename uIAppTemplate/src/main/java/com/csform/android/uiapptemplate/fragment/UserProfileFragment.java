@@ -50,6 +50,7 @@ public class UserProfileFragment extends Fragment {
     private static Context ctx;
     private static Firebase ref;
     private static String auth_id;
+    private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
     /**
      * This class represents a tab to be displayed by {@link ViewPager} and it's associated
      * {@link SlidingTabLayout}.
@@ -77,7 +78,8 @@ public class UserProfileFragment extends Fragment {
          * @return A new {@link Fragment} to be displayed by a {@link ViewPager}
          */
         Fragment createFragment() {
-            return ContentFragment.newInstance(mTitle, mIndicatorColor, mDividerColor);
+            //return ContentFragment.newInstance(mTitle, mIndicatorColor, mDividerColor);
+            return ReqOffListFragment.newInstance(FIREBASE_URL, "requests");
         }
 
         /**

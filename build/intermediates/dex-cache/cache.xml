@@ -26,7 +26,11 @@
         jar="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/Solid/stickyListHeaders/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.2"
+<<<<<<< HEAD
         sha1="2db792fee6cebbad8e35de54254fbacb4096742b">
+=======
+        sha1="74d2918e0005d18ec5811dccbbf10cbfcfe8515a">
+>>>>>>> modified pages slightly to show requests:
         <dex dex="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-9c2ef61988c95f19e3a353103593ea6bdcb2f861.jar" />
     </item>
     <item
