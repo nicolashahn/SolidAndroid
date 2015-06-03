@@ -26,8 +26,17 @@
         jar="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\libs\nineoldandroids-2.4.0.jar"
         jumboMode="false"
         revision="21.1.2"
+<<<<<<< HEAD
         sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
         <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-2be2602913da0713a29b72ca7379686827632e0a.jar" />
+=======
+<<<<<<< HEAD
+        sha1="2db792fee6cebbad8e35de54254fbacb4096742b">
+=======
+        sha1="74d2918e0005d18ec5811dccbbf10cbfcfe8515a">
+>>>>>>> modified pages slightly to show requests:
+        <dex dex="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-9c2ef61988c95f19e3a353103593ea6bdcb2f861.jar" />
+>>>>>>> modified pages slightly to show requests:
     </item>
     <item
         jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.2.3\682d0a8dce58e47bde57316aac7d6bb5618dee6b\firebase-client-android-2.2.3.jar"
