@@ -27,10 +27,13 @@
         jumboMode="false"
         revision="21.1.2"
 <<<<<<< HEAD
+<<<<<<< HEAD
         sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
         <dex dex="C:\Users\Nick\Documents\2015spring\cs121\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-2be2602913da0713a29b72ca7379686827632e0a.jar" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> bb87caf845cea626af2ccf59bb6689f78e719088
         sha1="2db792fee6cebbad8e35de54254fbacb4096742b">
 =======
         sha1="74d2918e0005d18ec5811dccbbf10cbfcfe8515a">
