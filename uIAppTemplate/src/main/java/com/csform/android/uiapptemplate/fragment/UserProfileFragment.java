@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -241,7 +242,7 @@ public class UserProfileFragment extends Fragment {
      * The important section of this class is the {@link #getPageTitle(int)} method which controls
      * what is displayed in the {@link SlidingTabLayout}.
      */
-    class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+    class SampleFragmentPagerAdapter extends FragmentStatePagerAdapter {
 
         SampleFragmentPagerAdapter(FragmentManager fm) {
             super(fm);
