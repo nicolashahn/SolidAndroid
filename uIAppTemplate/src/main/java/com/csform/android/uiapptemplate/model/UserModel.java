@@ -1,5 +1,7 @@
 package com.csform.android.uiapptemplate.model;
 
+import android.util.Log;
+
 import java.io.Serializable;
 
 /**
@@ -46,10 +48,12 @@ public class UserModel implements Serializable {
     }
 
     public String getName() {
+        Log.i("returninig", name);
         return name;
     }
 
     public void setName(String n) {
+        Log.i("setting, ", n);
         name = n;
     }
     public String getPhone() {

@@ -32,6 +32,7 @@ import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.model.FavorModel;
+import com.csform.android.uiapptemplate.model.UserModel;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -40,6 +41,7 @@ import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class LeftMenusActivity extends ActionBarActivity
 	implements ReqOffListFragment.OnFragmentInteractionListener {
@@ -48,7 +50,8 @@ public class LeftMenusActivity extends ActionBarActivity
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
 	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
 	private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
-	private static String AUTH_USER_ID = "default_id";
+	private static final UserModel USER_DATA = new UserModel();
+	private static Firebase ref;
 	private ListView mDrawerList;
 	private List<DrawerItem> mDrawerItems;
 	private DrawerLayout mDrawerLayout;
@@ -63,12 +66,30 @@ public class LeftMenusActivity extends ActionBarActivity
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
 		Intent intent = getIntent();
-		AUTH_USER_ID = intent.getStringExtra("key");
-		Toast.makeText(this, "USERID = " + AUTH_USER_ID, Toast.LENGTH_LONG).show();
+        if(!intent.getExtras().containsKey("email")){
+			errorKill();
+		}
+		USER_DATA.setEmail(intent.getStringExtra("email"));
+		ref.child("users").child(emailToKey(USER_DATA.getEmail()))
+				.addListenerForSingleValueEvent(new ValueEventListener() {
+					@Override
+					public void onDataChange(DataSnapshot dataSnapshot) {
+						if (!dataSnapshot.exists()) errorKill();
+						Map<?, ?> userDataMap = (Map<?, ?>) dataSnapshot.getValue();
+						USER_DATA.setName(userDataMap.get("name").toString());
+						USER_DATA.setPhone(userDataMap.get("phone").toString());
+					}
+
+					@Override
+					public void onCancelled(FirebaseError firebaseError) {
+
+					}
+				});
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
@@ -163,8 +184,7 @@ public class LeftMenusActivity extends ActionBarActivity
 
 		View headerView = null;
 
-
-		Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+/*
 		ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
 			@Override
 			public void onDataChange(DataSnapshot datasnap) {
@@ -191,7 +211,7 @@ public class LeftMenusActivity extends ActionBarActivity
 
 			}
 		});
-
+*/
 		if (option.equals(LEFT_MENU_OPTION_1)) {
 			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
 					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
@@ -324,7 +344,7 @@ public class LeftMenusActivity extends ActionBarActivity
 			transaction.commit();
 		}
 		if (position == 5) {
-			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", AUTH_USER_ID);
+			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", USER_DATA.getName());
 			// Create new fragment and transaction
 			//Fragment newFragment = new UserProfileFragment();
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -369,5 +389,23 @@ public class LeftMenusActivity extends ActionBarActivity
 		Intent intent = new Intent(LeftMenusActivity.this, FavorSpecActivity.class);
 		intent.putExtra("fm", fm);
 		this.startActivity(intent);
+	}
+
+    /**
+     * Firebase keys cannot have a period (.) in them, so this converts the emails to valid keys
+     */
+    public String emailToKey(String emailAddress) {
+        return emailAddress.replace('.', ',');
+    }
+
+	private void errorKill(){
+		Context context = getApplicationContext();
+		CharSequence text = "Error retrieving user data";
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+		Intent myIntent = new Intent(this, LogInPageActivity.class);
+		startActivity(myIntent);
+		finish();
 	}
 }

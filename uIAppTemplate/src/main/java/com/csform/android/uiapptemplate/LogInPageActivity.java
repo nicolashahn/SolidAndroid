@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -16,6 +17,7 @@ import com.firebase.client.FirebaseError;
 
 public class LogInPageActivity extends Activity implements OnClickListener {
 
+    private static final int REG_REQUEST = 1;
 	public static final String LOGIN_PAGE_AND_LOADERS_CATEGORY = "com.csform.android.uiapptemplate.LogInPageAndLoadersActivity";
 	public static final String DARK = "Dark";
 	public static final String LIGHT = "Light";
@@ -30,6 +32,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
 		if (extras != null && extras.containsKey(LOGIN_PAGE_AND_LOADERS_CATEGORY)) {
 			category = extras.getString(LOGIN_PAGE_AND_LOADERS_CATEGORY, LIGHT);
 		}
+
 		setContentView(category);
 	}
 	
@@ -46,7 +49,6 @@ public class LogInPageActivity extends Activity implements OnClickListener {
 		login.setOnClickListener(this);
 		register.setOnClickListener(this);
 
-
 		skip.setOnClickListener(this);
 	}
 
@@ -60,14 +62,13 @@ public class LogInPageActivity extends Activity implements OnClickListener {
             if(regi.equalsIgnoreCase("REGISTER")){
                 Toast.makeText(this, tv.getText(), Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(LogInPageActivity.this, RegistrationPageActivity.class);
-                LogInPageActivity.this.startActivity(myIntent);
+                startActivityForResult(myIntent, REG_REQUEST);
+                //LogInPageActivity.this.startActivity(myIntent);
             }else if(regi.equalsIgnoreCase("LOGIN")) {
-
                 final TextView usernameview = (TextView)findViewById(R.id.emailview);
                 final TextView passwordview = (TextView) findViewById(R.id.passview);
-
-                String emailuser = usernameview.getText().toString();
-                String pwidpass = passwordview.getText().toString();
+                final String emailuser = usernameview.getText().toString();
+                final String pwidpass = passwordview.getText().toString();
                 if(emailuser.matches("") || pwidpass.matches("")){
                     Context context = getApplicationContext();
                     CharSequence text = "You cannot leave one or both fields blank!";
@@ -80,17 +81,22 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                     ref.authWithPassword(emailuser, pwidpass, new Firebase.AuthResultHandler() {
                         @Override
                         public void onAuthenticated(AuthData authData) {
-                            System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
-                            String value = authData.getUid().toString();
-
+                            String value = authData.getUid();
                             Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
-                            myIntent.putExtra("key", value); //Optional parameters
+                            myIntent.putExtra("email", emailuser); //Optional parameters
                             LogInPageActivity.this.startActivity(myIntent);
+                            finish();
                         }
 
                         @Override
                         public void onAuthenticationError(FirebaseError firebaseError) {
                             // there was an error Context context = getApplicationContext();
+                            Context context = getApplicationContext();
+                            CharSequence text = "Incorrect email/password combination";
+                            int duration = Toast.LENGTH_SHORT;
+
+                            Toast toast = Toast.makeText(context, text, duration);
+                            toast.show();
 
                         }
                     });
@@ -98,9 +104,27 @@ public class LogInPageActivity extends Activity implements OnClickListener {
             }else{
                 String value = "key";
                 Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
-                myIntent.putExtra("key", value); //Optional parameters
+                myIntent.putExtra("email", "a@a.com"); //Optional parameters
                 LogInPageActivity.this.startActivity(myIntent);
+                finish();
             }
 		}
 	}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == REG_REQUEST) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                if(data.getExtras().containsKey("email")){
+                    Log.i("Contains", "true");
+                    TextView emailview = (TextView)findViewById(R.id.emailview);
+                    emailview.setText(data.getStringExtra("email"));
+                    TextView passview = (TextView)findViewById(R.id.passview);
+                    passview.requestFocus();
+                    // maybe set PW here too if there is a secure way to do so
+                }
+            }
+        }
+    }
 }
