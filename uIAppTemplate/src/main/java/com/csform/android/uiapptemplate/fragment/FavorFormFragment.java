@@ -42,6 +42,7 @@ public class FavorFormFragment extends Fragment {
     private static String list;
     private static String url;
     private static Context ctx;
+    public String userEmail;
 
     private OnFragmentInteractionListener mListener;
     public String LOG_TAG = "FavorFormActivity";
@@ -95,8 +96,9 @@ public class FavorFormFragment extends Fragment {
         // auto fill the completed by date to be tomorrow
         autofillDate(mLinearLayout);
 
-        TextView userEmail = (TextView) mLinearLayout.findViewById(R.id.userEmailView);
-        userEmail.setText(UserModel.getField(getActivity(), "email"));
+        TextView userEmailView = (TextView) mLinearLayout.findViewById(R.id.userEmailView);
+        userEmail = UserModel.getField(getActivity(), "email");
+        userEmailView.setText(UserModel.getField(getActivity(), "email"));
 
         return mLinearLayout;
     }
@@ -195,7 +197,7 @@ public class FavorFormFragment extends Fragment {
         f1.put("dateToBeCompletedBy",date);
         f1.put("datePosted", Clock.getTimeStamp());
         // change this later - use appInfo from hw3?
-        f1.put("userPosted","batman");
+        f1.put("userPosted",userEmail);
         f1.put("favorId",favorId);
         f1.put("category",category);
         newFavorRef.setValue(f1);
