@@ -213,7 +213,7 @@ public class FavorFormFragment extends Fragment {
         Toast t = Toast.makeText(getActivity(), "Posted!", Toast.LENGTH_SHORT );
         t.show();
 
-        onDetach();
+        getFragmentManager().popBackStack();
     }
 
 }
