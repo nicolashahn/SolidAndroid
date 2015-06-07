@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -56,9 +57,12 @@ public class LeftMenusActivity extends ActionBarActivity
 	private List<DrawerItem> mDrawerItems;
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
+	private String LOG_TAG = "LeftMenusActivity";
+
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
-	private String LOG_TAG = "LeftMenusActivity";
+
+	private Handler mHandler;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +75,11 @@ public class LeftMenusActivity extends ActionBarActivity
 		final Context context = this;
 
 		Intent intent = getIntent();
-		if (!intent.getExtras().containsKey("email")) {
+		if(!intent.getExtras().containsKey("email")){
 			errorKill();
 		}
 		USER_DATA.setField(context, "email", intent.getStringExtra("email"));
-		Log.i(LOG_TAG, "getField call = " + USER_DATA.getField(context, "email"));
+		Log.i(LOG_TAG, "getField call = "+USER_DATA.getField(context, "email"));
 		ref.child("users").child(emailToKey(USER_DATA.getField(context, "email")))
 				.addListenerForSingleValueEvent(new ValueEventListener() {
 					@Override
@@ -192,7 +196,6 @@ public class LeftMenusActivity extends ActionBarActivity
 		View headerView = null;
 
 /*
-		Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
 		ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
 			@Override
 			public void onDataChange(DataSnapshot datasnap) {
@@ -268,7 +271,12 @@ public class LeftMenusActivity extends ActionBarActivity
 		mDrawerItems.add(
 				new DrawerItem(
 						R.string.drawer_icon_instagram,
-						R.string.drawer_title_form,
+						R.string.drawer_title_make_request,
+						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
+		mDrawerItems.add(
+				new DrawerItem(
+						R.string.drawer_icon_instagram,
+						R.string.drawer_title_make_offer,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 		mDrawerItems.add(
 				new DrawerItem(
@@ -276,6 +284,7 @@ public class LeftMenusActivity extends ActionBarActivity
 						R.string.drawer_title_profile,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -358,7 +367,7 @@ public class LeftMenusActivity extends ActionBarActivity
 			transaction.commit();
 		}
 		if (position == 6) {
-			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", USER_DATA.getField(this, "name"));
+			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", "batman");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
@@ -404,8 +413,7 @@ public class LeftMenusActivity extends ActionBarActivity
 		return emailAddress.replace('.', ',');
 	}
 
-	// If user data cannot be retrieved, display error and kill activity
-	private void errorKill() {
+	private void errorKill(){
 		Context context = getApplicationContext();
 		CharSequence text = "Error retrieving user data";
 		int duration = Toast.LENGTH_SHORT;
@@ -414,6 +422,5 @@ public class LeftMenusActivity extends ActionBarActivity
 		Intent myIntent = new Intent(this, LogInPageActivity.class);
 		startActivity(myIntent);
 		finish();
-
 	}
 }

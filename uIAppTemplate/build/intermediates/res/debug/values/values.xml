@@ -570,11 +570,13 @@
     <string name="drawer_title_linked_in">LinkedIn</string>
     <string name="drawer_title_list_views">List Views</string>
     <string name="drawer_title_login_page">Login Pages</string>
-    <string name="drawer_title_offers">Offers</string>
+    <string name="drawer_title_make_offer">Make Offer</string>
+    <string name="drawer_title_make_request">Make Request</string>
+    <string name="drawer_title_offers">Browse Offers</string>
     <string name="drawer_title_parallax">Parallax</string>
     <string name="drawer_title_profile">Profile</string>
     <string name="drawer_title_progress_bars">Progress Bars</string>
-    <string name="drawer_title_requests">Requests</string>
+    <string name="drawer_title_requests">Browse Requests</string>
     <string name="drawer_title_search_bars">Search Bars</string>
     <string name="drawer_title_settings">Settings</string>
     <string name="drawer_title_shape_image_views">Shape Image Views</string>
