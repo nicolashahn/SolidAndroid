@@ -79,21 +79,20 @@ public class LeftMenusActivity extends ActionBarActivity
 			errorKill();
 		}
 		USER_DATA.setField(context, "email", intent.getStringExtra("email"));
-		Log.i(LOG_TAG, "getField call = "+USER_DATA.getField(context, "email"));
-		ref.child("users").child(emailToKey(USER_DATA.getField(context, "email")))
+		Log.i(LOG_TAG, "getField call = " + UserModel.getField(context, "email"));
+		ref.child("users").child(emailToKey(UserModel.getField(context, "email")))
 				.addListenerForSingleValueEvent(new ValueEventListener() {
 					@Override
 					public void onDataChange(DataSnapshot dataSnapshot) {
 						if (!dataSnapshot.exists()) errorKill();
 						Log.i(LOG_TAG, dataSnapshot.toString());
 						Map<?, ?> userDataMap = (Map<?, ?>) dataSnapshot.getValue();
-
-
 						if (userDataMap == null) {
 							errorKill();
 						}
 						USER_DATA.setField(context, "name", userDataMap.get("name").toString());
 						USER_DATA.setField(context, "phone", userDataMap.get("phone").toString());
+                        USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
 					}
 
 					@Override
@@ -156,8 +155,6 @@ public class LeftMenusActivity extends ActionBarActivity
 		@Override
 		public void onProviderDisabled(String provider) {
 		}
-
-
 	};
 	double _lat = 0.0;
 	double _long = 0.0;
@@ -169,16 +166,10 @@ public class LeftMenusActivity extends ActionBarActivity
 			locationgiven = false;
 		} else {
 			locationgiven = true;
-
 			_lat = location.getLatitude();
-
-
 			_long = location.getLongitude();
-
 			_acc = location.getAccuracy();
-
 			//can choose to color the accuracy here, but naaah
-
 		}
 	}
 
@@ -245,7 +236,11 @@ public class LeftMenusActivity extends ActionBarActivity
 		ImageView iv = (ImageView) headerView.findViewById(R.id.image);
 		TextView tv = (TextView) headerView.findViewById(R.id.email);
 
-		ImageUtil.displayRoundImage(iv, url, null);
+
+		Log.i("Name:", UserModel.getField(this, "name"));
+		Log.i("Image:", UserModel.getField(this, "avatar"));
+        ImageUtil.displayImage(iv, UserModel.getField(this, "avatar"), null);
+//		ImageUtil.displayRoundImage(iv, url, null);
 		tv.setText(email);
 
 		return headerView;

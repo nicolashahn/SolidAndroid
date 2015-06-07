@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.adapter.ReqOffListAdapter;
 import com.csform.android.uiapptemplate.model.FavorModel;
+import com.csform.android.uiapptemplate.model.UserModel;
 import com.csform.android.uiapptemplate.view.AnimatedExpandableListView;
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
@@ -32,16 +33,17 @@ import java.util.List;
 import java.util.Map;
 
 public class ReqOffListFragment extends Fragment {
-	private static Firebase ref;
+    private static Firebase ref;
     private static String list;
     private static String url;
-	private static Context ctx;
+    private static Context ctx;
     private static Boolean singleUser;
-	private ReqOffListAdapter adapter;
+    private ReqOffListAdapter adapter;
     private AnimatedExpandableListView listView;
     private OnFragmentInteractionListener mListener;
     private List<FavorModel> favorList = new ArrayList<>();
-	private DynamicListView mDynamicListView;
+    private DynamicListView mDynamicListView;
+    private String USER_EMAIL;
 
 
     public static ReqOffListFragment newInstance(String url_, String list_) {
@@ -53,6 +55,7 @@ public class ReqOffListFragment extends Fragment {
         singleUser = false;
         return fragment;
     }
+
     public static ReqOffListFragment newInstance(String url_, String list_, Boolean singleUser_) {
         ReqOffListFragment fragment = new ReqOffListFragment();
         Bundle args = new Bundle();
@@ -70,10 +73,10 @@ public class ReqOffListFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		ctx = getActivity().getApplicationContext();
+        ctx = getActivity().getApplicationContext();
         Firebase.setAndroidContext(ctx);
         ref = new Firebase(url);
-		setHasOptionsMenu(true);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -84,22 +87,22 @@ public class ReqOffListFragment extends Fragment {
             @Override
             //  A DataSnapshot instance contains data from a Firebase location.
             public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
-                if(!snapshot.exists()) return;
+                if (!snapshot.exists()) return;
                 Map<?, ?> favorMap = (Map<?, ?>) snapshot.getValue();
                 final FavorModel favor = new FavorModel();
                 favor.setUser(favorMap.get("userPosted") + "");
-                if(singleUser) {
-                    if(!favor.getUser().equals("batman")) {
-                        Log.i("AFG", favor.getUser());
+                String user_key =  emailToKey(UserModel.getField(getActivity(), "email"));
+                if (singleUser) {
+                    if (!favor.getUser().equals(user_key)) {
                         return;
                     }
                 }
                 favor.setTitle(favorMap.get("title") + "");
                 favor.setDesc(favorMap.get("description") + "");
                 favor.setDatePosted(favorMap.get("datePosted") + "");
-                favor.setDateDoneBy(favorMap.get("dateToBeCompletedBy")+"");
-                favor.setCompensation(favorMap.get("compensation")+"");
-                ref.child("users").child(favor.getUser()).addListenerForSingleValueEvent(new ValueEventListener() {
+                favor.setDateDoneBy(favorMap.get("dateToBeCompletedBy") + "");
+                favor.setCompensation(favorMap.get("compensation") + "");
+                ref.child("users").child(user_key).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (!dataSnapshot.exists()) {
@@ -151,9 +154,9 @@ public class ReqOffListFragment extends Fragment {
         });
         View V = inflater.inflate(R.layout.fragment_reqoff_list_view, container, false);
         final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) V.findViewById(R.id.reqoff_list_swipe_refresh_layout);
-		mDynamicListView = (DynamicListView) V.findViewById(R.id.dynamic_listview);
+        mDynamicListView = (DynamicListView) V.findViewById(R.id.dynamic_listview);
         adapter = new ReqOffListAdapter(ctx, favorList, false, mListener, singleUser);
-		AnimationAdapter animAdapter = new AlphaInAnimationAdapter(adapter);
+        AnimationAdapter animAdapter = new AlphaInAnimationAdapter(adapter);
         //AnimationAdapter animAdapter = new ScaleInAnimationAdapter(adapter);
         animAdapter.setAbsListView(mDynamicListView);
         mDynamicListView.setAdapter(animAdapter);
@@ -185,20 +188,22 @@ public class ReqOffListFragment extends Fragment {
                     + " must implement OnFragmentInteractionListener");
         }
     }
-	@Override
+
+    @Override
     public void onCreateOptionsMenu(
-      Menu menu, MenuInflater inflater) {
+            Menu menu, MenuInflater inflater) {
 //		inflater.inflate(R.menu.menu_expandable_list, menu);
     }
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		if (item.getItemId() == android.R.id.home) {
-			Log.i("OnOptions", "trigger");
-			getFragmentManager().popBackStack();
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            Log.i("OnOptions", "trigger");
+            getFragmentManager().popBackStack();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onDetach() {
@@ -219,5 +224,9 @@ public class ReqOffListFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(FavorModel fm);
+    }
+
+    public String emailToKey(String emailAddress) {
+        return emailAddress.replace('.', ',');
     }
 }
