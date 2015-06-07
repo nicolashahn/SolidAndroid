@@ -413,6 +413,8 @@ public class LeftMenusActivity extends ActionBarActivity
 		return emailAddress.replace('.', ',');
 	}
 
+	public String keyToEmail(String key){ return key.replace('.',','); }
+
 	private void errorKill(){
 		Context context = getApplicationContext();
 		CharSequence text = "Error retrieving user data";

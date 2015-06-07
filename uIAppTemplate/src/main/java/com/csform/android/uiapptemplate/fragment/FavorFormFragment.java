@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.Clock;
 import com.csform.android.uiapptemplate.R;
@@ -96,9 +97,10 @@ public class FavorFormFragment extends Fragment {
         // auto fill the completed by date to be tomorrow
         autofillDate(mLinearLayout);
 
+        // get email from UserModel
         TextView userEmailView = (TextView) mLinearLayout.findViewById(R.id.userEmailView);
         userEmail = UserModel.getField(getActivity(), "email");
-        userEmailView.setText(UserModel.getField(getActivity(), "email"));
+        userEmailView.setText(userEmail);
 
         return mLinearLayout;
     }
@@ -187,7 +189,6 @@ public class FavorFormFragment extends Fragment {
         SecureRandom random = new SecureRandom();
         String favorId = new BigInteger(130, random).toString(32);
 
-
         // build a request object, send it to server
         Map<String, String> f1 = new HashMap<String, String>();
         f1.put("title", title);
@@ -200,6 +201,8 @@ public class FavorFormFragment extends Fragment {
         f1.put("userPosted",userEmail);
         f1.put("favorId",favorId);
         f1.put("category",category);
+        // empty until someone clicks 'accept favor'
+        f1.put("userAccepted","");
         newFavorRef.setValue(f1);
 
 
@@ -207,9 +210,10 @@ public class FavorFormFragment extends Fragment {
         String returnId = newFavorRef.getKey();
         Log.i(LOG_TAG, "key id = " + returnId);
 
-//        Toast t = Toast.makeText(this.getApplicationContext(), "Favor posted!", Toast.LENGTH_SHORT);
-//        t.show();
+        Toast t = Toast.makeText(getActivity(), "Posted!", Toast.LENGTH_SHORT );
+        t.show();
 
+        onDetach();
     }
 
 }
