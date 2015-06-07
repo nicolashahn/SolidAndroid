@@ -12,15 +12,15 @@
         android:layout_weight="0.22" />
 
     <com.csform.android.uiapptemplate.view.SlidingTabLayout
-          android:id="@+id/sliding_tabs"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <android.support.v4.view.ViewPager
-          android:id="@+id/viewpager"
-          android:layout_width="match_parent"
-          android:layout_height="0dp"
-          android:layout_weight="1"
-          android:background="@android:color/white" />
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
 
 </LinearLayout>

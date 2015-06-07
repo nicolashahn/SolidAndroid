@@ -1,5 +1,6 @@
 package com.csform.android.uiapptemplate;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.location.Location;
@@ -32,16 +33,16 @@ import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.util.ImageUtil;
-import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.client.Query;
+import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class LeftMenusActivity extends ActionBarActivity
-	implements ReqOffListFragment.OnFragmentInteractionListener {
+		implements ReqOffListFragment.OnFragmentInteractionListener {
 
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
@@ -162,47 +163,34 @@ public class LeftMenusActivity extends ActionBarActivity
 
 		View headerView = null;
 
-        Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com/user_database");
 
-        Query queryRef = ref.orderByChild("uid").equalTo(AUTH_USER_ID);
+		Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+		ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
+			@Override
+			public void onDataChange(DataSnapshot datasnap) {
+				full_name = datasnap.getKey();
+				String aud = datasnap.getKey();
+				Context context = getApplicationContext();
+				CharSequence text = "Name:" + full_name + " UID =" + aud;
+				int duration = Toast.LENGTH_LONG;
+
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
 
 
-        queryRef.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                System.out.println(dataSnapshot.getKey());
-                System.out.println(dataSnapshot.child("FullName").getValue().toString());
-                System.out.println(dataSnapshot.child("uid").getChildrenCount());
-                full_name = dataSnapshot.child("FullName").getValue().toString();
+			}
 
-                View headerView = getLayoutInflater().inflate(R.layout.header_navigation_drawer_1, mDrawerList, false);
-                TextView tv = (TextView) headerView.findViewById(R.id.email);
-                System.out.println("Right before the full-Name : " + full_name);
-                tv.setText(full_name);
-                mDrawerList.addHeaderView(headerView);
-            }
+			@Override
+			public void onCancelled(FirebaseError error) {
+				Context context = getApplicationContext();
+				CharSequence text = "Error";
+				int duration = Toast.LENGTH_LONG;
 
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
 
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-
+			}
+		});
 
 		if (option.equals(LEFT_MENU_OPTION_1)) {
 			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
@@ -217,17 +205,17 @@ public class LeftMenusActivity extends ActionBarActivity
 
 		BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems, isFirstType);
 
-		//mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
+		mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
 		mDrawerList.setAdapter(adapter);
 	}
 
 	private View prepareHeaderView(int layoutRes, String url, String email) {
 		View headerView = getLayoutInflater().inflate(layoutRes, mDrawerList, false);
 		ImageView iv = (ImageView) headerView.findViewById(R.id.image);
-		//TextView tv = (TextView) headerView.findViewById(R.id.email);
+		TextView tv = (TextView) headerView.findViewById(R.id.email);
 
 		ImageUtil.displayRoundImage(iv, url, null);
-		//tv.setText(email);
+		tv.setText(email);
 
 		return headerView;
 	}

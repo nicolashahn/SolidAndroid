@@ -157,12 +157,14 @@ public class UserProfileFragment extends Fragment {
          * Populate our tab list with tabs. Each item contains a title, indicator color and divider
          * color, which are used by {@link SlidingTabLayout}.
          */
+        /*
         mTabs.add(new SamplePagerItem(
                 getString(R.string.history), // Title
                 Color.BLUE, // Indicator color
                 Color.GRAY, // Divider color
                 "offers"
         ));
+        */
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.offers), // Title
