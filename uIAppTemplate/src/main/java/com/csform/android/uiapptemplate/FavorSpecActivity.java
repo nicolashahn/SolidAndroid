@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,9 @@ public class FavorSpecActivity extends ActionBarActivity {
         TextView datePosted = (TextView) findViewById(R.id.postedDateText);
         TextView dateDoneBy = (TextView) findViewById(R.id.completedDateText);
         TextView compensation = (TextView) findViewById(R.id.compText);
+        TextView userAccepted = (TextView) findViewById(R.id.userAcceptedText);
+
+        title.setText(fm.getUserAccepted());
         title.setText(fm.getTitle());
         user.setText(fm.getUser());
         dateDoneBy.setText("Do Favor/Accept Offer by "+fm.getDateDoneBy());
@@ -58,5 +62,9 @@ public class FavorSpecActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View v){
+
     }
 }
