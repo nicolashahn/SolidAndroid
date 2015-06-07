@@ -96,6 +96,9 @@ public class ReqOffListFragment extends Fragment {
                 }
                 favor.setTitle(favorMap.get("title") + "");
                 favor.setDesc(favorMap.get("description") + "");
+                favor.setDatePosted(favorMap.get("datePosted") + "");
+                favor.setDateDoneBy(favorMap.get("dateToBeCompletedBy")+"");
+                favor.setCompensation(favorMap.get("compensation")+"");
                 ref.child("users").child(favor.getUser()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

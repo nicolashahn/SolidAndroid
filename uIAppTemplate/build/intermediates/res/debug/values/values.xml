@@ -1810,8 +1810,8 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="typeface">robotoRegular</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingLeft">26dp</item>
         <item name="android:paddingRight">26dp</item>
         <!-- Supports API Level 17+ -->
@@ -1851,7 +1851,7 @@
     </style>
     <style name="TextViewAppearance.Display1" parent="@style/TextViewAppearance">
         <item name="typeface">robotoRegular</item>
-        <item name="android:textSize">45sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/main_color_grey_500</item>
     </style>
     <style name="TextViewAppearance.Display2" parent="@style/TextViewAppearance">

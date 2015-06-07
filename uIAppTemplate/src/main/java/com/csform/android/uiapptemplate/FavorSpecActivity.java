@@ -32,7 +32,15 @@ public class FavorSpecActivity extends ActionBarActivity {
 
         TextView title = (TextView) findViewById(R.id.titleText);
         TextView desc = (TextView) findViewById(R.id.descText);
+        TextView user = (TextView) findViewById(R.id.userText);
+        TextView datePosted = (TextView) findViewById(R.id.postedDateText);
+        TextView dateDoneBy = (TextView) findViewById(R.id.completedDateText);
+        TextView compensation = (TextView) findViewById(R.id.compText);
         title.setText(fm.getTitle());
+        user.setText(fm.getUser());
+        dateDoneBy.setText("Do Favor/Accept Offer by "+fm.getDateDoneBy());
+        datePosted.setText("Posted on "+fm.getDatePosted());
+        compensation.setText("Compensation: " + fm.getCompensation());
         desc.setText(fm.getDesc());
     }
 

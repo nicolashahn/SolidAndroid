@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,56 +11,65 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal|top"
-        android:padding="15dp">
+        android:padding="5dp">
 
-        <TextView
+        <com.csform.android.uiapptemplate.font.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Title"
             android:id="@+id/titleText"
-            android:textStyle="bold"
+            style="@style/TextViewAppearance.Display1"
             android:layout_marginBottom="10dp" />
 
-        <TextView
+        <com.csform.android.uiapptemplate.font.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            style="@style/TextViewAppearance.Headline1"
             android:text="User"
             android:id="@+id/userText" />
 
-        <TextView
+        <com.csform.android.uiapptemplate.font.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextViewAppearance.Title1"
             android:text="Date posted"
             android:id="@+id/postedDateText" />
 
-        <TextView
+        <com.csform.android.uiapptemplate.font.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextViewAppearance.Headline1"
             android:text="Date to be done by"
             android:id="@+id/completedDateText" />
 
-        <TextView
+        <com.csform.android.uiapptemplate.font.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            style="@style/TextViewAppearance.Body1"
             android:text="Description"
             android:id="@+id/descText"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp" />
 
-        <TextView
+        <com.csform.android.uiapptemplate.font.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextViewAppearance.Title1"
             android:text="Compensation"
             android:id="@+id/compText" />
+
+      <com.csform.android.uiapptemplate.font.RobotoTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          style="@style/TextViewAppearance.Caption1"
+          android:text="By clicking Do Favor/Accept Offer, you agree to release your phone number to the original poster."
+          android:id="@+id/disclaimer" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Do This Favor"
+            android:text="Do Favor/Accept Offer"
             android:id="@+id/acceptFavorButton"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
-</FrameLayout>
+</ScrollView>
