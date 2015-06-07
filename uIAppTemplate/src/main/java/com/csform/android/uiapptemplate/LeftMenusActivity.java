@@ -14,6 +14,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -56,6 +57,7 @@ public class LeftMenusActivity extends ActionBarActivity
 	private List<DrawerItem> mDrawerItems;
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
+    private String LOG_TAG = "LeftMenusActivity";
 
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
@@ -70,26 +72,35 @@ public class LeftMenusActivity extends ActionBarActivity
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
+		final Context context = this;
+
 		Intent intent = getIntent();
         if(!intent.getExtras().containsKey("email")){
 			errorKill();
 		}
-		USER_DATA.setEmail(intent.getStringExtra("email"));
-		ref.child("users").child(emailToKey(USER_DATA.getEmail()))
-				.addListenerForSingleValueEvent(new ValueEventListener() {
-					@Override
-					public void onDataChange(DataSnapshot dataSnapshot) {
-						if (!dataSnapshot.exists()) errorKill();
-						Map<?, ?> userDataMap = (Map<?, ?>) dataSnapshot.getValue();
-						USER_DATA.setName(userDataMap.get("name").toString());
-						USER_DATA.setPhone(userDataMap.get("phone").toString());
-					}
+		USER_DATA.setField(context, "email", intent.getStringExtra("email"));
+        Log.i(LOG_TAG, "getField call = "+USER_DATA.getField(context, "email"));
+		ref.child("users").child(emailToKey(USER_DATA.getField(context, "email")))
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (!dataSnapshot.exists()) errorKill();
+                        Log.i(LOG_TAG, dataSnapshot.toString());
+                        Map<?, ?> userDataMap = (Map<?, ?>) dataSnapshot.getValue();
 
-					@Override
-					public void onCancelled(FirebaseError firebaseError) {
 
-					}
-				});
+                        if (userDataMap == null) {
+                            errorKill();
+                        }
+                        USER_DATA.setField(context, "name", userDataMap.get("name").toString());
+                        USER_DATA.setField(context, "phone", userDataMap.get("phone").toString());
+                    }
+
+                    @Override
+                    public void onCancelled(FirebaseError firebaseError) {
+
+                    }
+                });
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
@@ -344,7 +355,7 @@ public class LeftMenusActivity extends ActionBarActivity
 			transaction.commit();
 		}
 		if (position == 5) {
-			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", USER_DATA.getName());
+			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", USER_DATA.getField(this, "name"));
 			// Create new fragment and transaction
 			//Fragment newFragment = new UserProfileFragment();
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

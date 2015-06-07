@@ -31,7 +31,6 @@ public class UserModel implements Serializable {
         avatar = "no avatar";
     }
 
-
     public UserModel( String dj, String e, String n, String p, String a){
         dateJoined = dj;
         email = e;
@@ -41,7 +40,7 @@ public class UserModel implements Serializable {
     }
 
     // given context and all fields of UserModel, store in SharedPreferences
-    public static void storeInfo(Context context, String dj, String e, String n, String p, String a){
+    public void storeInfo(Context context, String dj, String e, String n, String p, String a){
         SharedPreferences settings =
                 PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = settings.edit();
@@ -50,10 +49,10 @@ public class UserModel implements Serializable {
         editor.putString("name",n);
         editor.putString("phone",p);
         editor.putString("avatar",a);
-        editor.commit();
+        editor.apply();
     }
 
-    public static UserModel getInfo(Context context){
+    public UserModel getInfo(Context context){
         SharedPreferences settings =
                 PreferenceManager.getDefaultSharedPreferences(context);
         String dj = "defValue";
@@ -78,54 +77,87 @@ public class UserModel implements Serializable {
         return new UserModel();
     }
 
-    public String getEmail() {
-        return email;
+    // 1st arg = context -> UserModel.setField(this, , )
+    // 2nd arg = name of the field - dateJoined, email, phone, name, avatar
+    // 3rd arg = the field entry - if 2nd arg was "email", then "bob@ucsc.edu"
+    public void setField(Context context, String fieldname, String entry){
+        SharedPreferences settings =
+                PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(fieldname, entry);
+        editor.commit();
+        Log.i(LOG_TAG, "Putting "+entry+" in field "+fieldname);
     }
 
-    public void setEmail(String e) {
-        email = e;
+    public static String getField(Context context, String fieldname){
+        String result = "";
+        SharedPreferences settings =
+                PreferenceManager.getDefaultSharedPreferences(context);
+        result = settings.getString(fieldname, result);
+        return result;
     }
 
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String a) {
-        avatar = a;
-    }
-
-    public String getName() {
-        Log.i("returning name "+name, name);
-        return name;
-    }
-
-    public void setName(String n) {
-        Log.i("setting name "+n, n);
-        name = n;
-    }
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String p) {
-        phone = p;
-    }
-
-    public String getDateJoined() {
-        return dateJoined;
-    }
-
-    public void setDateJoined(String dj) {
-        dateJoined = dj;
-    }
-
-    @Override
-    public String toString() {
-        return email;
-    }
-
-    // no purpose other than to satisfy the abstract method Adapter
-    public long getId() {
-        return 0;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(Context context, String e) {
+//        SharedPreferences settings =
+//                PreferenceManager.getDefaultSharedPreferences(context);
+//        SharedPreferences.Editor editor = settings.edit();
+//        editor.putString("email", e);
+//        editor.commit();
+//    }
+//
+//    public String getAvatar() {
+//        return avatar;
+//    }
+//
+//    public void setAvatar(Context context, String a) {
+//        SharedPreferences settings =
+//                PreferenceManager.getDefaultSharedPreferences(context);
+//        SharedPreferences.Editor editor = settings.edit();
+//        editor.putString("avatar", a);
+//        editor.commit();
+//    }
+//
+//    public String getName() {
+//        Log.i("returning name "+name, name);
+//        return name;
+//    }
+//
+//    public void setName(Context context, String n) {
+//        Log.i("setting name "+n, n);
+//        name = n;
+//        SharedPreferences settings =
+//                PreferenceManager.getDefaultSharedPreferences(context);
+//        SharedPreferences.Editor editor = settings.edit();
+//        editor.putString("name", n);
+//        editor.commit();
+//    }
+//    public String getPhone() {
+//        return phone;
+//    }
+//
+//    public void setPhone(String p) {
+//        phone = p;
+//    }
+//
+//    public String getDateJoined() {
+//        return dateJoined;
+//    }
+//
+//    public void setDateJoined(String dj) {
+//        dateJoined = dj;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return email;
+//    }
+//
+//    // no purpose other than to satisfy the abstract method Adapter
+//    public long getId() {
+//        return 0;
+//    }
 }

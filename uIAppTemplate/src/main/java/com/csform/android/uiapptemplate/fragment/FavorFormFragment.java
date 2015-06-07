@@ -1,9 +1,9 @@
 package com.csform.android.uiapptemplate.fragment;
 
 import android.app.Activity;
-import android.support.v4.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +14,11 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.csform.android.uiapptemplate.Clock;
 import com.csform.android.uiapptemplate.R;
+import com.csform.android.uiapptemplate.model.UserModel;
 import com.firebase.client.Firebase;
 
 import java.math.BigInteger;
@@ -110,6 +112,9 @@ public class FavorFormFragment extends Fragment {
         spin.setAdapter(adapter);
         // auto fill the completed by date to be tomorrow
         autofillDate(mLinearLayout);
+
+        TextView userEmail = (TextView) mLinearLayout.findViewById(R.id.userEmailView);
+        userEmail.setText(UserModel.getField(getActivity(), "email"));
 
         return mLinearLayout;
     }
