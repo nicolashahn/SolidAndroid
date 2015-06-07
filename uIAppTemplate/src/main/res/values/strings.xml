@@ -97,8 +97,12 @@
     <string name="welcome">Welcome!</string>
     <string name="phone">Phone Number</string>
     <string name="name">Full Name</string>
+    <string name="title">Title</string>
+    <string name="dateEnd">Date to be done by</string>
+    <string name="description">Description</string>
+    <string name="compensation">Compensation</string>
 
-
+    <string name="postFavor">POST FAVOR</string>
     <string name="submit">SUBMIT</string>
     <string name="undo_deletion">UNDO DELETION</string>
     <string name="download">DOWNLOAD</string>

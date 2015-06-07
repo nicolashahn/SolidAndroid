@@ -309,6 +309,11 @@ public class LeftMenusActivity extends ActionBarActivity
 	private void selectItem(int position/*, int drawerTag*/) {
 		// minus 1 because we have header that has 0 position
 		if (position < 1) { //because we have header, we skip clicking on it
+			Fragment newFragment = ParallaxEffectsFragment.newInstance();
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+			transaction.commit();
 			return;
 		}
 		String drawerTitle = getString(mDrawerItems.get(position - 1).getTitle());
@@ -339,33 +344,26 @@ public class LeftMenusActivity extends ActionBarActivity
 			transaction.commit();
 		}
 		if (position == 4) {
-			// Create new fragment and transaction
-			Fragment newFragment = new FavorFormFragment();
+			Fragment newFragment = FavorFormFragment.newInstance(FIREBASE_URL, "requests");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-			// Replace whatever is in the fragment view with this fragment,
-			// and add the transaction to the back stack
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
-
-			// Commit the transaction
 			transaction.commit();
 		}
 		if (position == 5) {
-			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", USER_DATA.getField(this, "name"));
-			// Create new fragment and transaction
-			//Fragment newFragment = new UserProfileFragment();
+			Fragment newFragment = FavorFormFragment.newInstance(FIREBASE_URL, "offers");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-			// Replace whatever is in the fragment view with this fragment,
-			// and add the transaction to the back stack
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
-
-			// Commit the transaction
 			transaction.commit();
 		}
-
+		if (position == 6) {
+			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", USER_DATA.getField(this, "name"));
+			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+			transaction.replace(R.id.fragment, newFragment);
+			transaction.addToBackStack(null);
+			transaction.commit();
+		}
 		//nick was here
 	}
 
