@@ -125,7 +125,6 @@
 
     <string name="firebaseURL">https://crackling-torch-5178.firebaseio.com/</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="categories">
@@ -138,6 +137,7 @@
     </string-array>
     <string name="categoryPrompt">Choose Category</string>
 
+    <string name="info">Info</string>
     <string name="history">History</string>
     <string name="offers">Offers</string>
     <string name="tab_notifications">Notifications</string>

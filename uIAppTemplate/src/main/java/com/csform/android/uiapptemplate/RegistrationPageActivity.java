@@ -39,80 +39,80 @@ public class RegistrationPageActivity extends ActionBarActivity {
         TextView submitbut = (TextView) findViewById(R.id.submitbutton);
         submitbut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Perform action on click
-                final String emailuser = emailview.getText().toString();
-                final String pwidpass = passview.getText().toString();
-                final String phoneNumber = numview.getText().toString();
-                final String fullName = nameview.getText().toString();
+            // Perform action on click
+            final String emailuser = emailview.getText().toString();
+            final String pwidpass = passview.getText().toString();
+            final String phoneNumber = numview.getText().toString();
+            final String fullName = nameview.getText().toString();
 
-                int phoneLen = phoneNumber.length();
+            int phoneLen = phoneNumber.length();
 
-                if (emailuser.matches("") || pwidpass.matches("") || fullName.matches("")) {
-                    Context context = getApplicationContext();
-                    CharSequence text = "You cannot leave a field blank!";
-                    int duration = Toast.LENGTH_SHORT;
+            if (emailuser.matches("") || pwidpass.matches("") || fullName.matches("")) {
+                Context context = getApplicationContext();
+                CharSequence text = "You cannot leave a field blank!";
+                int duration = Toast.LENGTH_SHORT;
 
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-                } else if (phoneLen != 10) {
-                    Context context = getApplicationContext();
-                    CharSequence text = "Phone number must be 10 digits";
-                    int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            } else if (phoneLen != 10) {
+                Context context = getApplicationContext();
+                CharSequence text = "Phone number must be 10 digits";
+                int duration = Toast.LENGTH_SHORT;
 
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-                } else {
-                    final Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
-                    final Firebase userRef = ref.child("users");
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            } else {
+                final Firebase ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+                final Firebase userRef = ref.child("users");
 
-                    ref.createUser(emailuser, pwidpass, new Firebase.ValueResultHandler<Map<String, Object>>() {
-                        @Override
-                        public void onSuccess(Map<String, Object> result) {
-                            // System.out.println("Successfully created user account with uid: " + result.get("uid"));
-                            Context context = getApplicationContext();
-                            CharSequence text = "Successful!";
-                            int duration = Toast.LENGTH_SHORT;
+                ref.createUser(emailuser, pwidpass, new Firebase.ValueResultHandler<Map<String, Object>>() {
+                    @Override
+                    public void onSuccess(Map<String, Object> result) {
+                        // System.out.println("Successfully created user account with uid: " + result.get("uid"));
+                        Context context = getApplicationContext();
+                        CharSequence text = "Successful!";
+                        int duration = Toast.LENGTH_SHORT;
 
-                            // get today's date
-                            Calendar c = Calendar.getInstance();
-                            DateFormat df = SimpleDateFormat.getDateInstance();
-                            df.setTimeZone(TimeZone.getTimeZone("UTC"));
-                            String todaysDate = df.format(c.getTime());
+                        // get today's date
+                        Calendar c = Calendar.getInstance();
+                        DateFormat df = SimpleDateFormat.getDateInstance();
+                        df.setTimeZone(TimeZone.getTimeZone("UTC"));
+                        String todaysDate = df.format(c.getTime());
 
-                            // build a request object, send it to server
-                            Map<String, Object> userData = new HashMap<>();
-                            userData.put("name", fullName);
-                            userData.put("phone", phoneNumber);
-                            userData.put("dateJoined", todaysDate);
+                        // build a request object, send it to server
+                        Map<String, Object> userData = new HashMap<>();
+                        userData.put("name", fullName);
+                        userData.put("phone", phoneNumber);
+                        userData.put("dateJoined", todaysDate);
 
-                            //Map<String, Map<String, String>> user = new HashMap<>();
-                            //user.put(emailuser, userData);
-                            userRef.child(emailToKey(emailuser)).updateChildren(userData);
-                            Toast toast = Toast.makeText(context, text, duration);
-                            toast.show();
+                        //Map<String, Map<String, String>> user = new HashMap<>();
+                        //user.put(emailuser, userData);
+                        userRef.child(emailToKey(emailuser)).updateChildren(userData);
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
 //                      String unique_user_id = result.get("uid").toString();
-                            //Intent myIntent = new Intent(RegistrationPageActivity.this, LogInPageActivity.class);
-                            //myIntent.putExtra("key", unique_user_id); //Optional parameters
-                            //RegistrationPageActivity.this.startActivity(myIntent);
-                            Intent i = getIntent(); //gets the intent that called this intent
-                            i.putExtra("email", emailuser);
-                            Log.i("email", emailuser);
-                            setResult(Activity.RESULT_OK, i);
-                            finish();
-                        }
+                        //Intent myIntent = new Intent(RegistrationPageActivity.this, LogInPageActivity.class);
+                        //myIntent.putExtra("key", unique_user_id); //Optional parameters
+                        //RegistrationPageActivity.this.startActivity(myIntent);
+                        Intent i = getIntent(); //gets the intent that called this intent
+                        i.putExtra("email", emailuser);
+                        Log.i("email", emailuser);
+                        setResult(Activity.RESULT_OK, i);
+                        finish();
+                    }
 
-                        public void onError(FirebaseError firebaseError) {
-                            // there was an error
-                            Context context = getApplicationContext();
-                            CharSequence text = "Error!" + emailToKey(emailuser);
-                            int duration = Toast.LENGTH_SHORT;
+                    public void onError(FirebaseError firebaseError) {
+                        // there was an error
+                        Context context = getApplicationContext();
+                        CharSequence text = "Error!" + emailToKey(emailuser);
+                        int duration = Toast.LENGTH_SHORT;
 
-                            Toast toast = Toast.makeText(context, text, duration);
-                            toast.show();
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
 
-                        }
-                    });
-                }
+                    }
+                });
+            }
             }
         });
     }

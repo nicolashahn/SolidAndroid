@@ -17,6 +17,7 @@
 package com.csform.android.uiapptemplate.fragment;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,8 +29,12 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.csform.android.uiapptemplate.R;
+import com.csform.android.uiapptemplate.model.UserModel;
+import com.csform.android.uiapptemplate.util.ImageUtil;
 import com.csform.android.uiapptemplate.view.SlidingTabLayout;
 import com.firebase.client.Firebase;
 
@@ -47,19 +52,28 @@ public class UserProfileFragment extends Fragment {
     private static String url;
     private static Context ctx;
     private static Firebase ref;
-    private static String auth_id;
+    private OnFragmentInteractionListener mListener;
     private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
     /**
      * This class represents a tab to be displayed by {@link ViewPager} and it's associated
      * {@link SlidingTabLayout}.
      */
-    public static UserProfileFragment newInstance(String arg_url, String auth_id_received){
+    public static UserProfileFragment newInstance(String arg_url){
         UserProfileFragment fragment = new UserProfileFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         url = arg_url;
-        auth_id = auth_id_received;
         return fragment;
+    }
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (OnFragmentInteractionListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
     }
     static class SamplePagerItem {
         private final CharSequence mTitle;
@@ -67,6 +81,12 @@ public class UserProfileFragment extends Fragment {
         private final int mDividerColor;
         private final String mDatabase;
 
+        SamplePagerItem(CharSequence title, int indicatorColor, int dividerColor) {
+            mTitle = title;
+            mIndicatorColor = indicatorColor;
+            mDividerColor = dividerColor;
+            mDatabase = "";
+        }
         SamplePagerItem(CharSequence title, int indicatorColor, int dividerColor, String database) {
             mTitle = title;
             mIndicatorColor = indicatorColor;
@@ -138,55 +158,55 @@ public class UserProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-/*
-        ref.child(auth_id).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot datasnap) {
-                full_name = datasnap.getValue(String.class);
-            }
-
-            @Override
-            public void onCancelled(FirebaseError error) {
-            }
-        });
-        */
-
-
+        View V = inflater.inflate(R.layout.fragment_user_profile, container, false);
+        ImageView avatarView = (ImageView) V.findViewById(R.id.image);
+        TextView nameView = (TextView) V.findViewById(R.id.name);
+        ImageUtil.displayImage(avatarView, UserModel.getField(getActivity(), "avatar"), null);
+        nameView.setText(UserModel.getField(getActivity(), "name"));
         // BEGIN_INCLUDE (populate_tabs)
         /**
          * Populate our tab list with tabs. Each item contains a title, indicator color and divider
          * color, which are used by {@link SlidingTabLayout}.
          */
-        /*
+        TextView b = (TextView) V.findViewById(R.id.edit);
+        b.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                mListener.onFragmentInteraction();
+            }
+        });
+
+        mTabs.add(new SamplePagerItem(
+                getString(R.string.info), // Title
+                R.color.main_color_100, // Indicator color
+                Color.GRAY, // Divider color
+                "requests"
+        ));
+
         mTabs.add(new SamplePagerItem(
                 getString(R.string.history), // Title
-                Color.BLUE, // Indicator color
+                R.color.main_color_100,
+//                Color.BLUE, // Indicator color
                 Color.GRAY, // Divider color
-                "offers"
+                "requests"
         ));
-        */
+
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.offers), // Title
-                Color.RED, // Indicator color
+                R.color.main_color_300,
+                //               Color.RED, // Indicator color
                 Color.GRAY, // Divider color
                 "offers"
         ));
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.requests), // Title
-                Color.YELLOW, // Indicator color
+                R.color.main_color_grey_500, // Indicator color
                 Color.GRAY, // Divider color
-                "requests"
+                "offers"
         ));
 
-        /*mTabs.add(new SamplePagerItem(
-                getString(R.string.tab_notifications), // Title
-                Color.GREEN, // Indicator color
-                Color.GRAY // Divider color
-        ));*/
-        // END_INCLUDE (populate_tabs)
-        return inflater.inflate(R.layout.fragment_user_profile, container, false);
+        return V;
 
     }
 
@@ -279,5 +299,10 @@ public class UserProfileFragment extends Fragment {
         // END_INCLUDE (pageradapter_getpagetitle)
 
     }
-
+        public String keyToEmail(String key) {
+            return key.replace(',', '.');
+    }
+    public interface OnFragmentInteractionListener {
+        void onFragmentInteraction();
+    }
 }

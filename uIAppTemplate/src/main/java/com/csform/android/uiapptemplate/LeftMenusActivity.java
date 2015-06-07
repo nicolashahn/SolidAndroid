@@ -45,7 +45,8 @@ import java.util.List;
 import java.util.Map;
 
 public class LeftMenusActivity extends ActionBarActivity
-		implements ReqOffListFragment.OnFragmentInteractionListener {
+		implements ReqOffListFragment.OnFragmentInteractionListener,
+				   UserProfileFragment.OnFragmentInteractionListener{
 
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
@@ -92,7 +93,7 @@ public class LeftMenusActivity extends ActionBarActivity
 						}
 						USER_DATA.setField(context, "name", userDataMap.get("name").toString());
 						USER_DATA.setField(context, "phone", userDataMap.get("phone").toString());
-                        USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
+						USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
 					}
 
 					@Override
@@ -362,7 +363,7 @@ public class LeftMenusActivity extends ActionBarActivity
 			transaction.commit();
 		}
 		if (position == 6) {
-			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database", "batman");
+			Fragment newFragment = UserProfileFragment.newInstance(FIREBASE_URL + "user_database");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
@@ -398,6 +399,12 @@ public class LeftMenusActivity extends ActionBarActivity
 	public void onFragmentInteraction(FavorModel fm) {
 		Intent intent = new Intent(LeftMenusActivity.this, FavorSpecActivity.class);
 		intent.putExtra("fm", fm);
+		this.startActivity(intent);
+	}
+
+	@Override
+	public void onFragmentInteraction() {
+		Intent intent = new Intent(LeftMenusActivity.this, ParallaxActivity.class);
 		this.startActivity(intent);
 	}
 
