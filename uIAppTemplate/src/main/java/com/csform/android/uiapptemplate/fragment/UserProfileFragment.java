@@ -186,7 +186,7 @@ public class UserProfileFragment extends Fragment {
                 Color.GRAY // Divider color
         ));*/
         // END_INCLUDE (populate_tabs)
-        return inflater.inflate(R.layout.fragment_sample, container, false);
+        return inflater.inflate(R.layout.fragment_user_profile, container, false);
 
     }
 

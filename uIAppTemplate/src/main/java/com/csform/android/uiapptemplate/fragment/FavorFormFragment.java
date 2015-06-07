@@ -1,9 +1,9 @@
 package com.csform.android.uiapptemplate.fragment;
 
 import android.app.Activity;
-import android.support.v4.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +14,11 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.csform.android.uiapptemplate.Clock;
 import com.csform.android.uiapptemplate.R;
+import com.csform.android.uiapptemplate.model.UserModel;
 import com.firebase.client.Firebase;
 
 import java.math.BigInteger;
@@ -37,19 +39,10 @@ import java.util.Map;
  * create an instance of this fragment.
  */
 public class FavorFormFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     private OnFragmentInteractionListener mListener;
 
 
-    public String LOG_TAG = "FavorFormActivity";
+    public String LOG_TAG = "FavorFormFragment";
 
     public String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 
@@ -65,8 +58,6 @@ public class FavorFormFragment extends Fragment {
     public static FavorFormFragment newInstance(String param1, String param2) {
         FavorFormFragment fragment = new FavorFormFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -80,10 +71,7 @@ public class FavorFormFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(super.getActivity().getApplicationContext());
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
@@ -95,9 +83,9 @@ public class FavorFormFragment extends Fragment {
         Button b = (Button) mLinearLayout.findViewById(R.id.fragPostButton);
         // make its click listener call postButton()
         b.setOnClickListener(new View.OnClickListener(){
-           public void onClick(View v){
-               postButton();
-           }
+            public void onClick(View v){
+                postButton();
+            }
         });
 
 
@@ -110,6 +98,9 @@ public class FavorFormFragment extends Fragment {
         spin.setAdapter(adapter);
         // auto fill the completed by date to be tomorrow
         autofillDate(mLinearLayout);
+
+        TextView userEmail = (TextView) mLinearLayout.findViewById(R.id.userEmailView);
+        userEmail.setText(UserModel.getField(getActivity(), "email"));
 
         return mLinearLayout;
     }

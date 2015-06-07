@@ -533,7 +533,7 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="all_set_by_google_instructions_of_material_design">All set by Google instructions of Material Design</string>
-    <string name="app_name">UIAppTemplate</string>
+    <string name="app_name">Solid</string>
     <string name="categoryPrompt">Choose Category</string>
     <string name="cd_background_image">background image</string>
     <string name="cd_main_image">main image</string>
@@ -577,6 +577,7 @@
     <string name="drawer_title_shape_image_views">Shape Image Views</string>
     <string name="drawer_title_splash_screens">Splash Screens</string>
     <string name="drawer_title_text_views">Text Views</string>
+    <string name="email">Email</string>
     <string name="error">ERROR</string>
     <string name="firebaseURL">https://crackling-torch-5178.firebaseio.com/</string>
     <string name="flat">FLAT</string>
@@ -600,20 +601,23 @@
     <string name="lorem_ipsum_short">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
     <string name="material_design">Material design</string>
     <string name="material_design_variation">Material design variation</string>
+    <string name="name">Full Name</string>
     <string name="number_of_images">%d image(s)</string>
     <string name="offers">Offers</string>
     <string name="password">Password</string>
+    <string name="phone">Phone Number</string>
     <string name="raised">RAISED</string>
     <string name="register">REGISTER</string>
     <string name="requests">Requests</string>
     <string name="skip">SKIP</string>
+    <string name="submit">SUBMIT</string>
     <string name="tab_notifications">Notifications</string>
     <string name="thicker_and_darker_version">Thicker and darker version of Material design</string>
     <string name="thiner_and_lighter_version">Thiner and lighter version of Material design</string>
-    <string name="title_activity_favor_form">FavorFormActivity</string>
-    <string name="title_activity_favor_spec">FavorSpecActivity</string>
+    <string name="title_activity_favor_form">Create a favor</string>
+    <string name="title_activity_favor_spec">Favor spec</string>
     <string name="title_activity_firebase_test">FirebaseTestActivity</string>
-    <string name="title_activity_registration_page">RegistrationPageActivity</string>
+    <string name="title_activity_registration_page">Registration</string>
     <string name="typography1">Typography I</string>
     <string name="typography2">Typography II</string>
     <string name="typography3">Typography III</string>

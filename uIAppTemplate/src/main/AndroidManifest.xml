@@ -59,10 +59,6 @@
             android:label="@string/title_activity_firebase_test" >
         </activity>
         <activity
-            android:name=".FavorFormActivity"
-            android:label="@string/title_activity_favor_form" >
-        </activity>
-        <activity
             android:name=".FavorSpecActivity"
             android:label="@string/title_activity_favor_spec" >
         </activity>
