@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ReqOffListFragment extends Fragment {
+public class ReqOffListFragment extends Fragment{
     private static Firebase ref;
     private static String list;
     private static String url;
@@ -181,10 +181,19 @@ public class ReqOffListFragment extends Fragment {
 
         FloatingActionButton fab = new FloatingActionButton.Builder(this.getActivity(), (FrameLayout)V.findViewById(R.id.frameLayout))
                 .withDrawable(getResources().getDrawable(R.drawable.ic_add))
-                .withButtonColor(getResources().getColor(R.color.cpb_red_dark))
+                .withButtonColor(getResources().getColor(R.color.material_blue_800))
                 .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
                 .withMargins(0, 0, 5, 5)
                 .create();
+/*
+        fab.setOnClickListener(V.OnClickListener(){
+
+            @Override
+
+                    public void onClick(View V){
+                //some code to launch the form
+            }
+        }*/
 
         return V;
     }
