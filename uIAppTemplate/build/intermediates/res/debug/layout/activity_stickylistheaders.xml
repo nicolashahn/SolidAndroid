@@ -23,4 +23,8 @@
         android:layout_height="match_parent"
         android:dividerHeight="0dp" />
 
+<<<<<<< HEAD
 </merge><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/activity_stickylistheaders.xml -->
+=======
+</merge><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_stickylistheaders.xml -->
+>>>>>>> changed formatting a little bit

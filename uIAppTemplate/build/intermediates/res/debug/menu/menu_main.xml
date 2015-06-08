@@ -11,4 +11,8 @@
         android:title="@string/chat_button_menu"
         app:showAsAction="never"/>
 </menu>
+<<<<<<< HEAD
 <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/menu/menu_main.xml -->
+=======
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/menu/menu_main.xml -->
+>>>>>>> changed formatting a little bit

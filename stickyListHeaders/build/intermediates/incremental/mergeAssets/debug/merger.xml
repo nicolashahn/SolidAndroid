@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="/Users/ahlien/solid/solid/stickyListHeaders/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/ahlien/solid/solid/stickyListHeaders/src/debug/assets"/></dataSet></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="/Users/remypham/Documents/AndroidStudioProjects/Solid/stickyListHeaders/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/remypham/Documents/AndroidStudioProjects/Solid/stickyListHeaders/src/debug/assets"/></dataSet></merger>
+>>>>>>> changed formatting a little bit

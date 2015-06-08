@@ -24,4 +24,8 @@
             android:foreground="?android:attr/windowContentOverlay" />
 
 </merge>
+<<<<<<< HEAD
 <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout-v11/abc_screen_content_include.xml -->
+=======
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout-v11/abc_screen_content_include.xml -->
+>>>>>>> changed formatting a little bit

@@ -39,4 +39,8 @@
         android:layout_weight="1"
         android:background="@android:color/white" />
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/fragment_user_profile.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_user_profile.xml -->
+>>>>>>> changed formatting a little bit

@@ -5,4 +5,8 @@
 
     <solid android:color="@color/main_color_grey_600" />
 
+<<<<<<< HEAD
 </shape><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/drawable/edit_text_cursor_drawable_main.xml -->
+=======
+</shape><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/drawable/edit_text_cursor_drawable_main.xml -->
+>>>>>>> changed formatting a little bit

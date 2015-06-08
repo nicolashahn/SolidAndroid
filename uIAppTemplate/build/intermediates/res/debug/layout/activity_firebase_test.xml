@@ -21,4 +21,8 @@
         android:onClick="clickButton" />
 
 </RelativeLayout>
+<<<<<<< HEAD
 <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/activity_firebase_test.xml -->
+=======
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_firebase_test.xml -->
+>>>>>>> changed formatting a little bit

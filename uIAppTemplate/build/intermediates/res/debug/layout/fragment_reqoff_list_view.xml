@@ -13,4 +13,8 @@
                 android:layout_height="match_parent" />
     </android.support.v4.widget.SwipeRefreshLayout>
 </FrameLayout>
+<<<<<<< HEAD
 <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/fragment_reqoff_list_view.xml -->
+=======
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_reqoff_list_view.xml -->
+>>>>>>> changed formatting a little bit

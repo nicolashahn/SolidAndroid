@@ -6,4 +6,8 @@
     <item android:drawable="@color/main_color_grey_300" android:state_pressed="true"/>
     <item android:drawable="@android:color/transparent"/>
 
+<<<<<<< HEAD
 </selector><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/drawable/selector_background_empty.xml -->
+=======
+</selector><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/drawable/selector_background_empty.xml -->
+>>>>>>> changed formatting a little bit

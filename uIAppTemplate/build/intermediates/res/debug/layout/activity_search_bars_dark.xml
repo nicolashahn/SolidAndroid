@@ -56,4 +56,8 @@
 
     <include layout="@layout/list_view" />
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/activity_search_bars_dark.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_search_bars_dark.xml -->
+>>>>>>> changed formatting a little bit

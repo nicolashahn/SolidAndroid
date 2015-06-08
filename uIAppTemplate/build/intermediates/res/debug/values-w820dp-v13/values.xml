@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/values-w820dp/dimens.xml -->
+=======
+    <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/values-w820dp/dimens.xml -->
+>>>>>>> changed formatting a little bit
     <eat-comment/>
     <dimen name="activity_horizontal_margin">64dp</dimen>
 </resources>

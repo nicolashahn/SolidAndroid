@@ -33,4 +33,8 @@
         android:textColor="@color/main_color_grey_700"
         android:textSize="20dp" />
 
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/list_item_default.xml -->
+=======
+</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_item_default.xml -->
+>>>>>>> changed formatting a little bit

@@ -8,4 +8,8 @@
 
     <include layout="@layout/list_view"/>
 </RelativeLayout>
+<<<<<<< HEAD
 <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/activity_requests.xml -->
+=======
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_requests.xml -->
+>>>>>>> changed formatting a little bit
