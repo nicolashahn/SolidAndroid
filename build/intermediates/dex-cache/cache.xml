@@ -26,7 +26,11 @@
         jar="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/Solid/stickyListHeaders/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.2"
+<<<<<<< HEAD
         sha1="0c807db7725a619ebcc243303ea3238fccd61056">
+=======
+        sha1="71659eab5660f10bf12dac78647c18f021abd44f">
+>>>>>>> AWWWWW YEEEAAAAHHHHH BUTTON
         <dex dex="/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-9c2ef61988c95f19e3a353103593ea6bdcb2f861.jar" />
     </item>
     <item

@@ -7,16 +7,19 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.adapter.ReqOffListAdapter;
 import com.csform.android.uiapptemplate.model.FavorModel;
+import com.csform.android.uiapptemplate.model.FloatingActionButton;
 import com.csform.android.uiapptemplate.model.UserModel;
 import com.csform.android.uiapptemplate.view.AnimatedExpandableListView;
 import com.firebase.client.ChildEventListener;
@@ -44,6 +47,7 @@ public class ReqOffListFragment extends Fragment {
     private List<FavorModel> favorList = new ArrayList<>();
     private DynamicListView mDynamicListView;
     private String USER_EMAIL;
+
 
 
     public static ReqOffListFragment newInstance(String url_, String list_) {
@@ -174,6 +178,13 @@ public class ReqOffListFragment extends Fragment {
                 }, 750);
             }
         });
+
+        FloatingActionButton fab = new FloatingActionButton.Builder(this.getActivity(), (FrameLayout)V.findViewById(R.id.frameLayout))
+                .withDrawable(getResources().getDrawable(R.drawable.ic_add))
+                .withButtonColor(getResources().getColor(R.color.cpb_red_dark))
+                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
+                .withMargins(0, 0, 5, 5)
+                .create();
 
         return V;
     }
