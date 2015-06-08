@@ -153,6 +153,7 @@ public class UserProfileFragment extends Fragment {
         Firebase.setAndroidContext(ctx);
         ref = new Firebase(url);
         setHasOptionsMenu(true);
+
     }
     /**
      * Inflates the {@link View} which will be displayed by this {@link Fragment}, from the app's
@@ -198,7 +199,6 @@ public class UserProfileFragment extends Fragment {
                 Color.GRAY, // Divider color
                 "requests"
         ));
-
         return V;
 
     }
@@ -307,7 +307,6 @@ public class UserProfileFragment extends Fragment {
                 return super.onOptionsItemSelected(item);
         }
     }
-
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction();
     }

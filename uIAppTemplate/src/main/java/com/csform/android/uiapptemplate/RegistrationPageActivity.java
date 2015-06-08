@@ -109,7 +109,6 @@ public class RegistrationPageActivity extends ActionBarActivity {
 
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
-
                     }
                 });
             }

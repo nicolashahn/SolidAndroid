@@ -6,7 +6,6 @@ import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -48,12 +47,14 @@ public class LeftMenusActivity extends ActionBarActivity
 		implements ReqOffListFragment.OnFragmentInteractionListener,
 				   UserProfileFragment.OnFragmentInteractionListener{
 
+    private static final int REG_REQUEST = 1;
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
 	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
 	private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 	private static final UserModel USER_DATA = new UserModel();
 	private static Firebase ref;
+	private static Context context;
 	private ListView mDrawerList;
 	private List<DrawerItem> mDrawerItems;
 	private DrawerLayout mDrawerLayout;
@@ -63,8 +64,6 @@ public class LeftMenusActivity extends ActionBarActivity
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
 
-	private Handler mHandler;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,16 +72,16 @@ public class LeftMenusActivity extends ActionBarActivity
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
-		final Context context = this;
+		context = this;
 
 		Intent intent = getIntent();
 		if(!intent.getExtras().containsKey("email")){
 			errorKill();
 		}
 		USER_DATA.setField(context, "email", intent.getStringExtra("email"));
-		Log.i(LOG_TAG, "getField call = " + UserModel.getField(context, "email"));
+//		Log.i(LOG_TAG, "getField call = " + UserModel.getField(context, "email"));
 		ref.child("users").child(emailToKey(UserModel.getField(context, "email")))
-				.addListenerForSingleValueEvent(new ValueEventListener() {
+				.addValueEventListener(new ValueEventListener() {
 					@Override
 					public void onDataChange(DataSnapshot dataSnapshot) {
 						if (!dataSnapshot.exists()) errorKill();
@@ -93,14 +92,14 @@ public class LeftMenusActivity extends ActionBarActivity
 						}
 						USER_DATA.setField(context, "name", userDataMap.get("name") + "");
 						USER_DATA.setField(context, "phone", userDataMap.get("phone") + "");
-						USER_DATA.setField(context, "avatar", userDataMap.get("avatar") + "");
+						USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
 					}
 
 					@Override
 					public void onCancelled(FirebaseError firebaseError) {
 
 					}
-				});
+        });
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
@@ -406,10 +405,22 @@ public class LeftMenusActivity extends ActionBarActivity
 	// Listener from UserProfileFragment
 	@Override
 	public void onFragmentInteraction() {
-		Intent intent = new Intent(LeftMenusActivity.this, UserProfileEditActivity.class);
-		this.startActivity(intent);
+        Intent myIntent = new Intent(LeftMenusActivity.this, UserProfileEditActivity.class);
+        startActivity(myIntent);
+//        startActivityForResult(myIntent, REG_REQUEST);
 	}
+    @Override
+    // Gets result from RegistrationPageActivity
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != REG_REQUEST) errorKill(); // Check which request we're responding to
+        if (resultCode != RESULT_OK) errorKill(); // Make sure the request was successful
 
+        TextView emailview = (TextView)findViewById(R.id.emailview);
+        emailview.setText(data.getStringExtra("email"));
+        TextView passview = (TextView)findViewById(R.id.passview);
+        passview.requestFocus();
+
+    }
 	/**
 	 * Firebase keys cannot have a period (.) in them, so this converts the emails to valid keys
 	 */

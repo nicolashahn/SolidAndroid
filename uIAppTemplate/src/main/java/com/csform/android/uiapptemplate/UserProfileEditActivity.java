@@ -81,7 +81,6 @@ public class UserProfileEditActivity extends ActionBarActivity {
                  * How do I update User Model here?
                  * UserModel.setField(this, "phone", "newPhone");
                  */
-//          UserModel.setField(LeftMenusActivity, "phone", "newPhone");
         finish();
     }
     @Override

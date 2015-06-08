@@ -57,7 +57,6 @@ public class LogInPageActivity extends Activity implements OnClickListener {
         if (v instanceof TextView) {
             TextView tv = (TextView) v;
             //Toast.makeText(this, tv.getText(), Toast.LENGTH_SHORT).show();
-
             String regi = tv.getText().toString();
             if(regi.equalsIgnoreCase("REGISTER")){
                 Toast.makeText(this, tv.getText(), Toast.LENGTH_SHORT).show();
@@ -65,7 +64,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                 startActivityForResult(myIntent, REG_REQUEST);
                 //LogInPageActivity.this.startActivity(myIntent);
             }else if(regi.equalsIgnoreCase("LOGIN")) {
-                final TextView usernameview = (TextView)findViewById(R.id.emailview);
+                final TextView usernameview = (TextView) findViewById(R.id.emailview);
                 final TextView passwordview = (TextView) findViewById(R.id.passview);
                 final String emailuser = usernameview.getText().toString();
                 final String pwidpass = passwordview.getText().toString();
@@ -113,7 +112,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode != REG_REQUEST) return; // Check which request we're responding to
         if (resultCode != RESULT_OK) return; // Make sure the request was successful
-        if(data.getExtras().containsKey("email")){
+        if (data.getExtras().containsKey("email")){
             Log.i("Contains", "true");
             TextView emailview = (TextView)findViewById(R.id.emailview);
             emailview.setText(data.getStringExtra("email"));
