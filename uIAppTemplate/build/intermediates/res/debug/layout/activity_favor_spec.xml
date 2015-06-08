@@ -78,7 +78,8 @@
             android:layout_height="wrap_content"
             android:text="Do Favor/Accept Offer"
             android:id="@+id/acceptFavorButton"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClick" />
     </LinearLayout>
 </ScrollView>
 <!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml -->

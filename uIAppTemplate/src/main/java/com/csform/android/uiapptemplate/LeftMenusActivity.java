@@ -255,7 +255,7 @@ public class LeftMenusActivity extends ActionBarActivity
 		mDrawerItems = new ArrayList<>();
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_linked_in,
+						R.string.drawer_icon_home,
 						R.string.drawer_title_home,
 						DrawerItem.DRAWER_ITEM_TAG_LINKED_IN));
 		mDrawerItems.add(

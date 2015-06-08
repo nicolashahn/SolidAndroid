@@ -75,6 +75,6 @@ public class FavorSpecActivity extends ActionBarActivity {
     }
 
     public void onClick(View v){
-        
+
     }
 }
