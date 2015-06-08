@@ -2,116 +2,116 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\listviewanimations_lib-manipulation_3.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-manipulation_3.1.0-646cec26b9cfa410fdf47728f875cde0d36c1052.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2-2a4f16fd4df34fe0269ccf4a2726b4e36e919c73.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.2.3\682d0a8dce58e47bde57316aac7d6bb5618dee6b\firebase-client-android-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="682d0a8dce58e47bde57316aac7d6bb5618dee6b">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\firebase-client-android-2.2.3-23ddbdf29b4ce32465a78e2e08fc4c5d630139dd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-05fcb18586cf85fc49a2ac517bb418a7a3f47760.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-14262b5edd1aa672d5fc9c601cbc2cb000aef593.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\listviewanimations_lib-core-slh_3.1.0.jar"
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/libs/listviewanimations_lib-core-slh_3.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a4fe703aabd23e8c287c90396514418119109dd1">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-core-slh_3.1.0-be480cf78c0826aab19f7c352cc837fa36ce89be.jar" />
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-core-slh_3.1.0-1fb7de43a4220a272e854eeca116f5d8e382459e.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-461275fbebe6afc4412416eddd13b7f3f2c70439.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.11\d37cb67277928cf59344b4196af8d9cee1f1a27c\tubesock-0.0.11.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\tubesock-0.0.11-b1912014adc0515507915dca4e844e7afa4d85e7.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-aab931e8d35e11ea1044bb19e23a90c56870dfe4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\nineoldandroids-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-fd1f9aa9d7ba82bef5d5db45ecc4cc748d4145db.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\listviewanimations_lib-core_3.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f3f9629b068554d8513a2aaf34418171bf430851">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\listviewanimations_lib-core_3.1.0-1ffa1df8cb7263a451ccb75bbeb00c774ff717e6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.2.3\e787a02a644f2681e4af82cdc88dd2f69877692b\firebase-client-jvm-2.2.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e787a02a644f2681e4af82cdc88dd2f69877692b">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\firebase-client-jvm-2.2.3-0a05dc2864c3e65c78c9d5b059784c3effba68d8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-core-2.2.2-5994638a733cae2dd101810a624f51280fe15bde.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\libs\universal-image-loader-1.9.3.jar"
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/libs/universal-image-loader-1.9.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-b3ea6d73015e75c3d6c344b82450b765eb2960b6.jar" />
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-20f082e11f89af723ab764615e6fc850f4518047.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\exploded-aar\Solid\stickyListHeaders\unspecified\classes.jar"
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2abcaa73c8b4c77515a017ccf185f04b55091e9d">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\classes-fe557c94899e7ec43e27c145af9bb46a8004692c.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-cbfc833a1de480009d68118af0d50a2ecd6b45ba.jar" />
     </item>
     <item
-        jar="C:\Users\Ash\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jar="/Users/ahlien/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
-        <dex dex="C:\Users\Ash\AndroidStudioProjects\solid\uIAppTemplate\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2-ef6c2634f3b04227db966491b052df04b0f1921a.jar" />
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-635dbcd4961a332111fd1000ca1c6c05e5ebae07.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/libs/listviewanimations_lib-manipulation_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-manipulation_3.1.0-a41b0e49d596daeb3d64d8ec03e4418939971d1a.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.2.3/e787a02a644f2681e4af82cdc88dd2f69877692b/firebase-client-jvm-2.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e787a02a644f2681e4af82cdc88dd2f69877692b">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.2.3-adac718e78b6884af5989ff3074088c7940fde9b.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-ecc6c9726cadac7a08c658f1519a715f7ab8f516.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.2.3/682d0a8dce58e47bde57316aac7d6bb5618dee6b/firebase-client-android-2.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="682d0a8dce58e47bde57316aac7d6bb5618dee6b">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/firebase-client-android-2.2.3-07e4ddc02a000df6537fd8552808c0d1c70d7c17.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-7b8b12967192fbbe96e39e732a55e56e260b711f.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/tubesock-0.0.11-1d24f5775ec0fd87629fff5d10696f3578f25d69.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/libs/listviewanimations_lib-core_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f3f9629b068554d8513a2aaf34418171bf430851">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/listviewanimations_lib-core_3.1.0-1a614459ee3337cd166b172775c46e2a613018d5.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-05b8b11372451ccf3e8b7caaed33608ce498d2b9.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-e909bbca13a798ac8b919c9c73c109a958ee19c3.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-3875a40177bb2fd0dfbfa5669facb540b05e22ea.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/Solid/stickyListHeaders/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e6d5a9e1fc9f810ce1d15d38d9c0bbbda9b72b8e">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/classes-d654af85a0ef24303e875457a60be88ecffd2cfb.jar" />
+    </item>
+    <item
+        jar="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-67ae68b9ddf0acbd7adba5342a77729145cd6268.jar" />
     </item>
 
 </items>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/main_color_500"
+    android:orientation="vertical"
+    tools:context="com.csform.android.uiapptemplate.fragment.UserProfileFragment">
+    <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+        android:id="@+id/image"
+        style="@style/ImageViewStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="12dp"
+        app:siShape="@raw/c" />
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/name"
+        style="@style/TextViewAppearance.Headline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"
+        android:textColor="#fff" />
+
+    <com.csform.android.uiapptemplate.view.SlidingTabLayout
+        android:id="@+id/sliding_tabs"
+        android:background="@color/cpb_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+
+</LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/fragment_user_profile.xml -->

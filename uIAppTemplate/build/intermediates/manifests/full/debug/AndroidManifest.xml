@@ -42,6 +42,9 @@
             android:name="com.csform.android.uiapptemplate.ImageGalleryCategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
         <activity
+            android:name="com.csform.android.uiapptemplate.view.ChatFragment"
+            android:theme="@style/AppTheme.NoShadow" />
+        <activity
             android:name="com.csform.android.uiapptemplate.ImageGallerySubcategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
         <activity android:name="com.csform.android.uiapptemplate.MainActivity" />

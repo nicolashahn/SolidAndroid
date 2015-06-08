@@ -42,6 +42,9 @@
             android:name=".ImageGalleryCategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
         <activity
+            android:name=".view.ChatFragment"
+            android:theme="@style/AppTheme.NoShadow" />
+        <activity
             android:name=".ImageGallerySubcategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
         <activity android:name=".MainActivity" />

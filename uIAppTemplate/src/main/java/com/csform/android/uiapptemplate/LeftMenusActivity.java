@@ -35,6 +35,7 @@ import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.model.UserModel;
 import com.csform.android.uiapptemplate.util.ImageUtil;
+import com.csform.android.uiapptemplate.view.ChatFragment;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -94,6 +95,7 @@ public class LeftMenusActivity extends ActionBarActivity
 						USER_DATA.setField(context, "name", userDataMap.get("name") + "");
 						USER_DATA.setField(context, "phone", userDataMap.get("phone") + "");
 						USER_DATA.setField(context, "avatar", userDataMap.get("avatar") + "");
+
 					}
 
 					@Override
@@ -296,11 +298,22 @@ public class LeftMenusActivity extends ActionBarActivity
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		if (mDrawerToggle.onOptionsItemSelected(item)) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                Intent myIntent = new Intent(LeftMenusActivity.this, ChatFragment.class);
+                myIntent.putExtra("key", UserModel.getField(this, "name")); //Optional parameters
+                LeftMenusActivity.this.startActivity(myIntent);
+
+                break;
+
+
+        }
+      return super.onOptionsItemSelected(item);
+    }
 
 	private class DrawerItemClickListener implements
 			ListView.OnItemClickListener {

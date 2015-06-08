@@ -4,4 +4,4 @@
     <item android:drawable="@drawable/check_on_light" android:state_checked="true"/>
     <item android:drawable="@drawable/check_off_light"/>
 
-</selector><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/drawable/checkbox_selector_light.xml -->
+</selector><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/drawable/checkbox_selector_light.xml -->
