@@ -313,7 +313,7 @@ public class LeftMenusActivity extends ActionBarActivity
 			return;
 		}
 		String drawerTitle = getString(mDrawerItems.get(position - 1).getTitle());
-		Toast.makeText(this, "You selected " + drawerTitle + " at position: " + position, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "You selected " + drawerTitle + " at position: " + position, Toast.LENGTH_SHORT).show();
 
 		mDrawerList.setItemChecked(position, true);
 		setTitle(mDrawerItems.get(position - 1).getTitle());
