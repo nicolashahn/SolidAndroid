@@ -544,6 +544,8 @@
     <string name="download">DOWNLOAD</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="drawer_icon_blog"></string>
+    <string name="drawer_icon_browse_offers"></string>
+    <string name="drawer_icon_browse_requests"></string>
     <string name="drawer_icon_check_and_radio_buttons"></string>
     <string name="drawer_icon_git_hub"></string>
     <string name="drawer_icon_home"></string>
@@ -554,6 +556,9 @@
     <string name="drawer_icon_list_views"></string>
     <string name="drawer_icon_login_page"></string>
     <string name="drawer_icon_parallax"></string>
+    <string name="drawer_icon_post_offer"></string>
+    <string name="drawer_icon_post_request"></string>
+    <string name="drawer_icon_profile"></string>
     <string name="drawer_icon_progress_bars"></string>
     <string name="drawer_icon_search_bars"></string>
     <string name="drawer_icon_shape_image_views"></string>

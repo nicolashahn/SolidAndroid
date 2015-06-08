@@ -260,27 +260,27 @@ public class LeftMenusActivity extends ActionBarActivity
 						DrawerItem.DRAWER_ITEM_TAG_LINKED_IN));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_blog,
+						R.string.drawer_icon_browse_requests,
 						R.string.drawer_title_requests,
 						DrawerItem.DRAWER_ITEM_TAG_BLOG));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_git_hub,
+						R.string.drawer_icon_browse_offers,
 						R.string.drawer_title_offers,
 						DrawerItem.DRAWER_ITEM_TAG_GIT_HUB));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_instagram,
+						R.string.drawer_icon_post_request,
 						R.string.drawer_title_make_request,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_instagram,
+						R.string.drawer_icon_post_offer,
 						R.string.drawer_title_make_offer,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_instagram,
+						R.string.drawer_icon_profile,
 						R.string.drawer_title_profile,
 						DrawerItem.DRAWER_ITEM_TAG_INSTAGRAM));
 	}

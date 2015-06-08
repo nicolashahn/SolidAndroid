@@ -27,7 +27,13 @@
     <string name="drawer_icon_blog">&#xe81e;</string>
     <string name="drawer_icon_git_hub">&#xe808;</string>
     <string name="drawer_icon_instagram">&#xe80c;</string>
+    <!-- the following are for Fontello1.ttf -->
     <string name="drawer_icon_home">&#xe803;</string>
+    <string name="drawer_icon_browse_offers">&#xe800;</string>
+    <string name="drawer_icon_browse_requests">&#xe801;</string>
+    <string name="drawer_icon_post_offer">&#xe804;</string>
+    <string name="drawer_icon_post_request">&#xe805;</string>
+    <string name="drawer_icon_profile">&#xe802;</string>
 
     <!-- Navigation Drawer icon titles -->
     <string name="drawer_title_splash_screens">Splash Screens</string>
