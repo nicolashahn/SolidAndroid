@@ -5,8 +5,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<<<<<<< HEAD
-<!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/menu/menu_firebase_test.xml -->
-=======
-<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/menu/menu_firebase_test.xml -->
->>>>>>> changed formatting a little bit
+<!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/menu/menu_firebase_test.xml -->

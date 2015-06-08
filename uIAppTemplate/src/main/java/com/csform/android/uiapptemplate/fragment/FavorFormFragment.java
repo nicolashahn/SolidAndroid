@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.Clock;
 import com.csform.android.uiapptemplate.R;
@@ -195,7 +196,7 @@ public class FavorFormFragment extends Fragment {
         f1.put("dateToBeCompletedBy",date);
         f1.put("datePosted", Clock.getTimeStamp());
         // change this later - use appInfo from hw3?
-        f1.put("userPosted","batman");
+        f1.put("userPosted", emailToKey(UserModel.getField(getActivity(), "email")));
         f1.put("favorId",favorId);
         f1.put("category",category);
         newFavorRef.setValue(f1);
@@ -205,9 +206,10 @@ public class FavorFormFragment extends Fragment {
         String returnId = newFavorRef.getKey();
         Log.i(LOG_TAG, "key id = " + returnId);
 
-//        Toast t = Toast.makeText(this.getApplicationContext(), "Favor posted!", Toast.LENGTH_SHORT);
-//        t.show();
-
+        Toast t = Toast.makeText(getActivity(), "Favor posted!", Toast.LENGTH_SHORT);
+        t.show();
     }
-
+    public String emailToKey(String emailAddress) {
+        return emailAddress.replace('.', ',');
+    }
 }

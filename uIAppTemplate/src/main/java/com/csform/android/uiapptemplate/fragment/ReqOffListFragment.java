@@ -48,8 +48,6 @@ public class ReqOffListFragment extends Fragment{
     private DynamicListView mDynamicListView;
     private String USER_EMAIL;
 
-
-
     public static ReqOffListFragment newInstance(String url_, String list_) {
         ReqOffListFragment fragment = new ReqOffListFragment();
         Bundle args = new Bundle();
@@ -87,6 +85,7 @@ public class ReqOffListFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        if(list.equals("")) return inflater.inflate(R.layout.fragment_reqoff_list_view, container, false);
         ref.child(list).addChildEventListener(new ChildEventListener() {
             @Override
             //  A DataSnapshot instance contains data from a Firebase location.

@@ -23,8 +23,4 @@
             android:textColor="@color/main_color_grey_800" />
     </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/list_view_item_subcategory.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_view_item_subcategory.xml -->
->>>>>>> changed formatting a little bit
+</LinearLayout><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/list_view_item_subcategory.xml -->

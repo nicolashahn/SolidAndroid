@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/values-v21/styles.xml -->
-=======
-    <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/values-v21/styles.xml -->
->>>>>>> changed formatting a little bit
+    <!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="actionBarStyle">@style/ActionBarStyle</item>
@@ -13,11 +9,7 @@
 	    <item name="colorPrimary">@color/main_color_500</item>
 	    <item name="colorPrimaryDark">@color/main_color_700</item>
     </style>
-<<<<<<< HEAD
-    <!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
-=======
-    <!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
->>>>>>> changed formatting a little bit
+    <!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>

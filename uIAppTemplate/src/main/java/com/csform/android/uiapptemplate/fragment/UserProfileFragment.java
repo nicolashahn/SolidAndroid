@@ -171,31 +171,29 @@ public class UserProfileFragment extends Fragment {
         // Populate tabs
         mTabs.add(new SamplePagerItem(
                 getString(R.string.info), // Title
-                R.color.main_color_100, // Indicator color
+                getResources().getColor(R.color.main_color_100),
                 Color.GRAY, // Divider color
-                "offers"
+                ""
         ));
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.history), // Title
-                //R.color.main_color_100,
-                Color.BLUE, // Indicator color
+                getResources().getColor(R.color.main_color_200),
                 Color.GRAY, // Divider color
-                "requests"
+                ""
         ));
 
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.offers), // Title
-                R.color.main_color_300,
-                //               Color.RED, // Indicator color
+                getResources().getColor(R.color.main_color_300),
                 Color.GRAY, // Divider color
                 "offers"
         ));
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.requests), // Title
-                R.color.main_color_grey_500, // Indicator color
+                getResources().getColor(R.color.main_color_400),
                 Color.GRAY, // Divider color
                 "requests"
         ));
@@ -293,7 +291,7 @@ public class UserProfileFragment extends Fragment {
     }
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		inflater.inflate(R.menu.menu_user_profile, menu);
+        inflater.inflate(R.menu.menu_user_profile, menu);
 
     }
     @Override

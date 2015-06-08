@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -13,9 +11,11 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:4:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
-MERGED from Solid:stickyListHeaders:unspecified:7:5
+MERGED from solid:stickyListHeaders:unspecified:7:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
@@ -167,7 +167,6 @@ ADDED from AndroidManifest.xml:70:9
 	android:name
 		ADDED from AndroidManifest.xml:71:13
 meta-data#android.support.PARENT_ACTIVITY
-<<<<<<< HEAD
 ADDED from AndroidManifest.xml:74:13
 	android:value
 		ADDED from AndroidManifest.xml:76:17
@@ -181,10 +180,3 @@ ADDED from AndroidManifest.xml:78:9
 		ADDED from AndroidManifest.xml:81:13
 	android:name
 		ADDED from AndroidManifest.xml:79:13
-=======
-ADDED from AndroidManifest.xml:73:13
-	android:name
-		ADDED from AndroidManifest.xml:74:17
-	android:value
-		ADDED from AndroidManifest.xml:75:17
->>>>>>> changed formatting a little bit

@@ -24,8 +24,4 @@
           android:layout_height="wrap_content"
           android:textAppearance="?android:attr/textAppearanceLarge" />
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/pager_item.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/pager_item.xml -->
->>>>>>> changed formatting a little bit
+</LinearLayout><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/pager_item.xml -->

@@ -28,8 +28,4 @@
         android:textSize="16sp"
         app:typeface="robotoRegular" />
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/list_view_item_search.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/list_view_item_search.xml -->
->>>>>>> changed formatting a little bit
+</LinearLayout><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/list_view_item_search.xml -->

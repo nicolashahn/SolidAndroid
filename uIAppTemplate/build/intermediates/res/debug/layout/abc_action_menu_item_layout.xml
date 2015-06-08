@@ -28,8 +28,4 @@
         android:textAppearance="?attr/actionMenuTextAppearance"
         android:textColor="?attr/actionMenuTextColor"
         style="?attr/actionButtonStyle"/>
-<<<<<<< HEAD
-<!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_menu_item_layout.xml -->
-=======
-<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_menu_item_layout.xml -->
->>>>>>> changed formatting a little bit
+<!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_menu_item_layout.xml -->

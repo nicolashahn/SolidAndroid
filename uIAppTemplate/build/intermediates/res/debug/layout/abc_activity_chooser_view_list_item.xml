@@ -49,8 +49,4 @@
 
     </LinearLayout>
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view_list_item.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view_list_item.xml -->
->>>>>>> changed formatting a little bit
+</LinearLayout><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view_list_item.xml -->

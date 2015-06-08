@@ -115,6 +115,7 @@
 
     <string name="saveChanges">SAVE CHANGES</string>
     <string name="cancel">CANCEL</string>
+    <string name="acceptFavor">ACCEPT FAVOR</string>
     <string name="postFavor">POST FAVOR</string>
     <string name="submit">SUBMIT</string>
     <string name="undo_deletion">UNDO DELETION</string>
