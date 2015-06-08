@@ -92,7 +92,7 @@ public class LeftMenusActivity extends ActionBarActivity
 						}
 						USER_DATA.setField(context, "name", userDataMap.get("name") + "");
 						USER_DATA.setField(context, "phone", userDataMap.get("phone") + "");
-						USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
+						USER_DATA.setField(context, "avatar", userDataMap.get("avatar")+"");
 					}
 
 					@Override
