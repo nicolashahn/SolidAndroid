@@ -37,6 +37,7 @@
         <activity
             android:name=".ParallaxKenBurnsActivity"
             android:theme="@style/AppTheme.Overlay" />
+
         <activity android:name=".ParallaxActivity" />
         <activity
             android:name=".ImageGalleryCategoryActivity"
@@ -73,6 +74,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.csform.android.uiapptemplate.LogInPageActivity" />
+        </activity>
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName=".LeftMenusActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csform.android.uiapptemplate.LeftMenusActivity" />
         </activity>
     </application>
 

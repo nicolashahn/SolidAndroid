@@ -13,6 +13,8 @@
     <string name="drawer_icon_text_views">&#xe852;</string>
     <string name="drawer_icon_search_bars">&#xe84f;</string>
     <string name="drawer_icon_login_page">&#xe842;</string>
+
+    <string name ="chat_button_menu">Global Chat</string>
     <!-- <string name="drawer_icon_audio_player">&#xe807;</string> -->
     <!-- <string name="drawer_icon_video_player">&#xe808;</string> -->
     <string name="drawer_icon_image_gallery">&#xe83c;</string>
@@ -154,6 +156,7 @@
     <string name="tab_notifications">Notifications</string>
     <string name="requests">Requests</string>
     <string name="title_activity_registration_page">Registration</string>
+    <string name="title_activity_chat">ChatActivity</string>
 
 
 

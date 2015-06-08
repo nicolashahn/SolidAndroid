@@ -269,6 +269,7 @@ public class LeftMenusActivity extends ActionBarActivity
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
 		}
+
 		switch (item.getItemId()) {
 			case R.id.action_logout:
 				USER_DATA.destroy();
@@ -276,11 +277,21 @@ public class LeftMenusActivity extends ActionBarActivity
                 myIntent.putExtra("email", UserModel.getField(this, "email"));
                 startActivity(myIntent);
                 finish();
+            break;
+                    case R.id.action_search:
+                        Intent intent = new Intent(LeftMenusActivity.this, ChatActivity.class);
+                        intent.putExtra("key", USER_DATA.getField(this,"name")); //Optional parameters
+                        LeftMenusActivity.this.startActivity(intent);
+            break;
+
+
 
 			default:
 				return super.onOptionsItemSelected(item);
+    
 		}
-	}
+        return super.onOptionsItemSelected(item);
+    }
 
 	private class DrawerItemClickListener implements
 			ListView.OnItemClickListener {

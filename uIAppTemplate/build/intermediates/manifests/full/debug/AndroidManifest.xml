@@ -74,6 +74,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.csform.android.uiapptemplate.LogInPageActivity" />
         </activity>
+        <activity
+            android:name="com.csform.android.uiapptemplate.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName="com.csform.android.uiapptemplate.LeftMenusActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csform.android.uiapptemplate.LeftMenusActivity" />
+        </activity>
     </application>
 
 </manifest>
