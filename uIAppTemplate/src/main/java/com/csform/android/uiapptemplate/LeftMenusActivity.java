@@ -319,7 +319,7 @@ public class LeftMenusActivity extends ActionBarActivity
 		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
 		if (position == 1) {
-			Fragment newFragment = ParallaxEffectsFragment.newInstance();
+			Fragment newFragment = ReqOffListFragment.newInstance(FIREBASE_URL, "requests");
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
