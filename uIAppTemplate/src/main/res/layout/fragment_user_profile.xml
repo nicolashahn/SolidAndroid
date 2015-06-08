@@ -8,14 +8,6 @@
     android:background="@color/main_color_500"
     android:orientation="vertical"
     tools:context="com.csform.android.uiapptemplate.fragment.UserProfileFragment">
-<!--
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/background_small"
-        android:layout_weight="0.22" />
-        -->
     <com.csform.android.uiapptemplate.view.siv.ShapeImageView
         android:id="@+id/image"
         style="@style/ImageViewStyle"
@@ -23,7 +15,7 @@
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginTop="12dp"
-        app:siShape="@raw/g" />
+        app:siShape="@raw/c" />
 
     <com.csform.android.uiapptemplate.font.RobotoTextView
         android:id="@+id/name"

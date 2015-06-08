@@ -395,6 +395,7 @@ public class LeftMenusActivity extends ActionBarActivity
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
+	// Listener from ReqOffListView
 	@Override
 	public void onFragmentInteraction(FavorModel fm) {
 		Intent intent = new Intent(LeftMenusActivity.this, FavorSpecActivity.class);
@@ -402,9 +403,10 @@ public class LeftMenusActivity extends ActionBarActivity
 		this.startActivity(intent);
 	}
 
+	// Listener from UserProfileFragment
 	@Override
 	public void onFragmentInteraction() {
-		Intent intent = new Intent(LeftMenusActivity.this, ParallaxActivity.class);
+		Intent intent = new Intent(LeftMenusActivity.this, UserProfileEditActivity.class);
 		this.startActivity(intent);
 	}
 

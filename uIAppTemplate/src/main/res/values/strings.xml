@@ -104,6 +104,8 @@
     <string name="description">Description</string>
     <string name="compensation">Compensation</string>
 
+    <string name="saveChanges">SAVE CHANGES</string>
+    <string name="cancel">CANCEL</string>
     <string name="postFavor">POST FAVOR</string>
     <string name="submit">SUBMIT</string>
     <string name="undo_deletion">UNDO DELETION</string>
@@ -121,6 +123,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_favor_form">Create a favor</string>
     <string name="title_activity_favor_spec">Favor spec</string>
+    <string name="title_activity_user_profile_edit">Edit profile</string>
 
 
     <string name="firebaseURL">https://crackling-torch-5178.firebaseio.com/</string>
