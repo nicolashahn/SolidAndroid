@@ -13,6 +13,7 @@ public class FavorModel implements Serializable {
 	private String mDatePosted;
 	private String mDateDoneBy;
 	private String mCompensation;
+	private String mUserAccepted;
 
 	public FavorModel() {
 		mKey = "";
@@ -23,10 +24,11 @@ public class FavorModel implements Serializable {
 		mDateDoneBy="";
 		mDatePosted="";
 		mCompensation="";
+		mUserAccepted="";
 
 	}
 
-	public FavorModel(String key, String user, String userImage, String title, String desc, String dateDoneBy, String datePosted, String compensation) {
+	public FavorModel(String key, String user, String userImage, String title, String desc, String dateDoneBy, String datePosted, String compensation, String userAccepted) {
 		mKey = key;
 		mUser = user;
 		mUserImage = userImage;
@@ -35,6 +37,7 @@ public class FavorModel implements Serializable {
 		mDateDoneBy=dateDoneBy;
 		mDatePosted=datePosted;
 		mCompensation=compensation;
+		mUserAccepted=userAccepted;
 
 	}
 
@@ -89,6 +92,14 @@ public class FavorModel implements Serializable {
 
 	public void setCompensation(String compensation){mCompensation=compensation;}
 
+	public String getUserAccepted(){return mUserAccepted;}
+
+	public void setUserAccepted(String userAccepted) {
+
+		if (userAccepted.equals("null")) {
+			mUserAccepted="";
+		} else {mUserAccepted = userAccepted;}
+	}
 	@Override
 	public String toString() {
 		return mTitle;

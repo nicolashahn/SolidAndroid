@@ -41,6 +41,7 @@ public class ReqOffListFragment extends Fragment{
     private static String url;
     private static Context ctx;
     private static Boolean singleUser;
+    private static int check=0;
     private ReqOffListAdapter adapter;
     private AnimatedExpandableListView listView;
     private OnFragmentInteractionListener mListener;
@@ -67,6 +68,19 @@ public class ReqOffListFragment extends Fragment{
         url = url_;
         list = list_;
         singleUser = singleUser_;
+        return fragment;
+    }
+
+    public static ReqOffListFragment newInstance(String url_, String list_, int check_){
+        ReqOffListFragment fragment = new ReqOffListFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        url = url_;
+        list = list_;
+        singleUser = false;
+        check=check_;
+
+
         return fragment;
     }
 
@@ -101,11 +115,19 @@ public class ReqOffListFragment extends Fragment{
                         return;
                     }
                 }
+
+
+
+
+
+
                 favor.setTitle(favorMap.get("title") + "");
                 favor.setDesc(favorMap.get("description") + "");
                 favor.setDatePosted(favorMap.get("datePosted") + "");
                 favor.setDateDoneBy(favorMap.get("dateToBeCompletedBy") + "");
                 favor.setCompensation(favorMap.get("compensation") + "");
+                favor.setUserAccepted(favorMap.get("userAccepted")+"");
+
                 ref.child("users").child(emailToKey(favorMap.get("userPosted") + "")).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

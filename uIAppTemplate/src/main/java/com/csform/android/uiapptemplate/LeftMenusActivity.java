@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
+import com.csform.android.uiapptemplate.fragment.BothListFragment;
 import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
 import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
 import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
@@ -45,7 +46,7 @@ import java.util.Map;
 
 public class LeftMenusActivity extends ActionBarActivity
 		implements ReqOffListFragment.OnFragmentInteractionListener,
-				   UserProfileFragment.OnFragmentInteractionListener{
+				   UserProfileFragment.OnFragmentInteractionListener, BothListFragment.OnFragmentInteractionListener{
 
     private static final int REG_REQUEST = 1;
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.LeftMenusActivity";
@@ -327,7 +328,7 @@ public class LeftMenusActivity extends ActionBarActivity
 		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
 		if (position == 1) {
-			Fragment newFragment = ParallaxEffectsFragment.newInstance();
+			Fragment newFragment = BothListFragment.newInstance(FIREBASE_URL);
 			FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 			transaction.replace(R.id.fragment, newFragment);
 			transaction.addToBackStack(null);
