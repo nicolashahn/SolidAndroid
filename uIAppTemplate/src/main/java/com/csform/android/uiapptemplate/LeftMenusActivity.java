@@ -91,9 +91,9 @@ public class LeftMenusActivity extends ActionBarActivity
 						if (userDataMap == null) {
 							errorKill();
 						}
-						USER_DATA.setField(context, "name", userDataMap.get("name").toString());
-						USER_DATA.setField(context, "phone", userDataMap.get("phone").toString());
-						USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
+						USER_DATA.setField(context, "name", userDataMap.get("name") + "");
+						USER_DATA.setField(context, "phone", userDataMap.get("phone") + "");
+						USER_DATA.setField(context, "avatar", userDataMap.get("avatar") + "");
 					}
 
 					@Override
@@ -285,7 +285,7 @@ public class LeftMenusActivity extends ActionBarActivity
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
+		inflater.inflate(R.menu.menu_main, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 

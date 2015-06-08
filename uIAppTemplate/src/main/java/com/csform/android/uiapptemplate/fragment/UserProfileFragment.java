@@ -27,6 +27,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -149,8 +152,8 @@ public class UserProfileFragment extends Fragment {
         ctx = getActivity().getApplicationContext();
         Firebase.setAndroidContext(ctx);
         ref = new Firebase(url);
+        setHasOptionsMenu(true);
     }
-    String full_name = "";
     /**
      * Inflates the {@link View} which will be displayed by this {@link Fragment}, from the app's
      * resources.
@@ -163,29 +166,19 @@ public class UserProfileFragment extends Fragment {
         TextView nameView = (TextView) V.findViewById(R.id.name);
         ImageUtil.displayImage(avatarView, UserModel.getField(getActivity(), "avatar"), null);
         nameView.setText(UserModel.getField(getActivity(), "name"));
-        // BEGIN_INCLUDE (populate_tabs)
-        /**
-         * Populate our tab list with tabs. Each item contains a title, indicator color and divider
-         * color, which are used by {@link SlidingTabLayout}.
-         */
-        TextView b = (TextView) V.findViewById(R.id.edit);
-        b.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                mListener.onFragmentInteraction();
-            }
-        });
 
+        // Populate tabs
         mTabs.add(new SamplePagerItem(
                 getString(R.string.info), // Title
                 R.color.main_color_100, // Indicator color
                 Color.GRAY, // Divider color
-                "requests"
+                "offers"
         ));
 
         mTabs.add(new SamplePagerItem(
                 getString(R.string.history), // Title
-                R.color.main_color_100,
-//                Color.BLUE, // Indicator color
+                //R.color.main_color_100,
+                Color.BLUE, // Indicator color
                 Color.GRAY, // Divider color
                 "requests"
         ));
@@ -203,7 +196,7 @@ public class UserProfileFragment extends Fragment {
                 getString(R.string.requests), // Title
                 R.color.main_color_grey_500, // Indicator color
                 Color.GRAY, // Divider color
-                "offers"
+                "requests"
         ));
 
         return V;
@@ -297,11 +290,24 @@ public class UserProfileFragment extends Fragment {
             return mTabs.get(position).getTitle();
         }
         // END_INCLUDE (pageradapter_getpagetitle)
+    }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.menu_user_profile, menu);
 
     }
-        public String keyToEmail(String key) {
-            return key.replace(',', '.');
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_edit:
+                mListener.onFragmentInteraction();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
+
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction();
     }

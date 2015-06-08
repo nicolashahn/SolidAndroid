@@ -121,6 +121,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_edit">Edit</string>
     <string name="title_activity_favor_form">Create a favor</string>
     <string name="title_activity_favor_spec">Favor spec</string>
     <string name="title_activity_user_profile_edit">Edit profile</string>
