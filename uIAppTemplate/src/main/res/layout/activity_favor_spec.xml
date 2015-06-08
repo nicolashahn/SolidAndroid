@@ -78,6 +78,7 @@
             android:layout_height="wrap_content"
             android:text="Do Favor/Accept Offer"
             android:id="@+id/acceptFavorButton"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClick" />
     </LinearLayout>
 </ScrollView>
