@@ -7,12 +7,14 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.csform.android.uiapptemplate.common.Log;
 import com.csform.android.uiapptemplate.model.FavorModel;
 
 
 public class FavorSpecActivity extends ActionBarActivity {
 
     private FavorModel fm;
+    private String LOG_TAG = "FavorSpecActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,15 @@ public class FavorSpecActivity extends ActionBarActivity {
         datePosted.setText("Posted on "+fm.getDatePosted());
         compensation.setText("Compensation: " + fm.getCompensation());
         desc.setText(fm.getDesc());
+
+        TextView userAccepted = (TextView) findViewById(R.id.userAcceptedText);
+        // only change the userAcceptedText if we don't get "",
+        // which means no one has accepted to do this yet
+        Log.i(LOG_TAG, "fm.getUserAccepted() =" + fm.getUserAccepted());
+        String userAcceptedString = fm.getUserAccepted();
+        if ( userAcceptedString.length() > 0){
+            userAccepted.setText("User "+userAcceptedString+" has accepted this favor offer/request");
+        }
     }
 
     @Override
