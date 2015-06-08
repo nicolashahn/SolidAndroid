@@ -20,21 +20,19 @@
             />
 
     <com.csform.android.uiapptemplate.font.RobotoTextView
-        style="@style/TextViewAppearance.Body1"
+        style="@style/TextViewAppearance.Headline1"
         android:textColor="#fff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
         android:id="@+id/name"
         android:layout_alignTop="@+id/image"
         android:layout_toRightOf="@+id/image"
         android:layout_toEndOf="@+id/image" />
 
     <com.csform.android.uiapptemplate.font.RobotoTextView
-        style="@style/TextViewAppearance.Caption1"
+        style="@style/TextViewAppearance.Title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
         android:textColor="#fff"
         android:id="@+id/email"
         android:layout_below="@+id/name"

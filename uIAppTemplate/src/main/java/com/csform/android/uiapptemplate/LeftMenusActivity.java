@@ -269,7 +269,17 @@ public class LeftMenusActivity extends ActionBarActivity
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+			case R.id.action_logout:
+				USER_DATA.destroy();
+                Intent myIntent = new Intent(LeftMenusActivity.this, LogInPageActivity.class);
+                myIntent.putExtra("email", UserModel.getField(this, "email"));
+                startActivity(myIntent);
+                finish();
+
+			default:
+				return super.onOptionsItemSelected(item);
+		}
 	}
 
 	private class DrawerItemClickListener implements
@@ -392,6 +402,7 @@ public class LeftMenusActivity extends ActionBarActivity
         passview.requestFocus();
 
     }
+
 	/**
 	 * Firebase keys cannot have a period (.) in them, so this converts the emails to valid keys
 	 */
@@ -423,7 +434,6 @@ public class LeftMenusActivity extends ActionBarActivity
 	private void updateHeader(){
 		View V = this.findViewById(android.R.id.content);
 		if(V == null) return;
-//		View V = inflater.inflate(R.layout.fragment_user_profile, container, false);
 		ImageView avatarView = (ImageView) V.findViewById(R.id.image);
 		TextView nameView = (TextView) V.findViewById(R.id.name);
 		TextView emailView = (TextView) V.findViewById(R.id.email);

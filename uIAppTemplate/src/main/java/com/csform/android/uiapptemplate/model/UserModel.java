@@ -92,7 +92,7 @@ public class UserModel implements Serializable {
     public static String getField(Context context, String fieldname){
         String result = "";
         SharedPreferences settings =
-                PreferenceManager.getDefaultSharedPreferences(context);
+        PreferenceManager.getDefaultSharedPreferences(context);
         result = settings.getString(fieldname, result);
         return result;
     }

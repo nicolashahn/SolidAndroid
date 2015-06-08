@@ -21,6 +21,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
     public static final String LOGIN_PAGE_AND_LOADERS_CATEGORY = "com.csform.android.uiapptemplate.LogInPageAndLoadersActivity";
     public static final String DARK = "Dark";
     public static final String LIGHT = "Light";
+    public static String prev_email = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,9 @@ public class LogInPageActivity extends Activity implements OnClickListener {
         if (extras != null && extras.containsKey(LOGIN_PAGE_AND_LOADERS_CATEGORY)) {
             category = extras.getString(LOGIN_PAGE_AND_LOADERS_CATEGORY, LIGHT);
         }
-
+        if (extras != null && extras.containsKey("email")) {
+            prev_email = extras.getString("email");
+        }
         setContentView(category);
     }
 
@@ -48,7 +51,8 @@ public class LogInPageActivity extends Activity implements OnClickListener {
         skip = (TextView) findViewById(R.id.skip);
         login.setOnClickListener(this);
         register.setOnClickListener(this);
-
+        TextView emailview = (TextView)findViewById(R.id.emailview);
+        emailview.setText(prev_email);
         skip.setOnClickListener(this);
     }
 
