@@ -51,14 +51,14 @@
             android:id="@+id/descText"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp" />
-        <!--
+
                 <com.csform.android.uiapptemplate.font.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/TextViewAppearance.Title1"
                     android:text="Compensation"
                     android:id="@+id/compText" />
-
+ <!--
                 <TextView
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -104,4 +104,4 @@
             android:id="@+id/disclaimer" />
     </LinearLayout>
 </ScrollView>
-<!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml -->
+<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml -->

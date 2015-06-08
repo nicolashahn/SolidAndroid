@@ -39,4 +39,4 @@
         android:layout_toRightOf="@+id/image"
         android:layout_toEndOf="@+id/image" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Ash/AndroidStudioProjects/solid/uIAppTemplate/src/main/res/layout/header_navigation_drawer_1.xml -->
+</RelativeLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/header_navigation_drawer_1.xml -->
