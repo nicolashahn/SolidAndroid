@@ -34,8 +34,4 @@ tools:context="com.csform.android.uiapptemplate.fragment.ExpandableListViewFragm
 
 
 </FrameLayout>
-<<<<<<< HEAD
-</RelativeLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml -->
-=======
-</RelativeLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml -->
->>>>>>> changed formatting a little bit
+</RelativeLayout><!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/fragment_expandable_list_view.xml -->

@@ -100,8 +100,4 @@
             android:textColor="@color/main_color_500" />
     </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
 
-<<<<<<< HEAD
-</LinearLayout><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/activity_login_page_light.xml -->
-=======
-</LinearLayout><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_login_page_light.xml -->
->>>>>>> changed formatting a little bit
+</LinearLayout><!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/activity_login_page_light.xml -->

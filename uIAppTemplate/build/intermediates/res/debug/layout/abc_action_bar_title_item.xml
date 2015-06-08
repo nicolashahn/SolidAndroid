@@ -32,8 +32,4 @@
               android:ellipsize="end"
               android:visibility="gone" />
 </LinearLayout>
-<<<<<<< HEAD
-<!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_title_item.xml -->
-=======
-<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_title_item.xml -->
->>>>>>> changed formatting a little bit
+<!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_bar_title_item.xml -->

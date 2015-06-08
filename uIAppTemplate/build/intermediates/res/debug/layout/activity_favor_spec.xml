@@ -81,8 +81,4 @@
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 </ScrollView>
-<<<<<<< HEAD
-<!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml -->
-=======
-<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml -->
->>>>>>> changed formatting a little bit
+<!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/activity_favor_spec.xml -->

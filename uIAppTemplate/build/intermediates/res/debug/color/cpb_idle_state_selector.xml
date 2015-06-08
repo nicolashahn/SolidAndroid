@@ -8,8 +8,4 @@
           android:color="@color/cpb_grey"/>
     <item android:state_enabled="true"
           android:color="@color/cpb_blue"/>
-<<<<<<< HEAD
-</selector><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/color/cpb_idle_state_selector.xml -->
-=======
-</selector><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/color/cpb_idle_state_selector.xml -->
->>>>>>> changed formatting a little bit
+</selector><!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/color/cpb_idle_state_selector.xml -->
