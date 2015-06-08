@@ -310,4 +310,5 @@ public class UserProfileFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction();
     }
+
 }

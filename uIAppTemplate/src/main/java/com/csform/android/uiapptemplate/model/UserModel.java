@@ -96,6 +96,13 @@ public class UserModel implements Serializable {
         result = settings.getString(fieldname, result);
         return result;
     }
+    public void destroy(){
+        dateJoined = "defaultDate";
+        email = "default@email.com";
+        name = "Default Name";
+        phone = "5551234567";
+        avatar = "no avatar";
+    }
 
 //    public String getEmail() {
 //        return email;

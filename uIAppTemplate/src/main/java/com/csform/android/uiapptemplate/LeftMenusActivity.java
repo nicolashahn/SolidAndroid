@@ -92,14 +92,17 @@ public class LeftMenusActivity extends ActionBarActivity
 						}
 						USER_DATA.setField(context, "name", userDataMap.get("name") + "");
 						USER_DATA.setField(context, "phone", userDataMap.get("phone") + "");
-						USER_DATA.setField(context, "avatar", userDataMap.get("avatar")+"");
+						if (userDataMap.get("avatar") != null) {
+							Log.i("Avatar not null", userDataMap.get("avatar").toString());
+							USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
+						} else USER_DATA.setField(context, "avatar", "");
+						updateHeader();
 					}
 
 					@Override
 					public void onCancelled(FirebaseError firebaseError) {
-
 					}
-        });
+				});
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
@@ -130,11 +133,6 @@ public class LeftMenusActivity extends ActionBarActivity
 		if (savedInstanceState == null) {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
-/*
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,locationListener);*/
-
 	}
 
 	LocationListener locationListener = new LocationListener() {
@@ -186,34 +184,6 @@ public class LeftMenusActivity extends ActionBarActivity
 
 		View headerView = null;
 
-/*
-		ref.child(AUTH_USER_ID).child("FullName").addListenerForSingleValueEvent(new ValueEventListener() {
-			@Override
-			public void onDataChange(DataSnapshot datasnap) {
-				full_name = datasnap.getKey();
-				String aud = datasnap.getKey();
-				Context context = getApplicationContext();
-				CharSequence text = "Name:" + full_name + " UID =" + aud;
-				int duration = Toast.LENGTH_LONG;
-
-				Toast toast = Toast.makeText(context, text, duration);
-				toast.show();
-
-
-			}
-
-			@Override
-			public void onCancelled(FirebaseError error) {
-				Context context = getApplicationContext();
-				CharSequence text = "Error";
-				int duration = Toast.LENGTH_LONG;
-
-				Toast toast = Toast.makeText(context, text, duration);
-				toast.show();
-
-			}
-		});
-*/
 		if (option.equals(LEFT_MENU_OPTION_1)) {
 			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
 					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
@@ -239,6 +209,7 @@ public class LeftMenusActivity extends ActionBarActivity
 
 		Log.i("Name:", UserModel.getField(this, "name"));
 		Log.i("Image:", UserModel.getField(this, "avatar"));
+
         ImageUtil.displayImage(iv, UserModel.getField(this, "avatar"), null);
 //		ImageUtil.displayRoundImage(iv, url, null);
 		tv.setText(email);
@@ -437,5 +408,29 @@ public class LeftMenusActivity extends ActionBarActivity
 		Intent myIntent = new Intent(this, LogInPageActivity.class);
 		startActivity(myIntent);
 		finish();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	protected void onDestroy() {
+		USER_DATA.destroy();
+		super.onDestroy();
+	}
+	private void updateHeader(){
+		View V = this.findViewById(android.R.id.content);
+		if(V == null) return;
+//		View V = inflater.inflate(R.layout.fragment_user_profile, container, false);
+		ImageView avatarView = (ImageView) V.findViewById(R.id.image);
+		TextView nameView = (TextView) V.findViewById(R.id.name);
+		TextView emailView = (TextView) V.findViewById(R.id.email);
+		ImageUtil.displayImage(avatarView, UserModel.getField(this, "avatar"), null);
+		nameView.setText(UserModel.getField(this, "name"));
+		emailView.setText(UserModel.getField(this, "email"));
+
+
 	}
 }

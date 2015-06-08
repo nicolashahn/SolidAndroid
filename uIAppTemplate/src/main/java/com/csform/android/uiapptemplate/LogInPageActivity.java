@@ -101,6 +101,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                 }
             }else{
                 Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
+//                myIntent.putExtra("email", "a@a.com");
                 myIntent.putExtra("email", "skip@pb.com");
                 startActivity(myIntent);
                 finish();

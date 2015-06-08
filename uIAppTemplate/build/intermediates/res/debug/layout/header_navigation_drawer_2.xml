@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.csform.android.uiapptemplate"
     android:layout_width="match_parent"
+    android:background="@color/main_color_500"
     android:layout_height="92dp" >
 
     <ImageView
@@ -31,4 +32,4 @@
         android:textSize="14sp"
         app:typeface="robotoBold" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Nick/Documents/2015spring/cs121/solid/uIAppTemplate/src/main/res/layout/header_navigation_drawer_2.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Ash/Documents/solid/uIAppTemplate/src/main/res/layout/header_navigation_drawer_2.xml -->
