@@ -628,7 +628,7 @@
     <string name="title_activity_favor_spec">Favor spec</string>
     <string name="title_activity_firebase_test">FirebaseTestActivity</string>
     <string name="title_activity_registration_page">Registration</string>
-    <string name="title_activity_user_profile_edit">User profile edit</string>
+    <string name="title_activity_user_profile_edit">Edit profile</string>
     <string name="typography1">Typography I</string>
     <string name="typography2">Typography II</string>
     <string name="typography3">Typography III</string>

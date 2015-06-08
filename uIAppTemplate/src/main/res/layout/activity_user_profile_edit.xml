@@ -8,67 +8,55 @@
     android:orientation="vertical"
     android:padding="24dp"
     tools:context="com.csform.android.uiapptemplate.UserProfileEditActivity">
+    <ImageView
+        android:id="@+id/image"
+        style="@style/ImageViewStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_margin="12dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/emailView"
+        android:layout_gravity="center_horizontal" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/nameEdit"
+        android:hint="Edit name"
+        android:layout_gravity="center_horizontal" />
 
-        <com.csform.android.uiapptemplate.font.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:id="@+id/titleText"
-            style="@style/TextViewAppearance.Display1"
-            android:layout_marginBottom="10dp" />
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        style="@style/TextViewAppearance.Caption3"
+        android:paddingTop="0dp"
+        android:text="Name"
+        android:id="@+id/nameHeader" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phoneEdit"
+        android:hint="Edit phone number"
+        android:layout_gravity="center_horizontal" />
 
-        <com.csform.android.uiapptemplate.font.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextViewAppearance.Headline1"
-            android:text="User"
-            android:id="@+id/userText" />
-
-        <com.csform.android.uiapptemplate.font.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextViewAppearance.Title1"
-            android:text="Date posted"
-            android:id="@+id/postedDateText" />
-
-        <com.csform.android.uiapptemplate.font.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextViewAppearance.Headline1"
-            android:text="Date to be done by"
-            android:id="@+id/completedDateText" />
-
-        <com.csform.android.uiapptemplate.font.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextViewAppearance.Body1"
-            android:text="Description"
-            android:id="@+id/descText"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
-
-        <com.csform.android.uiapptemplate.font.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/TextViewAppearance.Title1"
-            android:text="Compensation"
-            android:id="@+id/compText" />
-
-      <com.csform.android.uiapptemplate.font.RobotoTextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          style="@style/TextViewAppearance.Caption1"
-          android:text="By clicking Do Favor/Accept Offer, you agree to release your phone number to the original poster."
-          android:id="@+id/disclaimer" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Do Favor/Accept Offer"
-            android:id="@+id/acceptFavorButton"
-            android:layout_gravity="center_horizontal" />
-
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        style="@style/TextViewAppearance.Caption3"
+        android:paddingTop="0dp"
+        android:text="Phone number"
+        android:id="@+id/phoneHeader" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
