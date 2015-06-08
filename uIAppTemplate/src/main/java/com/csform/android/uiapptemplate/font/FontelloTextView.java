@@ -29,7 +29,7 @@ public class FontelloTextView extends TextView {
 	
 	private void setTypeface() {
 		if (sFontello == null) {
-			sFontello = Typeface.createFromAsset(getContext().getAssets(), "fonts/Fontello.ttf");
+			sFontello = Typeface.createFromAsset(getContext().getAssets(), "fonts/fontello1.ttf");
 		}
 		setTypeface(sFontello);
 	}
