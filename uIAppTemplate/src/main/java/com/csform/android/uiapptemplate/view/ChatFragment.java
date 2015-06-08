@@ -2,6 +2,7 @@ package com.csform.android.uiapptemplate.view;
 
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
 import android.os.Bundle;
@@ -13,14 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.csform.android.uiapptemplate.MainActivity;
 import com.csform.android.uiapptemplate.R;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-
-import java.util.Random;
 
 public class ChatFragment extends ListActivity {
 
@@ -35,10 +33,13 @@ public class ChatFragment extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_chat);
 
         // Make sure we have a mUsername
-        setupUsername();
+        Intent intent = getIntent();
+        String user_name = intent.getStringExtra("key");
+        System.out.println("---USERNAME IS " + user_name);
+        setupUsername(user_name);
 
         setTitle("Chatting as " + mUsername);
 
@@ -73,6 +74,7 @@ public class ChatFragment extends ListActivity {
         final ListView listView = getListView();
         final ListView list_view = getListView();
         // Tell our list adapter that we only want 50 messages at a time
+        System.out.println("To the adapter:" + mUsername);
         mChatListAdapter = new ChatListAdapter(mFirebaseRef.limit(50), this, R.layout.chat_message, mUsername);
         listView.setAdapter(mChatListAdapter);
         mChatListAdapter.registerDataSetObserver(new DataSetObserver() {
@@ -89,9 +91,9 @@ public class ChatFragment extends ListActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 boolean connected = (Boolean) dataSnapshot.getValue();
                 if (connected) {
-                    Toast.makeText(MainActivity.this, "Connected to Firebase", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChatFragment.this, "Connected to Firebase", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Disconnected from Firebase", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChatFragment.this, "Disconnected from Firebase", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -109,13 +111,14 @@ public class ChatFragment extends ListActivity {
         mChatListAdapter.cleanup();
     }
 
-    private void setupUsername() {
+    private void setupUsername(String user_name) {
         SharedPreferences prefs = getApplication().getSharedPreferences("ChatPrefs", 0);
-        mUsername = prefs.getString("username", null);
+        //mUsername = prefs.getString("username", null);
+        mUsername = user_name;
         if (mUsername == null) {
-            Random r = new Random();
+            //Random r = new Random();
             // Assign a random user name if we don't have one saved.
-            mUsername = "JavaUser" + r.nextInt(100000);
+            mUsername = user_name;
             prefs.edit().putString("username", mUsername).commit();
         }
     }
@@ -125,7 +128,7 @@ public class ChatFragment extends ListActivity {
         String input = inputText.getText().toString();
         if (!input.equals("")) {
             // Create our 'model', a Chat object
-            Chat chat = new Chat(input, mUsername);
+            Chat chat = new com.csform.android.uiapptemplate.view.Chat(input, mUsername);
             // Create a new, auto-generated child of that chat location, and save our chat data there
             mFirebaseRef.push().setValue(chat);
             inputText.setText("");

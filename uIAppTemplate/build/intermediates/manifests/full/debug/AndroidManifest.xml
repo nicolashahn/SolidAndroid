@@ -48,6 +48,9 @@
         <activity android:name="com.csform.android.uiapptemplate.SplashScreensActivity" />
         <activity android:name="com.csform.android.uiapptemplate.ListViewsActivity" />
         <activity
+            android:name="com.csform.android.uiapptemplate.view.ChatFragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.csform.android.uiapptemplate.LeftMenusActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.csform.android.uiapptemplate.SearchBarsActivity" />

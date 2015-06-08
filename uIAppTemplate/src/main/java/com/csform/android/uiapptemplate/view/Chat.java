@@ -1,9 +1,6 @@
 package com.csform.android.uiapptemplate.view;
 
-/**
- * @author greg
- * @since 6/21/13
- */
+
 public class Chat {
 
     private String message;
@@ -17,6 +14,7 @@ public class Chat {
     Chat(String message, String author) {
         this.message = message;
         this.author = author;
+        System.out.println("Author is " + author);
     }
 
     public String getMessage() {

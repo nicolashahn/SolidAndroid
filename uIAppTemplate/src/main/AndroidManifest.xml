@@ -48,8 +48,11 @@
         <activity android:name=".SplashScreensActivity" />
         <activity android:name=".ListViewsActivity" />
         <activity
-            android:name=".LeftMenusActivity"
+            android:name=".view.ChatFragment"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+        android:name=".LeftMenusActivity"
+        android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SearchBarsActivity" />
         <activity android:name=".GoogleCardsActivity" />
         <activity android:name=".ExpandableListViewActivity" />

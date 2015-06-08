@@ -8,4 +8,4 @@
           android:color="@color/cpb_grey"/>
     <item android:state_enabled="true"
           android:color="@android:color/transparent"/>
-</selector><!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/drawable/cpb_idle_state_selector_empty.xml -->
+</selector><!-- From: file:/Users/ahlien/solid/solid/uIAppTemplate/src/main/res/drawable/cpb_idle_state_selector_empty.xml -->
