@@ -6,4 +6,4 @@
     android:contentDescription="@string/cd_main_image"
     android:scaleType="centerCrop"
     android:src="@drawable/background_small" />
-<!-- From: file:/Users/remypham/Documents/AndroidStudioProjects/Solid/uIAppTemplate/src/main/res/layout/header_navigation_drawer_3.xml -->
+<!-- From: file:/C:/Users/Ash/Dev/Android/solid/uIAppTemplate/src/main/res/layout/header_navigation_drawer_3.xml -->

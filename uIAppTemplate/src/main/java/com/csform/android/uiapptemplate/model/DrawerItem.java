@@ -18,12 +18,13 @@ public class DrawerItem {
 	public static final int DRAWER_ITEM_TAG_LEFT_MENUS = 22;
 	public static final int DRAWER_ITEM_TAG_LIST_VIEWS = 23;
 	public static final int DRAWER_ITEM_TAG_PARALLAX  = 24;
-	//public static final int DRAWER_ITEM_TAG_DIALOGS = 25;
-	
-	public static final int DRAWER_ITEM_TAG_LINKED_IN = 26;
-	public static final int DRAWER_ITEM_TAG_BLOG = 27;
-	public static final int DRAWER_ITEM_TAG_GIT_HUB = 28;
-	public static final int DRAWER_ITEM_TAG_INSTAGRAM = 29;
+
+	public static final int DRAWER_ITEM_TAG_HOME = 30;
+	public static final int DRAWER_ITEM_TAG_BROWSE_REQUESTS = 31;
+	public static final int DRAWER_ITEM_TAG_BROWSE_OFFERS = 32;
+	public static final int DRAWER_ITEM_TAG_MAKE_REQUEST = 33;
+	public static final int DRAWER_ITEM_TAG_MAKE_OFFER = 34;
+    public static final int DRAWER_ITEM_TAG_PROFILE = 35;
 	
 	public DrawerItem(int icon, int title, int tag) {
 		this.icon = icon;

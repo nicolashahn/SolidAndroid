@@ -44,11 +44,10 @@
         <activity
             android:name="com.csform.android.uiapptemplate.ImageGallerySubcategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
-        <activity android:name="com.csform.android.uiapptemplate.MainActivity" />
         <activity android:name="com.csform.android.uiapptemplate.SplashScreensActivity" />
         <activity android:name="com.csform.android.uiapptemplate.ListViewsActivity" />
         <activity
-            android:name="com.csform.android.uiapptemplate.LeftMenusActivity"
+            android:name="com.csform.android.uiapptemplate.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.csform.android.uiapptemplate.SearchBarsActivity" />
         <activity android:name="com.csform.android.uiapptemplate.GoogleCardsActivity" />
@@ -77,10 +76,10 @@
         <activity
             android:name="com.csform.android.uiapptemplate.ChatActivity"
             android:label="@string/title_activity_chat"
-            android:parentActivityName="com.csform.android.uiapptemplate.LeftMenusActivity" >
+            android:parentActivityName="com.csform.android.uiapptemplate.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.csform.android.uiapptemplate.LeftMenusActivity" />
+                android:value=".MainActivity" />
         </activity>
     </application>
 

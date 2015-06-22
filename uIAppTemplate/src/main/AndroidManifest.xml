@@ -45,11 +45,10 @@
         <activity
             android:name=".ImageGallerySubcategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreensActivity" />
         <activity android:name=".ListViewsActivity" />
         <activity
-            android:name=".LeftMenusActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SearchBarsActivity" />
         <activity android:name=".GoogleCardsActivity" />
@@ -78,10 +77,10 @@
         <activity
             android:name=".ChatActivity"
             android:label="@string/title_activity_chat"
-            android:parentActivityName=".LeftMenusActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.csform.android.uiapptemplate.LeftMenusActivity" />
+                android:value=".MainActivity" />
         </activity>
     </application>
 

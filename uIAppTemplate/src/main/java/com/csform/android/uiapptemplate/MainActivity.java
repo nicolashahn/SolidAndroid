@@ -1,101 +1,122 @@
 package com.csform.android.uiapptemplate;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
-import com.csform.android.uiapptemplate.fragment.CheckAndRadioBoxesFragment;
-import com.csform.android.uiapptemplate.fragment.ImageGalleryFragment;
-import com.csform.android.uiapptemplate.fragment.LeftMenusFragment;
-import com.csform.android.uiapptemplate.fragment.ListViewsFragment;
-import com.csform.android.uiapptemplate.fragment.LogInPageFragment;
+import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
 import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
-import com.csform.android.uiapptemplate.fragment.ProgressBarsFragment;
-import com.csform.android.uiapptemplate.fragment.SearchBarsFragment;
-import com.csform.android.uiapptemplate.fragment.ShapeImageViewsFragment;
-import com.csform.android.uiapptemplate.fragment.SplashScreensFragment;
-import com.csform.android.uiapptemplate.fragment.TextViewsFragment;
+import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
+import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
+import com.csform.android.uiapptemplate.model.FavorModel;
+import com.csform.android.uiapptemplate.model.UserModel;
+import com.csform.android.uiapptemplate.util.ImageUtil;
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity
+		implements ReqOffListFragment.OnFragmentInteractionListener,
+		UserProfileFragment.OnFragmentInteractionListener{
 
+	private static final int REG_REQUEST = 1;
+	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.MainActivity";
+	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
+	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
+	private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
+	private static final UserModel USER_DATA = new UserModel();
+	private static Firebase ref;
+	private static Context context;
 	private ListView mDrawerList;
 	private List<DrawerItem> mDrawerItems;
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
+	private String LOG_TAG = "MainActivity";
 
+	private Handler mHandler;
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
-	
-	private Handler mHandler;
-    private Firebase ref;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Firebase.setAndroidContext(this);
-		/*
-		 * database url string located at res/values/firebase.xml for debug purposes
-		 */
-        ref = new Firebase(getResources().getString(R.string.url));
 		setContentView(R.layout.activity_main);
-/*
+		ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+		mHandler = new Handler();
+		context = this;
+
+		Intent intent = getIntent();
+		if(!intent.getExtras().containsKey("email")){
+			errorKill();
+		}
+		USER_DATA.setField(context, "email", intent.getStringExtra("email"));
+//		Log.i(LOG_TAG, "getField call = " + UserModel.getField(context, "email"));
+		ref.child("users").child(emailToKey(UserModel.getField(context, "email")))
+				.addValueEventListener(new ValueEventListener() {
+					@Override
+					public void onDataChange(DataSnapshot dataSnapshot) {
+						if (!dataSnapshot.exists()) errorKill();
+						Log.i(LOG_TAG, dataSnapshot.toString());
+						Map<?, ?> userDataMap = (Map<?, ?>) dataSnapshot.getValue();
+						if (userDataMap == null) {
+							errorKill();
+						}
+						USER_DATA.setField(context, "name", userDataMap.get("name") + "");
+						USER_DATA.setField(context, "phone", userDataMap.get("phone") + "");
+						if (userDataMap.get("avatar") != null) {
+							Log.i("Avatar not null", userDataMap.get("avatar").toString());
+							USER_DATA.setField(context, "avatar", userDataMap.get("avatar").toString());
+						} else USER_DATA.setField(context, "avatar", "");
+						updateHeader();
+					}
+
+					@Override
+					public void onCancelled(FirebaseError firebaseError) {
+					}
+				});
+
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mTitle = mDrawerTitle = getTitle();
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerList = (ListView) findViewById(R.id.list_view);
 
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 		prepareNavigationDrawerItems();
-		mDrawerList.setAdapter(new DrawerAdapter(this, mDrawerItems, true));
+		setAdapter();
+		//mDrawerList.setAdapter(new DrawerAdapter(this, mDrawerItems));
 		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setHomeButtonEnabled(true);
-
-		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-				R.drawable.ic_drawer, R.string.drawer_open,
-				R.string.drawer_close) {
-			public void onDrawerClosed(View view) {
-				getSupportActionBar().setTitle(mTitle);
-				invalidateOptionsMenu();
-			}
-
-			public void onDrawerOpened(View drawerView) {
-				getSupportActionBar().setTitle(mDrawerTitle);
-				invalidateOptionsMenu();
-			}
-		};
-		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
-		mHandler = new Handler();
-		
-		if (savedInstanceState == null) {
-			int position = 0;
-			selectItem(position, mDrawerItems.get(position).getTag());
-			mDrawerLayout.openDrawer(mDrawerList);
-		}*/
-		
-		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
 				R.string.drawer_open,
 				R.string.drawer_close) {
@@ -109,121 +130,138 @@ public class MainActivity extends ActionBarActivity {
 				invalidateOptionsMenu();
 			}
 		};
-		mDrawerToggle.setDrawerIndicatorEnabled(true);
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		mTitle = mDrawerTitle = getTitle();
-		mDrawerList = (ListView) findViewById(R.id.list_view);
-		
-		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-		prepareNavigationDrawerItems();
-		mDrawerList.setAdapter(new DrawerAdapter(this, mDrawerItems, true));
-		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
-		mHandler = new Handler();
-		
+
 		if (savedInstanceState == null) {
-			int position = 0;
-			selectItem(position, mDrawerItems.get(position).getTag());
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
+	}
+
+	LocationListener locationListener = new LocationListener() {
+		@Override
+		public void onLocationChanged(Location location) {
+			//do something with location received
+			displayLocation(location);
+		}
+
+		@Override
+		public void onStatusChanged(String provider, int status, Bundle extras) {
+		}
+
+		@Override
+		public void onProviderEnabled(String provider) {
+		}
+
+		@Override
+		public void onProviderDisabled(String provider) {
+		}
+	};
+	double _lat = 0.0;
+	double _long = 0.0;
+	double _acc = 0.0;
+	boolean locationgiven = false;
+
+	private void displayLocation(Location location) {
+		if (location == null) {
+			locationgiven = false;
+		} else {
+			locationgiven = true;
+			_lat = location.getLatitude();
+			_long = location.getLongitude();
+			_acc = location.getAccuracy();
+			//can choose to color the accuracy here, but naaah
+		}
+	}
+
+	String full_name = "";
+
+	private void setAdapter() {
+		String option = LEFT_MENU_OPTION_1;
+		Bundle extras = getIntent().getExtras();
+		if (extras != null && extras.containsKey(LEFT_MENU_OPTION)) {
+			option = extras.getString(LEFT_MENU_OPTION, LEFT_MENU_OPTION_1);
+		}
+
+		boolean isFirstType = true;
+
+		View headerView = null;
+
+		if (option.equals(LEFT_MENU_OPTION_1)) {
+			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
+					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
+					full_name + "");
+		} else if (option.equals(LEFT_MENU_OPTION_2)) {
+			headerView = prepareHeaderView(R.layout.header_navigation_drawer_2,
+					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
+					full_name + "");
+			isFirstType = false;
+		}
+
+		BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems, isFirstType);
+
+		mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
+		mDrawerList.setAdapter(adapter);
+	}
+
+	private View prepareHeaderView(int layoutRes, String url, String email) {
+		View headerView = getLayoutInflater().inflate(layoutRes, mDrawerList, false);
+		ImageView iv = (ImageView) headerView.findViewById(R.id.image);
+		TextView tv = (TextView) headerView.findViewById(R.id.email);
+
+
+		Log.i("Name:", UserModel.getField(this, "name"));
+		Log.i("Image:", UserModel.getField(this, "avatar"));
+
+		ImageUtil.displayImage(iv, UserModel.getField(this, "avatar"), null);
+//		ImageUtil.displayRoundImage(iv, url, null);
+		tv.setText(email);
+
+		return headerView;
 	}
 
 	private void prepareNavigationDrawerItems() {
 		mDrawerItems = new ArrayList<>();
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_list_views,
-						R.string.drawer_title_list_views,
-						DrawerItem.DRAWER_ITEM_TAG_LIST_VIEWS));
+						R.string.drawer_icon_home,
+						R.string.drawer_title_home,
+						DrawerItem.DRAWER_ITEM_TAG_HOME));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_parallax,
-						R.string.drawer_title_parallax,
-						DrawerItem.DRAWER_ITEM_TAG_PARALLAX));
+						R.string.drawer_icon_browse_requests,
+						R.string.drawer_title_requests,
+						DrawerItem.DRAWER_ITEM_TAG_BROWSE_REQUESTS));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_left_menus,
-						R.string.drawer_title_left_menus,
-						DrawerItem.DRAWER_ITEM_TAG_LEFT_MENUS));
+						R.string.drawer_icon_browse_offers,
+						R.string.drawer_title_offers,
+						DrawerItem.DRAWER_ITEM_TAG_BROWSE_OFFERS));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_login_page,
-						R.string.drawer_title_login_page,
-						DrawerItem.DRAWER_ITEM_TAG_LOGIN_PAGE_AND_LOADERS));
+						R.string.drawer_icon_post_request,
+						R.string.drawer_title_make_request,
+						DrawerItem.DRAWER_ITEM_TAG_MAKE_REQUEST));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_image_gallery,
-						R.string.drawer_title_image_gallery,
-						DrawerItem.DRAWER_ITEM_TAG_IMAGE_GALLERY));
+						R.string.drawer_icon_post_offer,
+						R.string.drawer_title_make_offer,
+						DrawerItem.DRAWER_ITEM_TAG_MAKE_OFFER));
 		mDrawerItems.add(
 				new DrawerItem(
-						R.string.drawer_icon_shape_image_views,
-						R.string.drawer_title_shape_image_views,
-						DrawerItem.DRAWER_ITEM_TAG_SHAPE_IMAGE_VIEWS));
-		mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_progress_bars,
-						R.string.drawer_title_progress_bars,
-						DrawerItem.DRAWER_ITEM_TAG_PROGRESS_BARS));
-		mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_check_and_radio_buttons,
-						R.string.drawer_title_check_and_radio_buttons,
-						DrawerItem.DRAWER_ITEM_TAG_CHECK_AND_RADIO_BOXES));
-		mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_splash_screens,
-						R.string.drawer_title_splash_screens,
-						DrawerItem.DRAWER_ITEM_TAG_SPLASH_SCREENS));
-		mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_search_bars,
-						R.string.drawer_title_search_bars,
-						DrawerItem.DRAWER_ITEM_TAG_SEARCH_BARS));
-		mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_text_views,
-						R.string.drawer_title_text_views,
-						DrawerItem.DRAWER_ITEM_TAG_TEXT_VIEWS));
-		/*mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_buttons,
-						R.string.drawer_title_buttons,
-						DrawerItem.DRAWER_ITEM_TAG_BUTTONS));*/
-		/*mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_audio_player,
-						R.string.drawer_title_audio_player,
-						DrawerItem.DRAWER_ITEM_TAG_BLOG));*/
-		/*mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_video_player,
-						R.string.drawer_title_video_player,
-						DrawerItem.DRAWER_ITEM_TAG_VIDEO_PLAYER));*/
-		/*mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_calendars,
-						R.string.drawer_title_calendars,
-						DrawerItem.DRAWER_ITEM_TAG_CALENDARS));*/
-		/*mDrawerItems.add(
-				new DrawerItem(
-						R.string.drawer_icon_dialogs,
-						R.string.drawer_title_dialogs,
-						DrawerItem.DRAWER_ITEM_TAG_DIALOGS));*/
+						R.string.drawer_icon_profile,
+						R.string.drawer_title_profile,
+						DrawerItem.DRAWER_ITEM_TAG_PROFILE));
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
+		inflater.inflate(R.menu.menu_main, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		//boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-		//menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
 		return super.onPrepareOptionsMenu(menu);
 	}
 
@@ -232,92 +270,83 @@ public class MainActivity extends ActionBarActivity {
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
 		}
+
+		switch (item.getItemId()) {
+			case R.id.action_logout:
+				USER_DATA.destroy();
+				Intent myIntent = new Intent(MainActivity.this, LogInPageActivity.class);
+				myIntent.putExtra("email", UserModel.getField(this, "email"));
+				startActivity(myIntent);
+				finish();
+				break;
+			case R.id.action_search:
+				Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+				intent.putExtra("key", USER_DATA.getField(this,"name")); //Optional parameters
+				MainActivity.this.startActivity(intent);
+				break;
+
+
+
+			default:
+				return super.onOptionsItemSelected(item);
+
+		}
 		return super.onOptionsItemSelected(item);
-		// Handle action buttons
-		/*switch (item.getItemId()) {
-		case R.id.action_websearch:
-			// create intent to perform web search for this planet
-			Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-			intent.putExtra(SearchManager.QUERY, getSupportActionBar().getTitle());
-			// catch event that there's no activity to handle intent
-			if (intent.resolveActivity(getPackageManager()) != null) {
-				startActivity(intent);
-			} else {
-				Toast.makeText(this, R.string.app_not_available,
-						Toast.LENGTH_LONG).show();
-			}
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}*/
 	}
 
 	private class DrawerItemClickListener implements
 			ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
-				long id) {
-			selectItem(position, mDrawerItems.get(position).getTag());
+								long id) {
+			selectItem(position, mDrawerItems.get(position - 1).getTag());
 		}
 	}
 
 	private void selectItem(int position, int drawerTag) {
 		Fragment fragment = getFragmentByDrawerTag(drawerTag);
 		commitFragment(fragment);
-		
+
 		mDrawerList.setItemChecked(position, true);
-		setTitle(mDrawerItems.get(position).getTitle());
+		setTitle(mDrawerItems.get(position - 1).getTitle());
 		mDrawerLayout.closeDrawer(mDrawerList);
 	}
-	
-	private Fragment getFragmentByDrawerTag(int drawerTag) {
+
+	private Fragment getFragmentByDrawerTag(int drawerTag){
 		Fragment fragment;
-		if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_SPLASH_SCREENS) {
-			fragment = SplashScreensFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_PROGRESS_BARS) {
-			fragment = ProgressBarsFragment.newInstance();
-		}/* else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_BUTTONS) {
-			fragment = ButtonsFragment.newInstance();
-		}*/ else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_SHAPE_IMAGE_VIEWS) {
-			fragment = ShapeImageViewsFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_TEXT_VIEWS) {
-			fragment = TextViewsFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_SEARCH_BARS) {
-			fragment = SearchBarsFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_LOGIN_PAGE_AND_LOADERS) {
-			fragment = LogInPageFragment.newInstance();
-		}/* else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_AUDIO_PLAYER) {
-			fragment = AudioPlayerFragment.newInstance();
-		}*//* else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_VIDEO_PLAYER) {
-			fragment = VideoPlayerFragment.newInstance();
-		}*/ else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_IMAGE_GALLERY) {
-			fragment = ImageGalleryFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_CHECK_AND_RADIO_BOXES) {
-			fragment = CheckAndRadioBoxesFragment.newInstance();
-		}/* else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_CALENDARS) {
-			fragment = CalendarsFragment.newInstance();
-		}*/ else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_LEFT_MENUS) {
-			fragment = LeftMenusFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_LIST_VIEWS) {
-			fragment = ListViewsFragment.newInstance();
-		} else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_PARALLAX) {
+		if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_HOME) {
 			fragment = ParallaxEffectsFragment.newInstance();
-		}/* else if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_DIALOGS) {
-			fragment = DialogsFragment.newInstance();
-		} */else {
+		}
+		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_BROWSE_REQUESTS){
+			fragment = ReqOffListFragment.newInstance(FIREBASE_URL, "requests");
+		}
+		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_BROWSE_OFFERS){
+			fragment = ReqOffListFragment.newInstance(FIREBASE_URL, "offers");
+		}
+		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_MAKE_REQUEST){
+			fragment = FavorFormFragment.newInstance(FIREBASE_URL, "requests");
+		}
+		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_MAKE_OFFER){
+			fragment = FavorFormFragment.newInstance(FIREBASE_URL, "offers");
+		}
+		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_PROFILE){
+			fragment = UserProfileFragment.newInstance(FIREBASE_URL);
+
+		}
+		else{
 			fragment = new Fragment();
 		}
 		return fragment;
 	}
-	
+
 	private class CommitFragmentRunnable implements Runnable {
 
 		private Fragment fragment;
-		
+
 		public CommitFragmentRunnable(Fragment fragment) {
 			this.fragment = fragment;
 		}
-		
+
 		@Override
 		public void run() {
 			FragmentManager fragmentManager = getSupportFragmentManager();
@@ -326,11 +355,7 @@ public class MainActivity extends ActionBarActivity {
 					.commit();
 		}
 	}
-	
-	public void commitFragment(Fragment fragment) {
-		//Using Handler class to avoid lagging while
-		//committing fragment in same time as closing
-		//navigation drawer
+	public void commitFragment(Fragment fragment){
 		mHandler.post(new CommitFragmentRunnable(fragment));
 	}
 
@@ -355,5 +380,69 @@ public class MainActivity extends ActionBarActivity {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+
+	// Listener from ReqOffListView
+	@Override
+	public void onFragmentInteraction(FavorModel fm) {
+		Intent intent = new Intent(MainActivity.this, FavorSpecActivity.class);
+		intent.putExtra("fm", fm);
+		this.startActivity(intent);
+	}
+
+	// Listener from UserProfileFragment
+	@Override
+	public void onFragmentInteraction() {
+		Intent myIntent = new Intent(MainActivity.this, UserProfileEditActivity.class);
+		startActivity(myIntent);
+//        startActivityForResult(myIntent, REG_REQUEST);
+	}
+	@Override
+	// Gets result from RegistrationPageActivity
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode != REG_REQUEST) errorKill(); // Check which request we're responding to
+		if (resultCode != RESULT_OK) errorKill(); // Make sure the request was successful
+
+		TextView emailview = (TextView)findViewById(R.id.emailview);
+		emailview.setText(data.getStringExtra("email"));
+		TextView passview = (TextView)findViewById(R.id.passview);
+		passview.requestFocus();
+
+	}
+
+	/**
+	 * Firebase keys cannot have a period (.) in them, so this converts the emails to valid keys
+	 */
+	public String emailToKey(String emailAddress) {
+		return emailAddress.replace('.', ',');
+	}
+
+	private void errorKill(){
+		Context context = getApplicationContext();
+		CharSequence text = "Error retrieving user data";
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+		Intent myIntent = new Intent(this, LogInPageActivity.class);
+		startActivity(myIntent);
+		finish();
+	}
+
+	@Override
+	protected void onDestroy() {
+		USER_DATA.destroy();
+		super.onDestroy();
+	}
+	private void updateHeader(){
+		View V = this.findViewById(android.R.id.content);
+		if(V == null) return;
+		ImageView avatarView = (ImageView) V.findViewById(R.id.image);
+		TextView nameView = (TextView) V.findViewById(R.id.name);
+		TextView emailView = (TextView) V.findViewById(R.id.email);
+		ImageUtil.displayImage(avatarView, UserModel.getField(this, "avatar"), null);
+		nameView.setText(UserModel.getField(this, "name"));
+		emailView.setText(UserModel.getField(this, "email"));
+
+
 	}
 }

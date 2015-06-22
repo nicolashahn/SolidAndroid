@@ -84,7 +84,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                     ref.authWithPassword(emailuser, pwidpass, new Firebase.AuthResultHandler() {
                         @Override
                         public void onAuthenticated(AuthData authData) {
-                            Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
+                            Intent myIntent = new Intent(LogInPageActivity.this, MainActivity.class);
                             myIntent.putExtra("email", emailuser);
                             startActivity(myIntent);
                             finish();
@@ -104,7 +104,7 @@ public class LogInPageActivity extends Activity implements OnClickListener {
                     });
                 }
             }else{
-                Intent myIntent = new Intent(LogInPageActivity.this, LeftMenusActivity.class);
+                Intent myIntent = new Intent(LogInPageActivity.this, MainActivity.class);
 //                myIntent.putExtra("email", "a@a.com");
                 myIntent.putExtra("email", "skip@pb.com");
                 startActivity(myIntent);

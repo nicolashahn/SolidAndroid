@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -13,9 +11,11 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:4:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
-MERGED from Solid:stickyListHeaders:unspecified:7:5
+MERGED from solid:stickyListHeaders:unspecified:7:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5
 MERGED from com.android.support:support-v4:21.0.3:15:5
@@ -106,77 +106,73 @@ ADDED from AndroidManifest.xml:45:9
 		ADDED from AndroidManifest.xml:47:13
 	android:name
 		ADDED from AndroidManifest.xml:46:13
-activity#com.csform.android.uiapptemplate.MainActivity
+activity#com.csform.android.uiapptemplate.SplashScreensActivity
 ADDED from AndroidManifest.xml:48:9
 	android:name
 		ADDED from AndroidManifest.xml:48:19
-activity#com.csform.android.uiapptemplate.SplashScreensActivity
+activity#com.csform.android.uiapptemplate.ListViewsActivity
 ADDED from AndroidManifest.xml:49:9
 	android:name
 		ADDED from AndroidManifest.xml:49:19
-activity#com.csform.android.uiapptemplate.ListViewsActivity
+activity#com.csform.android.uiapptemplate.MainActivity
 ADDED from AndroidManifest.xml:50:9
-	android:name
-		ADDED from AndroidManifest.xml:50:19
-activity#com.csform.android.uiapptemplate.LeftMenusActivity
-ADDED from AndroidManifest.xml:51:9
 	android:theme
-		ADDED from AndroidManifest.xml:53:13
-	android:name
 		ADDED from AndroidManifest.xml:52:13
+	android:name
+		ADDED from AndroidManifest.xml:51:13
 activity#com.csform.android.uiapptemplate.SearchBarsActivity
+ADDED from AndroidManifest.xml:53:9
+	android:name
+		ADDED from AndroidManifest.xml:53:19
+activity#com.csform.android.uiapptemplate.GoogleCardsActivity
 ADDED from AndroidManifest.xml:54:9
 	android:name
 		ADDED from AndroidManifest.xml:54:19
-activity#com.csform.android.uiapptemplate.GoogleCardsActivity
+activity#com.csform.android.uiapptemplate.ExpandableListViewActivity
 ADDED from AndroidManifest.xml:55:9
 	android:name
 		ADDED from AndroidManifest.xml:55:19
-activity#com.csform.android.uiapptemplate.ExpandableListViewActivity
+activity#com.csform.android.uiapptemplate.StickyListHeadersActivity
 ADDED from AndroidManifest.xml:56:9
 	android:name
 		ADDED from AndroidManifest.xml:56:19
-activity#com.csform.android.uiapptemplate.StickyListHeadersActivity
-ADDED from AndroidManifest.xml:57:9
-	android:name
-		ADDED from AndroidManifest.xml:57:19
 activity#com.csform.android.uiapptemplate.FirebaseTestActivity
-ADDED from AndroidManifest.xml:58:9
+ADDED from AndroidManifest.xml:57:9
 	android:label
-		ADDED from AndroidManifest.xml:60:13
-	android:name
 		ADDED from AndroidManifest.xml:59:13
+	android:name
+		ADDED from AndroidManifest.xml:58:13
 activity#com.csform.android.uiapptemplate.FavorSpecActivity
-ADDED from AndroidManifest.xml:62:9
+ADDED from AndroidManifest.xml:61:9
 	android:label
-		ADDED from AndroidManifest.xml:64:13
-	android:name
 		ADDED from AndroidManifest.xml:63:13
+	android:name
+		ADDED from AndroidManifest.xml:62:13
 activity#com.csform.android.uiapptemplate.UserProfileEditActivity
-ADDED from AndroidManifest.xml:66:9
+ADDED from AndroidManifest.xml:65:9
 	android:label
-		ADDED from AndroidManifest.xml:68:13
-	android:name
 		ADDED from AndroidManifest.xml:67:13
+	android:name
+		ADDED from AndroidManifest.xml:66:13
 activity#com.csform.android.uiapptemplate.RegistrationPageActivity
-ADDED from AndroidManifest.xml:70:9
+ADDED from AndroidManifest.xml:69:9
 	android:label
-		ADDED from AndroidManifest.xml:72:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:73:13
-	android:name
 		ADDED from AndroidManifest.xml:71:13
-meta-data#android.support.PARENT_ACTIVITY
-ADDED from AndroidManifest.xml:74:13
-	android:name
-		ADDED from AndroidManifest.xml:75:17
-	android:value
-		ADDED from AndroidManifest.xml:76:17
-activity#com.csform.android.uiapptemplate.ChatActivity
-ADDED from AndroidManifest.xml:78:9
-	android:label
-		ADDED from AndroidManifest.xml:80:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:81:13
+		ADDED from AndroidManifest.xml:72:13
 	android:name
+		ADDED from AndroidManifest.xml:70:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:73:13
+	android:value
+		ADDED from AndroidManifest.xml:75:17
+	android:name
+		ADDED from AndroidManifest.xml:74:17
+activity#com.csform.android.uiapptemplate.ChatActivity
+ADDED from AndroidManifest.xml:77:9
+	android:label
 		ADDED from AndroidManifest.xml:79:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:80:13
+	android:name
+		ADDED from AndroidManifest.xml:78:13

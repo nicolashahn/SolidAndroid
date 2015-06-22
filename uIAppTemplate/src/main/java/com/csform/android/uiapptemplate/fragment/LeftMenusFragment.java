@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.csform.android.uiapptemplate.LeftMenusActivity;
+import com.csform.android.uiapptemplate.MainActivity;
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.adapter.SubcategoryAdapter;
 
@@ -30,8 +30,8 @@ public class LeftMenusFragment extends Fragment implements OnItemClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mLeftMenus = new ArrayList<String>();
-		mLeftMenus.add(LeftMenusActivity.LEFT_MENU_OPTION_1);
-		mLeftMenus.add(LeftMenusActivity.LEFT_MENU_OPTION_2);
+		mLeftMenus.add(MainActivity.LEFT_MENU_OPTION_1);
+		mLeftMenus.add(MainActivity.LEFT_MENU_OPTION_2);
 
 	}
 
@@ -52,8 +52,8 @@ public class LeftMenusFragment extends Fragment implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		Intent intent = new Intent(getActivity(), LeftMenusActivity.class);
-		intent.putExtra(LeftMenusActivity.LEFT_MENU_OPTION, mLeftMenus.get(position));
+		Intent intent = new Intent(getActivity(), MainActivity.class);
+		intent.putExtra(MainActivity.LEFT_MENU_OPTION, mLeftMenus.get(position));
 		startActivity(intent);
 	}
 }
