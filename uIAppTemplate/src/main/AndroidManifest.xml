@@ -34,11 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ParallaxKenBurnsActivity"
-            android:theme="@style/AppTheme.Overlay" />
 
-        <activity android:name=".ParallaxActivity" />
         <activity
             android:name=".ImageGalleryCategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
@@ -51,7 +47,6 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SearchBarsActivity" />
-        <activity android:name=".GoogleCardsActivity" />
         <activity android:name=".ExpandableListViewActivity" />
         <activity android:name=".StickyListHeadersActivity" />
         <activity

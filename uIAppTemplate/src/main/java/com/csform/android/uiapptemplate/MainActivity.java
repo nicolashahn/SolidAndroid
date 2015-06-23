@@ -28,12 +28,13 @@ import android.widget.Toast;
 
 import com.csform.android.uiapptemplate.adapter.DrawerAdapter;
 import com.csform.android.uiapptemplate.fragment.FavorFormFragment;
-import com.csform.android.uiapptemplate.fragment.ParallaxEffectsFragment;
+import com.csform.android.uiapptemplate.fragment.HomeFragment;
 import com.csform.android.uiapptemplate.fragment.ReqOffListFragment;
 import com.csform.android.uiapptemplate.fragment.UserProfileFragment;
 import com.csform.android.uiapptemplate.model.DrawerItem;
 import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.model.UserModel;
+import com.csform.android.uiapptemplate.util.FirebaseUtil;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -52,7 +53,6 @@ public class MainActivity extends ActionBarActivity
 	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.MainActivity";
 	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
 	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
-	private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 	private static final UserModel USER_DATA = new UserModel();
 	private static Firebase ref;
 	private static Context context;
@@ -81,8 +81,7 @@ public class MainActivity extends ActionBarActivity
 			errorKill();
 		}
 		USER_DATA.setField(context, "email", intent.getStringExtra("email"));
-//		Log.i(LOG_TAG, "getField call = " + UserModel.getField(context, "email"));
-		ref.child("users").child(emailToKey(UserModel.getField(context, "email")))
+		ref.child("users").child(FirebaseUtil.emailToKey(UserModel.getField(context, "email")))
 				.addValueEventListener(new ValueEventListener() {
 					@Override
 					public void onDataChange(DataSnapshot dataSnapshot) {
@@ -176,28 +175,13 @@ public class MainActivity extends ActionBarActivity
 	String full_name = "";
 
 	private void setAdapter() {
-		String option = LEFT_MENU_OPTION_1;
-		Bundle extras = getIntent().getExtras();
-		if (extras != null && extras.containsKey(LEFT_MENU_OPTION)) {
-			option = extras.getString(LEFT_MENU_OPTION, LEFT_MENU_OPTION_1);
-		}
-
 		boolean isFirstType = true;
 
-		View headerView = null;
+        View headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
+                "http://pengaja.com/uiapptemplate/avatars/0.jpg",
+                full_name + "");
 
-		if (option.equals(LEFT_MENU_OPTION_1)) {
-			headerView = prepareHeaderView(R.layout.header_navigation_drawer_1,
-					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
-					full_name + "");
-		} else if (option.equals(LEFT_MENU_OPTION_2)) {
-			headerView = prepareHeaderView(R.layout.header_navigation_drawer_2,
-					"http://pengaja.com/uiapptemplate/avatars/0.jpg",
-					full_name + "");
-			isFirstType = false;
-		}
-
-		BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems, isFirstType);
+		BaseAdapter adapter = new DrawerAdapter(this, mDrawerItems);
 
 		mDrawerList.addHeaderView(headerView);//Add header before adapter (for pre-KitKat)
 		mDrawerList.setAdapter(adapter);
@@ -315,22 +299,22 @@ public class MainActivity extends ActionBarActivity
 	private Fragment getFragmentByDrawerTag(int drawerTag){
 		Fragment fragment;
 		if (drawerTag == DrawerItem.DRAWER_ITEM_TAG_HOME) {
-			fragment = ParallaxEffectsFragment.newInstance();
+			fragment = HomeFragment.newInstance();
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_BROWSE_REQUESTS){
-			fragment = ReqOffListFragment.newInstance(FIREBASE_URL, "requests");
+			fragment = ReqOffListFragment.newInstance(FirebaseUtil.getUrl(), "requests");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_BROWSE_OFFERS){
-			fragment = ReqOffListFragment.newInstance(FIREBASE_URL, "offers");
+			fragment = ReqOffListFragment.newInstance(FirebaseUtil.getUrl(), "offers");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_MAKE_REQUEST){
-			fragment = FavorFormFragment.newInstance(FIREBASE_URL, "requests");
+			fragment = FavorFormFragment.newInstance(FirebaseUtil.getUrl(), "requests");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_MAKE_OFFER){
-			fragment = FavorFormFragment.newInstance(FIREBASE_URL, "offers");
+			fragment = FavorFormFragment.newInstance(FirebaseUtil.getUrl(), "offers");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_PROFILE){
-			fragment = UserProfileFragment.newInstance(FIREBASE_URL);
+			fragment = UserProfileFragment.newInstance(FirebaseUtil.getUrl());
 
 		}
 		else{
@@ -410,13 +394,6 @@ public class MainActivity extends ActionBarActivity
 
 	}
 
-	/**
-	 * Firebase keys cannot have a period (.) in them, so this converts the emails to valid keys
-	 */
-	public String emailToKey(String emailAddress) {
-		return emailAddress.replace('.', ',');
-	}
-
 	private void errorKill(){
 		Context context = getApplicationContext();
 		CharSequence text = "Error retrieving user data";
@@ -442,7 +419,5 @@ public class MainActivity extends ActionBarActivity
 		ImageUtil.displayImage(avatarView, UserModel.getField(this, "avatar"), null);
 		nameView.setText(UserModel.getField(this, "name"));
 		emailView.setText(UserModel.getField(this, "email"));
-
-
 	}
 }

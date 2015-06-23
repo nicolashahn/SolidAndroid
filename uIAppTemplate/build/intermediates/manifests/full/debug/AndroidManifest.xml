@@ -35,10 +35,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.csform.android.uiapptemplate.ParallaxKenBurnsActivity"
-            android:theme="@style/AppTheme.Overlay" />
-        <activity android:name="com.csform.android.uiapptemplate.ParallaxActivity" />
-        <activity
             android:name="com.csform.android.uiapptemplate.ImageGalleryCategoryActivity"
             android:theme="@style/AppTheme.NoShadow" />
         <activity
@@ -50,7 +46,6 @@
             android:name="com.csform.android.uiapptemplate.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.csform.android.uiapptemplate.SearchBarsActivity" />
-        <activity android:name="com.csform.android.uiapptemplate.GoogleCardsActivity" />
         <activity android:name="com.csform.android.uiapptemplate.ExpandableListViewActivity" />
         <activity android:name="com.csform.android.uiapptemplate.StickyListHeadersActivity" />
         <activity

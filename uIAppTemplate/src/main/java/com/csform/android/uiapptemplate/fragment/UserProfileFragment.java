@@ -23,7 +23,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -101,7 +100,6 @@ public class UserProfileFragment extends Fragment {
          * @return A new {@link Fragment} to be displayed by a {@link ViewPager}
          */
         Fragment createFragment() {
-            //return ContentFragment.newInstance(mTitle, mIndicatorColor, mDividerColor);
             return ReqOffListFragment.newInstance(FIREBASE_URL, mDatabase, true);
         }
 
@@ -247,14 +245,6 @@ public class UserProfileFragment extends Fragment {
     }
     // END_INCLUDE (fragment_onviewcreated)
 
-    /**
-     * The {@link FragmentPagerAdapter} used to display pages in this sample. The individual pages
-     * are instances of {@link ContentFragment} which just display three lines of text. Each page is
-     * created by the relevant {@link SamplePagerItem} for the requested position.
-     * <p>
-     * The important section of this class is the {@link #getPageTitle(int)} method which controls
-     * what is displayed in the {@link SlidingTabLayout}.
-     */
     class SampleFragmentPagerAdapter extends FragmentStatePagerAdapter {
 
         SampleFragmentPagerAdapter(FragmentManager fm) {

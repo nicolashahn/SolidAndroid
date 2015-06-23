@@ -35,9 +35,6 @@ public class ChatActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-
-
-
     Intent intent = getIntent();
         full_name = intent.getStringExtra("key");
         mUsername = full_name;
