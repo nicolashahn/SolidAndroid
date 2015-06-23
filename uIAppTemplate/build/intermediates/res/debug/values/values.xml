@@ -644,11 +644,6 @@
     <string name="typography2">Typography II</string>
     <string name="typography3">Typography III</string>
     <string name="undo_deletion">UNDO DELETION</string>
-    <!-- From: file:/C:/Users/Ash/Dev/Android/solid/uIAppTemplate/src/main/res/values/firebase.xml -->
-    <eat-comment/>
-    <string name="url">https://YOUR-FIREBASE.firebaseio.com/</string>
-    <!-- From: file:/C:/Users/Ash/Dev/Android/solid/uIAppTemplate/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="username">Username</string>
     <string name="welcome">Welcome!</string>
     <!-- From: file:/C:/Users/Ash/Dev/Android/solid/uIAppTemplate/src/main/res/values/styles.xml -->

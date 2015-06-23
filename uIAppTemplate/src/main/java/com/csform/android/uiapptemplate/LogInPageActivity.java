@@ -19,8 +19,6 @@ public class LogInPageActivity extends Activity implements OnClickListener {
 
     private static final int REG_REQUEST = 1;
     public static final String LOGIN_PAGE_AND_LOADERS_CATEGORY = "com.csform.android.uiapptemplate.LogInPageAndLoadersActivity";
-    public static final String DARK = "Dark";
-    public static final String LIGHT = "Light";
     public static String prev_email = "";
 
     @Override
@@ -28,23 +26,15 @@ public class LogInPageActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(this);
         getWindow().requestFeature(Window.FEATURE_NO_TITLE); //Removing ActionBar
-        String category = LIGHT;
         Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.containsKey(LOGIN_PAGE_AND_LOADERS_CATEGORY)) {
-            category = extras.getString(LOGIN_PAGE_AND_LOADERS_CATEGORY, LIGHT);
-        }
         if (extras != null && extras.containsKey("email")) {
             prev_email = extras.getString("email");
         }
-        setContentView(category);
+        setContentView();
     }
 
-    private void setContentView(String category) {
-        if (category.equals(DARK)) {
-            setContentView(R.layout.activity_login_page_dark);
-        } else if (category.equals(LIGHT)) {
-            setContentView(R.layout.activity_login_page_light);
-        }
+    private void setContentView() {
+        setContentView(R.layout.activity_login_page);
         TextView login, register, skip;
         login = (TextView) findViewById(R.id.login);
         register = (TextView) findViewById(R.id.register);

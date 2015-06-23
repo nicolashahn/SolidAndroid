@@ -21,6 +21,7 @@ import com.csform.android.uiapptemplate.adapter.ReqOffListAdapter;
 import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.model.FloatingActionButton;
 import com.csform.android.uiapptemplate.model.UserModel;
+import com.csform.android.uiapptemplate.util.FirebaseUtil;
 import com.csform.android.uiapptemplate.view.AnimatedExpandableListView;
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
@@ -48,21 +49,19 @@ public class ReqOffListFragment extends Fragment{
     private DynamicListView mDynamicListView;
     private String USER_EMAIL;
 
-    public static ReqOffListFragment newInstance(String url_, String list_) {
+    public static ReqOffListFragment newInstance(String list_) {
         ReqOffListFragment fragment = new ReqOffListFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
-        url = url_;
         list = list_;
         singleUser = false;
         return fragment;
     }
 
-    public static ReqOffListFragment newInstance(String url_, String list_, Boolean singleUser_) {
+    public static ReqOffListFragment newInstance(String list_, Boolean singleUser_) {
         ReqOffListFragment fragment = new ReqOffListFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
-        url = url_;
         list = list_;
         singleUser = singleUser_;
         return fragment;
@@ -75,6 +74,7 @@ public class ReqOffListFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        url = FirebaseUtil.getUrl();
         ctx = getActivity().getApplicationContext();
         Firebase.setAndroidContext(ctx);
         ref = new Firebase(url);

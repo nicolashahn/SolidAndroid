@@ -50,10 +50,8 @@ public class MainActivity extends ActionBarActivity
 		UserProfileFragment.OnFragmentInteractionListener{
 
 	private static final int REG_REQUEST = 1;
-	public static final String LEFT_MENU_OPTION = "com.csform.android.uiapptemplate.MainActivity";
-	public static final String LEFT_MENU_OPTION_1 = "Left Menu Option 1";
-	public static final String LEFT_MENU_OPTION_2 = "Left Menu Option 2";
 	private static final UserModel USER_DATA = new UserModel();
+	private static String url;
 	private static Firebase ref;
 	private static Context context;
 	private ListView mDrawerList;
@@ -70,7 +68,8 @@ public class MainActivity extends ActionBarActivity
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		ref = new Firebase("https://crackling-torch-5178.firebaseio.com");
+		url = FirebaseUtil.getUrl();
+		ref = new Firebase(url);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		mHandler = new Handler();
@@ -302,19 +301,19 @@ public class MainActivity extends ActionBarActivity
 			fragment = HomeFragment.newInstance();
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_BROWSE_REQUESTS){
-			fragment = ReqOffListFragment.newInstance(FirebaseUtil.getUrl(), "requests");
+			fragment = ReqOffListFragment.newInstance("requests");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_BROWSE_OFFERS){
-			fragment = ReqOffListFragment.newInstance(FirebaseUtil.getUrl(), "offers");
+			fragment = ReqOffListFragment.newInstance("offers");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_MAKE_REQUEST){
-			fragment = FavorFormFragment.newInstance(FirebaseUtil.getUrl(), "requests");
+			fragment = FavorFormFragment.newInstance("requests");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_MAKE_OFFER){
-			fragment = FavorFormFragment.newInstance(FirebaseUtil.getUrl(), "offers");
+			fragment = FavorFormFragment.newInstance("offers");
 		}
 		else if(drawerTag == DrawerItem.DRAWER_ITEM_TAG_PROFILE){
-			fragment = UserProfileFragment.newInstance(FirebaseUtil.getUrl());
+			fragment = UserProfileFragment.newInstance();
 
 		}
 		else{

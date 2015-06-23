@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.csform.android.uiapptemplate.Clock;
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.model.UserModel;
+import com.csform.android.uiapptemplate.util.FirebaseUtil;
 import com.firebase.client.Firebase;
 
 import java.math.BigInteger;
@@ -48,11 +49,10 @@ public class FavorFormFragment extends Fragment {
     public String LOG_TAG = "FavorFormActivity";
     public String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
 
-    public static FavorFormFragment newInstance(String url_, String list_) {
+    public static FavorFormFragment newInstance(String list_) {
         FavorFormFragment fragment = new FavorFormFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
-        url = url_;
         list = list_;
         return fragment;
     }
@@ -63,6 +63,7 @@ public class FavorFormFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        url = FirebaseUtil.getUrl();
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(super.getActivity().getApplicationContext());
         ctx = getActivity().getApplicationContext();

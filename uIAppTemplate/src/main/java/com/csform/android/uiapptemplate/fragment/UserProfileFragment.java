@@ -36,6 +36,7 @@ import android.widget.TextView;
 
 import com.csform.android.uiapptemplate.R;
 import com.csform.android.uiapptemplate.model.UserModel;
+import com.csform.android.uiapptemplate.util.FirebaseUtil;
 import com.csform.android.uiapptemplate.util.ImageUtil;
 import com.csform.android.uiapptemplate.view.SlidingTabLayout;
 import com.firebase.client.Firebase;
@@ -55,16 +56,14 @@ public class UserProfileFragment extends Fragment {
     private static Context ctx;
     private static Firebase ref;
     private OnFragmentInteractionListener mListener;
-    private static final String FIREBASE_URL = "https://crackling-torch-5178.firebaseio.com/";
     /**
      * This class represents a tab to be displayed by {@link ViewPager} and it's associated
      * {@link SlidingTabLayout}.
      */
-    public static UserProfileFragment newInstance(String arg_url){
+    public static UserProfileFragment newInstance(){
         UserProfileFragment fragment = new UserProfileFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
-        url = arg_url;
         return fragment;
     }
     @Override
@@ -100,7 +99,7 @@ public class UserProfileFragment extends Fragment {
          * @return A new {@link Fragment} to be displayed by a {@link ViewPager}
          */
         Fragment createFragment() {
-            return ReqOffListFragment.newInstance(FIREBASE_URL, mDatabase, true);
+            return ReqOffListFragment.newInstance(mDatabase, true);
         }
 
         /**
@@ -149,6 +148,7 @@ public class UserProfileFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ctx = getActivity().getApplicationContext();
         Firebase.setAndroidContext(ctx);
+        url = FirebaseUtil.getUrl();
         ref = new Firebase(url);
         setHasOptionsMenu(true);
 
