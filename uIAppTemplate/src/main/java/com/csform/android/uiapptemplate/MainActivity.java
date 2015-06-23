@@ -129,10 +129,12 @@ public class MainActivity extends ActionBarActivity
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-
+/*
 		if (savedInstanceState == null) {
 			mDrawerLayout.openDrawer(mDrawerList);
 		}
+		*/
+		commitFragment(new HomeFragment());
 	}
 
 	LocationListener locationListener = new LocationListener() {
@@ -317,7 +319,7 @@ public class MainActivity extends ActionBarActivity
 
 		}
 		else{
-			fragment = new Fragment();
+			fragment = HomeFragment.newInstance();
 		}
 		return fragment;
 	}

@@ -22,7 +22,6 @@ import com.csform.android.uiapptemplate.model.FavorModel;
 import com.csform.android.uiapptemplate.model.FloatingActionButton;
 import com.csform.android.uiapptemplate.model.UserModel;
 import com.csform.android.uiapptemplate.util.FirebaseUtil;
-import com.csform.android.uiapptemplate.view.AnimatedExpandableListView;
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -43,7 +42,6 @@ public class ReqOffListFragment extends Fragment{
     private static Context ctx;
     private static Boolean singleUser;
     private ReqOffListAdapter adapter;
-    private AnimatedExpandableListView listView;
     private OnFragmentInteractionListener mListener;
     private List<FavorModel> favorList = new ArrayList<>();
     private DynamicListView mDynamicListView;
